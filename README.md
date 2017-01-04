@@ -5,3 +5,4 @@
 1. Clone
 2. `bundle`
 3. `yarn install`
+4. `jekyll serve`
