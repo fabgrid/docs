@@ -1,0 +1,11 @@
+{
+  "name": "fab17-docs",
+  "version": "0.1.0",
+  "description": "Jekyll site for joseph's fab17 project",
+  "main": "index.js",
+  "author": "Joseph Paul <joseph@sehrgute.software>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.5"
+  }
+}
