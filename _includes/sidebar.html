@@ -1,5 +1,5 @@
-<aside id="sidebar">
-	<button id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+<aside :class="{ open: menuOpen }" id="sidebar">
+	<button @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
 	<header>
 		<img class="logo" src="/assets/img/fabgrid-logo.svg" />
 		<h1>
