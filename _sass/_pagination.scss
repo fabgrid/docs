@@ -1,0 +1,20 @@
+.pagination {
+	display: block;
+	width: 100%;
+
+	.previous {
+		float: left;
+
+		&:before {
+			content: '← ';
+		}
+	}
+
+	.next {
+		float: right;
+
+		&:after {
+			content: ' →';
+		}
+	}
+}

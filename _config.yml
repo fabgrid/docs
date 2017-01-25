@@ -1,4 +1,11 @@
 ---
-title: fab17
-subtitle: by Joseph Paul
-description: FabAcademy 2017 Documentation
+title: fabgrid
+subtitle: Low Voltage Power Grid
+description: FabAcademy 2017 by Joseph Paul
+
+status: In Preparation
+status-color: info
+
+# TypeScript config
+tsc: /usr/local/bin/tsc
+js_dest: assets/js

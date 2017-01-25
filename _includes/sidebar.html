@@ -1,9 +1,22 @@
 <aside id="sidebar">
+	<button id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
 	<header>
+		<img class="logo" src="/assets/img/fabgrid-logo.svg" />
 		<h1>
 			{{ site.title }}
 			<small>{{ site.subtitle }}</small>
 		</h1>
 		<p>{{ site.description }}</p>
 	</header>
+
+	{% include nav.html %}
+
+	<footer>
+		<ul class="external-links">
+		{% for link in site.data.external_links %}
+			<li><a href="{{ link.target }}"{% if link.blank %} target="_blank"{% endif %}><i class="fa fa-fw fa-{{ link.icon }}"></i></a></li>
+		{% endfor %}
+		</ul>
+		<p>Project Status: <span class="project-status">{{ site.status }}</span></p>
+	</footer>
 </aside>

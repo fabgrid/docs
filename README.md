@@ -1,8 +1,14 @@
-# fab17 website
+# fabgrid website
+
+This is the official fabgrid documentation worked out during the FabAcademy 2017 by Joseph Paul.
 
 ## Development
 
-1. Clone
-2. `bundle`
-3. `yarn install`
-4. `jekyll serve`
+This site is built using jekyll. In order to run jekyll locally, you have to perform the following steps:
+
+1. Have jekyll installed
+2. Have typescript installed
+3. Clone this repo
+4. `bundle`
+5. `yarn install`
+6. `jekyll serve`

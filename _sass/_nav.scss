@@ -1,0 +1,41 @@
+nav.main-nav {
+
+	font-weight: 300;
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+
+		li {
+
+			a {
+				color: $brand-primary;
+
+
+				&.active,
+				&:active,
+				&:hover {
+					text-decoration: none;
+				}
+
+				&.active:after,
+				&:active:after,
+				&:hover:after {
+					font-size: .8em;
+					margin-top: .2em;
+					float: right;
+					font-style: initial;
+					content: '⎓';
+				}
+			}
+		}
+
+		ul.level-2 {
+			font-size: .8em;
+
+			li {
+				padding-left: 1em;
+			}
+		}
+	}
+}

@@ -1,31 +1,75 @@
 #sidebar {
 	display: block;
 	position: fixed;
-	left: 0;
+	left: -$sidebar-width;
 	top: 0;
-	width: $sidebar-width;
 	height: 100%;
+	padding: $sidebar-padding;
+	overflow: scroll;
+	width: $sidebar-width;
 
 	background-color: #333;
 	color: white;
 
+	&.visible {
+		left: 0;
+	}
+
 	header {
-		margin-top: 3em;
+		margin-top: 3rem;
 		text-align: center;
+
+		img.logo {
+			width: 4rem;
+		}
 
 		h1 {
 
 			small {
 				display: block;
-				font-size: .4em;
+				font-size: 1rem;
+				padding-top: .4rem;
 				color: $gray-light;
 			}
 		}
+	}
 
-		p {
-			font-size: .8em;
-			color: $gray-light;
-			font-style: italic;
+	footer {
+		display: block;
+		// position: absolute;
+		// bottom: $sidebar-padding;
+		// left: $sidebar-padding;
+		// right: $sidebar-padding;
+		text-align: center;
+		margin-top: $main-margin;
+
+		ul.external-links {
+			font-size: 1.4rem;
+			list-style-type: none;
+			padding-left: 0;
+
+			li {
+				display: inline-block;
+				text-align: center;
+			}
 		}
 	}
+
+	header p, footer p {
+		font-size: .8rem;
+		color: $gray-light;
+		font-style: italic;
+	}
+}
+
+#sidebar-toggle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: .2em .5em;
+	background-color: $gray-dark;
+	border: none;
+	color: $brand-primary;
+	margin: 0;
+	display: block;
 }
