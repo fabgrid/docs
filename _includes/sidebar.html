@@ -1,7 +1,8 @@
 <aside :class="{ open: menuOpen }" id="sidebar">
-	<button @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+	<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+	<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
 	<header>
-		<img class="logo" src="/assets/img/fabgrid-logo.svg" />
+		<img class="logo" src="{{ site.base_url }}/assets/img/fabgrid-logo-white.svg" />
 		<h1>
 			{{ site.title }}
 			<small>{{ site.subtitle }}</small>

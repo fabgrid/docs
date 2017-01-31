@@ -1,7 +1,7 @@
 declare var Vue: any
 
-var app = new Vue({
-	el: '#app',
+var sidebar = new Vue({
+	el: '#sidebar',
 
 	data() {
 		return {

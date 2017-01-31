@@ -1,5 +1,11 @@
 h1, h2, h3, h4, h5, h6 {
-	margin-bottom: .5em;
+	margin-bottom: .4em;
+	margin-top: .8em;
+
+	.card & {
+		margin-top: initial;
+		margin-bottom: initial;
+	}
 }
 
 blockquote {
@@ -7,4 +13,12 @@ blockquote {
 	font-style: italic;
 	font-size: 1.2em;
 	border-left: 2px solid $gray-lighter;
+}
+
+pre {
+	background-color: $gray-lightest;
+	padding: .75em 1em;
+	border-left: 3px solid $brand-primary;
+	max-height: 40vh;
+	overflow: scroll;
 }

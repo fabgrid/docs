@@ -1,3 +1,5 @@
+$sidebar-transition: .3s ease-out;
+
 #sidebar {
 	display: block;
 	position: fixed;
@@ -6,6 +8,7 @@
 	height: 100%;
 	width: $sidebar-width;
 	padding: $sidebar-padding;
+	z-index: 1000;
 
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -14,7 +17,7 @@
 	background-color: $gray-dark;
 	color: white;
 
-	transition: left .3s ease-out;
+	transition: left $sidebar-transition;
 
 	&.open {
 		left: 0;
@@ -68,10 +71,35 @@
 	top: 0;
 	left: 0;
 	font-size: 1.3em;
-	padding: .2em .5em;
+	padding: .05em .5em .2em .4em;
+	color: $brand-primary;
 	background-color: $gray-dark;
 	border: none;
-	color: $brand-primary;
 	margin: 0;
 	display: block;
+	border-bottom-right-radius: 50%;
+
+	transition: color $sidebar-transition;
+	transition: background-color $sidebar-transition;
+
+	&.open {
+		color: $gray-dark;
+		background-color: $brand-primary;
+	}
+}
+
+#sidebar-close {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: .5;
+	z-index: -1;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background-color: $gray-dark;
+
+	&.open {
+		display: block;
+	}
 }

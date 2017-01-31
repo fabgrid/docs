@@ -1,0 +1,56 @@
+<section class="lesson-meta">
+	<div class="card-deck">
+		{% if page.assignment != nil %}
+		<div class="card">
+			<div class="card-block">
+				<h4 class="card-title">Assignment</h4>
+				<p class="card-text">
+					{{ page.assignment }}
+				</p>
+			</div>
+		</div>
+		{% endif %}
+
+		{% if page.goal != nil %}
+		<div class="card">
+			<div class="card-block">
+				<h4 class="card-title">Personal Goal</h4>
+				<p class="card-text">
+					{{ page.goal }}
+				</p>
+			</div>
+		</div>
+		{% endif %}
+
+		{% assign notes_path = page.dir | append:"lecture-notes.md" %}
+		{% capture links %}
+		{% for element in site.pages %}
+			{% assign element_path = "/" | append:element.path %}
+			{% if element_path == notes_path %}
+				{% assign final_links = page.final_links | append:lecture_notes_link %}
+				<a href="{{ element.url }}">Lecture Notes <i class="fa fa-btn fa-sticky-note-o"></i></a>^
+			{% endif %}
+		{% endfor %}
+		{% for link in page.links %}
+				<a href="{{ link.url }}">{{ link.text }}</a>^
+		{% endfor %}
+		{% endcapture %}
+		{% assign links = links | split:'^' %}
+
+		{% if links.size > 1 %}
+		<div class="card">
+			<div class="card-block">
+				<h4 class="card-title">Further Resources</h4>
+			</div>
+			<ul class="links list-group list-group-flush">
+				{% for link in links %}
+					{% if forloop.last %}{% break %}{% endif %}
+					<li class="list-group-item">
+						{{ link }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+	</div>
+</section>

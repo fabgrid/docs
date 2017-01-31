@@ -1,8 +1,7 @@
 ---
 title: 'W2: CAD'
-layout: page
+layout: lesson
 previous: fabacademy/week-1/index.md
-next: fabacademy/week-3/index.md
 ---
 
 Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.

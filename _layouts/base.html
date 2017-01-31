@@ -13,8 +13,11 @@
 
 	</head>
 
-	<body>
-		<div id="app">
+	<body class="{{ page.layout }}">
+		<div class="container">
+
+			{% include sidebar.html %}
+
 
 			{{ content }}
 
