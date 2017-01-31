@@ -7,6 +7,12 @@ base_url: ''
 status: In Preparation
 status-color: info
 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - yarn.lock
+
 # TypeScript config
 tsc: /usr/local/bin/tsc
 js_dest: assets/js
