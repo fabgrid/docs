@@ -28,7 +28,7 @@
 			{% assign element_path = "/" | append:element.path %}
 			{% if element_path == notes_path %}
 				{% assign final_links = page.final_links | append:lecture_notes_link %}
-				<a href="{{ site.baseurl }}/{{ element.url }}">Lecture Notes <i class="fa fa-btn fa-sticky-note-o"></i></a>^
+				<a href="{{ site.baseurl }}{{ element.url }}">Lecture Notes <i class="fa fa-btn fa-sticky-note-o"></i></a>^
 			{% endif %}
 		{% endfor %}
 		{% for link in page.links %}

@@ -2,11 +2,11 @@
 	<div class="pagination">
 		{% if page.next %}
 			{% assign next_page = site.pages | where:"path",page.next | first %}
-			<a class="next" href="{{ site.baseurl }}/{{ next_page.url }}">{{ next_page.title }}</a>
+			<a class="next" href="{{ site.baseurl }}{{ next_page.url }}">{{ next_page.title }}</a>
 		{% endif %}
 		{% if page.previous %}
 			{% assign previous_page = site.pages | where:"path",page.previous | first %}
-			<a class="previous" href="{{ site.baseurl }}/{{ previous_page.url }}">{{ previous_page.title }}</a>
+			<a class="previous" href="{{ site.baseurl }}{{ previous_page.url }}">{{ previous_page.title }}</a>
 		{% endif %}
 	</div>
 {% endif %}
