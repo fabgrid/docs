@@ -22,6 +22,8 @@ We are encouraged to carefully document each step in order to ensure full reprod
 
 - [FabAcademy Schedule](http://fabacademy.org/class-schedule-2017)
 - [Class "Archive"](http://archive.fabacademy.org/archives/2017/master/)
+- Neils VNC: http://vnc.fabacademy.org/
+- http://docs.academany.org/
 
 ### Cheatsheets
 

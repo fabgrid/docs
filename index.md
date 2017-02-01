@@ -3,7 +3,6 @@ title: fabgrid
 layout: page
 ---
 
-
 <div class="row">
 	<div class="col-md-8">
 		<p><strong>Low-voltage DC power grid to supply today's devices with power at the voltage they need.</strong></p>
@@ -16,3 +15,33 @@ layout: page
 		<img src="{{ site.baseurl }}/assets/img/fabgrid-logo-dark.png" class="img-fluid">
 	</div>
 </div>
+
+## Structure
+
+### CPU (Central Power Unit)
+### Grid
+### Outlets
+### Monitoring
+
+## Challenges
+
+- Find the right tradeoff between price and power dissipation when calculating the cross section of the copper required for the grid
+- Protect connected devices from other devices accidentially causing power spikes
+- Ensure a smooth and stable DC signal
+- Make it easy to install
+
+## Roadmap
+
+1. Specification (Distances, voltages, max currents)
+2. Electrical Design
+	- Rough schematic of the entire system
+	- Schematic for a basic outlet
+3. Mechanical Design
+	- Conductor
+		- Geometry
+		- Joints
+		- Wall mounts
+	- Outlets
+		- Electric joints
+		- Case
+

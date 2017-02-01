@@ -1,10 +1,6 @@
 ---
-title: 'W2: CAD'
+title: 'W2: Computer Aided Design'
 layout: lesson
 previous: fabacademy/week-1/index.md
 ---
-
-Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
-
-Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
 
