@@ -8,7 +8,7 @@ previous: fabacademy/week-2/index.md
 
 ## Student Reviews:
 
-- Microphones far in the corners of a glass window can used to calculate the position of an interaction with the window based on the time the signal takes to reach each microphone. Piezo microphones work fine.
+- Microphones far in the corners of a glass window can be used to calculate the position of an interaction with the window based on the time the signal takes to reach each microphone. Piezo microphones work fine. @andy
 - [Tim Rolls](http://archive.fabacademy.org/archives/2017/makerlabs/students/384/about.html) does generative art, which interests me, i'll check it out…
 - There is material online on designing with cnc machines interactively
 - [Lucio Pentagna](http://archive.fabacademy.org/archives/2017/farmlabalgarve/students/290/project01.html) builds a vending machine - @andy
@@ -29,7 +29,5 @@ previous: fabacademy/week-2/index.md
 - Solidworks is good for big projects, meaning complex or many people working on
 - Onshape is a higher-end browser/cloud based 3D design software
 - Check antimony for its parametricity
-- Simulation Solidworks and Autodesk have simulation built-in
+- Simulation: Solidworks and Autodesk have simulation built-in
 - Antimony + OpenSCAD = [http://graphscad.blogspot.de/](http://graphscad.blogspot.de/)
-
-

@@ -1,5 +1,9 @@
 .lesson {
 	.lesson-meta .card {
 		background-color: $gray-lightest;
+
+		.card-text {
+			font-style: italic;
+		}
 	}
 }
