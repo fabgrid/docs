@@ -4,4 +4,4 @@
 ##
 
 jekyll build -d ../fabgrid.github.io/
-jekyll build --config _config.yml,_config-fabacademy.yml -d ../gitlab/students/260/
+jekyll build -b "http://archive.fabacademy.org/archives/2017/fablaberfindergarden/students/260" -d ../gitlab/students/260/

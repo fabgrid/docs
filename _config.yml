@@ -14,6 +14,7 @@ exclude:
   - yarn.lock
   - docs.gemspec
   - build.sh
+  - node_modules
 
 # TypeScript config
 tsc: /usr/local/bin/tsc
