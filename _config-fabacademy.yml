@@ -1,0 +1,7 @@
+---
+# This config file is to override settings for the fabacademy archives build.
+# Use it with `jekyll build --config _config.yml,_config-fabacademy.yml …` in
+# order to incorporate all parameters set in `_config.yml`
+# and override them with the values set in this file.
+
+baseurl: /2017/fablaberfindergarden/students/260
