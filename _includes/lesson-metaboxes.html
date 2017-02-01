@@ -3,7 +3,7 @@
 		{% if page.assignment != nil %}
 		<div class="card">
 			<div class="card-block">
-				<h4 class="card-title">Assignment</h4>
+				<h5 class="card-title">Assignment</h5>
 				<p class="card-text">
 					{{ page.assignment }}
 				</p>
@@ -14,7 +14,7 @@
 		{% if page.goal != nil %}
 		<div class="card">
 			<div class="card-block">
-				<h4 class="card-title">Personal Goal</h4>
+				<h5 class="card-title">Personal Goal</h5>
 				<p class="card-text">
 					{{ page.goal }}
 				</p>
@@ -40,7 +40,7 @@
 		{% if links.size > 1 %}
 		<div class="card">
 			<div class="card-block">
-				<h4 class="card-title">Further Resources</h4>
+				<h5 class="card-title">Further Resources</h5>
 			</div>
 			<ul class="links list-group list-group-flush">
 				{% for link in links %}
