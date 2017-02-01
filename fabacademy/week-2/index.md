@@ -7,3 +7,7 @@ layout: lesson
 previous: fabacademy/week-1/index.md
 ---
 
+## Table of Contents
+
+* TOC
+{:toc}
