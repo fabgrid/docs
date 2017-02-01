@@ -3,7 +3,7 @@
 	{% for item in site.data.menu %}
 		{% assign res = site.pages | where:"path",item.path | first %}
 		<li>
-			<a {% if page.url == res.url %}class="active"{% endif %} href="{{ res.url }}">
+			<a {% if page.url == res.url %}class="active"{% endif %} href="{{ site.baseurl }}/{{ res.url }}">
 				{{ item.title | default:res.title }}
 			</a>
 			{% if item.children %}
@@ -11,7 +11,7 @@
 					{% for subitem in item.children %}
 						{% assign subres = site.pages | where:"path",subitem.path | first %}
 						<li>
-							<a {% if page.url == subres.url %}class="active"{% endif %} href="{{ subres.url }}">
+							<a {% if page.url == subres.url %}class="active"{% endif %} href="{{ site.baseurl }}/{{ subres.url }}">
 								{{ subitemitem.title | default:subres.title }}
 							</a>
 						</li>

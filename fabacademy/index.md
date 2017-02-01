@@ -14,7 +14,7 @@ I will try to use each lesson to create a necessary part to my final project, th
 
 We are encouraged to carefully document each step in order to ensure full reproducibility of our work. Here is the documentation segmented by week/topic:
 
-- [Week 1: Principles and Practices, Project Management]({{ site.base_url }}/fabacademy/week-1)
+- [Week 1: Principles and Practices, Project Management]({{ site.baseurl }}/fabacademy/week-1)
 
 ## Resources
 

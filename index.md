@@ -13,6 +13,6 @@ layout: page
 		<p>Many devices that we use daily need a power adapter in order to operate on AC current at 110 or 230 V, as typically provided by the outlets installed in our houses. This project is meant to develop a system for creating a paralell, low-voltage DC-power grid with respect to the requirements and capabilities of a fablab. Yet, the system is intended to be used in homes and other professional enviroments equally.</p>
 	</div>
 	<div class="col-md-4">
-		<img src="{{ site.base_url }}/assets/img/fabgrid-logo-dark.png" class="img-fluid">
+		<img src="{{ site.baseurl }}/assets/img/fabgrid-logo-dark.png" class="img-fluid">
 	</div>
 </div>
