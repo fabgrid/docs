@@ -1,0 +1,20 @@
+
+img {
+	&.icon {
+		height: 1.3em;
+	}
+
+	&.constrain {
+		width: auto;
+		max-height: 50vh;
+		max-width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	&.shadow {
+	    margin: 5% auto;
+	    box-shadow: 0 1vh 2.2vh #999;
+	    max-width: 90%;
+	}
+}

@@ -16,6 +16,8 @@ next: fabacademy/week-2/index.md
 * TOC
 {:toc}
 
+---
+
 ## Notes on Jekyll
 
 In order to create a website that offers both good user experience *and* developer experience, i decided to build upon [jekyll](https://jekyllrb.com/).
@@ -91,6 +93,8 @@ Now all i need to do when creating a new page is to fill in that variables and i
 
 So there comes another advantage of this approach: Let's say i want to remove those boxes and display their contents in a table at the bottom of each page. With this setup, it's fairly easy. There is only one place to make the edits, no copies that need syncing.
 
+---
+
 ## Step-by-step Guide
 
 ### 1. Setup Jekyll
@@ -99,8 +103,8 @@ In order to start a new jekyll project, `jekyll new project_name` can be issued,
 
 {% endraw %}
 <div class="row">
-	<div class="col-sm-7"><img src="01-jekyll-initial-website.png" class="img-fluid img-thumbnail" /></div>
-	<div class="col-sm-4"><img src="02-jekyll-initial-files.png" class="img-fluid img-thumbnail" /></div>
+	<div class="col-sm-7"><img src="01-jekyll-initial-website.png" class="constrain shadow" /></div>
+	<div class="col-sm-4"><img src="02-jekyll-initial-files.png" class="constrain shadow" /></div>
 </div>
 {% raw %}
 
@@ -187,7 +191,7 @@ What this template says is basically "pass the content through to the base.html 
 So now let's make sure `jekyll serve` is running without errors, then open [http://127.0.0.1:4000](http://127.0.0.1:4000) again and see the result. This is what it should look like:
 
 {% endraw %}
-<img src="03-blank-theme.png" class="img-fluid img-thumbnail" />
+<img src="03-blank-theme.png" class="constrain shadow" />
 {% raw %}
 
 #### Including Twitter Bootstrap
@@ -308,13 +312,13 @@ What's left now is to include the `main.css` file in our the `<head>` section of
 After a page refresh, we should notice that the font has changed and a padding has been added to the content, which proves that we have set up bootstrap correctly:
 
 {% endraw %}
-<img src="04-blank-theme-with-bootstrap.png" class="img-fluid img-thumbnail" />
+<img src="04-blank-theme-with-bootstrap.png" class="constrain shadow" />
 {% raw %}
 
 At this point, our project should contain the following files and directories:
 
 {% endraw %}
-<img src="05-blank-theme-files.png" class="img-fluid img-thumbnail" />
+<img src="05-blank-theme-files.png" class="constrain shadow" />
 {% raw %}
 
 #### Using custom fonts
@@ -329,6 +333,8 @@ At this point, our project should contain the following files and directories:
 ### 3. Adding some content
 
 ### 4. Building the slide menu
+
+---
 
 ## Open Source tools used
 
