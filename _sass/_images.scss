@@ -14,7 +14,8 @@ img {
 
 	&.shadow {
 	    margin: 5% auto;
-	    box-shadow: 0 1vh 2.2vh #999;
+	    box-shadow: 0 1vh 3vh #999;
 	    max-width: 90%;
+	    border-radius: 2*$border-radius;
 	}
 }

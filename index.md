@@ -16,10 +16,14 @@ layout: page
 	</div>
 </div>
 
+---
+
 ## Structure
 
 ### CPU (Central Power Unit)
 ### Grid
+#### Distribution grid (flush- or wall-mounted)
+#### Access grid (wall-mounted)
 ### Outlets
 ### Monitoring
 

@@ -30,4 +30,4 @@ previous: fabacademy/week-2/index.md
 - Onshape is a higher-end browser/cloud based 3D design software
 - Check antimony for its parametricity
 - Simulation: Solidworks and Autodesk have simulation built-in
-- Antimony + OpenSCAD = [http://graphscad.blogspot.de/](http://graphscad.blogspot.de/)
+- Antimony + OpenSCAD ?= [http://graphscad.blogspot.de/](http://graphscad.blogspot.de/)
