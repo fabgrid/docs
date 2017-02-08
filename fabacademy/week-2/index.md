@@ -8,12 +8,15 @@ links:
 
 layout: lesson
 previous: fabacademy/week-1/index.md
+next: fabacademy/week-3/index.md
 ---
 
 ## Table of Contents
 
 * TOC
 {:toc}
+
+---
 
 ## 2D Overview
 
@@ -82,6 +85,8 @@ What's missing now are the routes for the access grid. They go vertically upward
 ### 4. Perform some calculations
 
 <div class="alert alert-warning">Initially, the plan was to build a tool that could calculate some useful statistics, such as the total length of wire required, based on an svg plan and some more parameters using the <code>SVGGeometryElement.getTotalLength()</code> method. As i will build a small prototype section before installing the entire grid, such a tool is of less importance right now, given my limited time. But i still like the idea and will hopefully come back to it later.</div>
+
+---
 
 ## 3D Components
 
