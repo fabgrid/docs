@@ -1,6 +1,7 @@
 ---
 title: About
 layout: page
+comments: false
 ---
 
 - Me: [https://jsph.pl/about-joseph-paul/](https://jsph.pl/about-joseph-paul/)
