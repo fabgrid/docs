@@ -6,7 +6,7 @@ links:
   - text: OpenSCAD User Manual
     url: https://en.wikibooks.org/wiki/OpenSCAD_User_Manual
   - text: Design Files
-  	url: https://github.com/fabgrid/design
+    url: https://github.com/fabgrid/design
 
 layout: lesson
 previous: fabacademy/week-1/index.md
