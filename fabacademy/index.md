@@ -27,8 +27,9 @@ We are encouraged to carefully document each step in order to ensure full reprod
 - Neils VNC: http://vnc.fabacademy.org/
 - http://docs.academany.org/
 
-### Cheatsheets
+### References
 
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [Rarely used GIT commands](https://jsph.pl/personal-git-cheatsheet/)
 - [OpenSCAD Cheatsheet](http://www.openscad.org/cheatsheet/)
+- [MathML Beginners Guide](http://danielscully.co.uk/projects/mathml-guide/)
