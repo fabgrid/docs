@@ -1,5 +1,5 @@
 ---
-title: 'W1: Principles and Practices, Project Management'
+title: 'W1: Principles and Practices'
 assignment: Build an html page describing your project. Use git for version control and for deployment to the fabacademy server.
 goal: I'm going to create a website about the fabgrid project. As a small challenge, i'll try to use Vue.js with TypeScript
 links:
