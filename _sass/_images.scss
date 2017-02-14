@@ -19,3 +19,10 @@ img {
 	    border-radius: 2*$border-radius;
 	}
 }
+
+iframe.constrain {
+	max-height: 50vh;
+	max-width: 100%;
+	display: block;
+	margin: 2em auto;
+}
