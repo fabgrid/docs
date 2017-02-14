@@ -1,9 +1,6 @@
 ---
-- title: Home
-  path: index.md
-
 - title: About
-  path: about/index.md
+  path: index.md
 
 - path: fabacademy/index.md
   children:

@@ -5,7 +5,7 @@ description: FabAcademy 2017 by Joseph Paul
 baseurl: ''
 comments: true
 
-status: In Preparation
+status: In Design
 status-color: info
 
 exclude:
@@ -16,6 +16,7 @@ exclude:
   - docs.gemspec
   - build.sh
   - node_modules
+  - drop-image.sh
 
 # TypeScript config
 tsc: /usr/local/bin/tsc
