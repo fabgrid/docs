@@ -1,6 +1,9 @@
 *.gem
 .bundle
 .sass-cache
-_site
+dist/*
+!dist/.gitkeep
 Gemfile.lock
 node_modules
+public
+src/assets/js/bundle.js

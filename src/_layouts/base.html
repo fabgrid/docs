@@ -14,7 +14,7 @@
 	</head>
 
 	<body class="{{ page.layout }}">
-		<div class="container">
+		<div class="container" id="app">
 
 			{% include sidebar.html %}
 
@@ -24,8 +24,16 @@
 		</div>
 	</body>
 
-	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/vue.min.js"></script>
-	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/main.js" async></script>
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/bundle.js" async></script>
 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
 	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
 </html>

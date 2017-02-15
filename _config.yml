@@ -1,4 +1,5 @@
 ---
+# Site config
 title: fabgrid
 subtitle: Low Voltage Power Grid
 description: FabAcademy 2017 by Joseph Paul
@@ -7,6 +8,10 @@ comments: true
 
 status: In Design
 status-color: info
+
+# Jekyll config
+destination: dist
+source: src
 
 exclude:
   - Gemfile
@@ -17,7 +22,3 @@ exclude:
   - build.sh
   - node_modules
   - drop-image.sh
-
-# TypeScript config
-tsc: /usr/local/bin/tsc
-js_dest: assets/js

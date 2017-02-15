@@ -1,19 +1,8 @@
-declare var Vue: any
+import Vue = require('vue')
+import Sidebar from './components/Sidebar'
 
-var sidebar = new Vue({
-	el: '#sidebar',
-
-	data() {
-		return {
-			menuOpen: false
-		}
-	},
-
-	methods: {
-		toggleMenu() {
-			this.menuOpen = !this.menuOpen
-		}
-	},
+var app = new Vue({
+	el: '#app',
 
 	created() {
 		console.log('                                 ')
@@ -23,5 +12,10 @@ var sidebar = new Vue({
 		console.log('/)            (/                 ')
 		console.log('`                                ')
 		console.log('    http://fabgrid.github.io     ')
-	}
+	},
+
+	components: {
+		Sidebar
+	},
+
 })
