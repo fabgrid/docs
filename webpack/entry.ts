@@ -12,7 +12,7 @@ var app = new Vue({
 		console.log('_/             _/_               ')
 		console.log('/)            (/                 ')
 		console.log('`                                ')
-		console.log('    http://fabgrid.github.io     ')
+		console.log('   http://bit.ly/fab17-joseph    ')
 	},
 
 	components: {
