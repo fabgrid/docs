@@ -11,4 +11,4 @@ This site is built using jekyll. In order to run jekyll locally, you have to per
 3. Clone this repo
 4. `bundle`
 5. `yarn install`
-6. `jekyll serve`
+6. `webpack --watch & jekyll serve`
