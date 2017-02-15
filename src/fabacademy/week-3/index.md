@@ -19,7 +19,13 @@ previous: fabacademy/week-2/index.md
 
 ## 1. Vinyl cutting
 
+Before i can use the Vinyl cutter (a *Silhouette Cameo* in our lab), i need to download and install the control software called [Silhouette Studio](https://www.silhouetteamerica.com/software#update).
 
+The design is simply gonna be the fabgrid logo as a vinyl sticker. I'll do it in Sketch, based on the already exising logo. A rectangular border is added so the sticker can later be easily removed from the rest of the vinyl.
+
+<img src="09-vinyl-design.png" class="constrain" />
+
+I was told that the free version of Silhouette Studio couldn't open svg files. But it can open dxf, so i'm gonna save it as dxf using an Inkscape, tracing the outlines of all paths in the process.
 
 ---
 

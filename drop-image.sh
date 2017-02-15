@@ -4,7 +4,7 @@
 # Import an image and resize it.
 ################################################################################
 
-DEFAULT_BASE="fabacademy"
+DEFAULT_BASE="src/fabacademy"
 DEFAULT_MAXSIZE=1200
 DEFAULT_QUALITY=85
 
@@ -86,7 +86,7 @@ quality=${quality:-$DEFAULT_QUALITY}
 
 
 ## Perform copy/conversion
-$CONVERT_BIN $source -resize $max_sizex$max_size\> -quality $quality $target_path
+$CONVERT_BIN "$source" -resize $max_sizex$max_size\> -quality $quality "$target_path"
 if [ ! $? -eq 0 ]; then
 	exit 1
 fi
@@ -101,10 +101,10 @@ delete=${delete:-$DEFAULT_DELETE}
 
 if [ "$delete" == "y" ] || [ "$delete" == "yes" ] || [ "$delete" == "Y" ]; then
 	if [ -z "$TRASH_PATH" ]; then
-		rm $source
+		rm "$source"
 		echo "File deleted."
 	else
-		mv $source $TRASH_PATH
+		mv "$source" "$TRASH_PATH"
 		echo "File moved to trash"
 	fi
 fi
