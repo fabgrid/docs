@@ -2,7 +2,8 @@ import Vue = require('vue')
 import Sidebar from './components/Sidebar'
 
 var app = new Vue({
-	el: '#app',
+
+	delimiters: ['${', '}'],
 
 	created() {
 		console.log('                                 ')
@@ -18,4 +19,4 @@ var app = new Vue({
 		Sidebar
 	},
 
-})
+}).$mount('#app')

@@ -64,16 +64,13 @@ At the very top, it says `layout: base`, which indicates to use in turn another 
 
 The `{{ content }}` placeholder in the above template is where the actual text body of the page is going to be placed. It is very common in templating engines to use double curly braces `{{ }}` to indicate placeholders. At `{{ page.title }}`, the value of the `title` variable of the current page is going to be inserted. The variable is defined in the corresponding markdown files. Of course, an arbitrary number of markdown (or html) files can use the same template. An example:
 
-```markdown
----
+<div class="language-html highlighter-rouge"><pre class="highlight" v-pre><code>---
 title: 'W1: Principles and Practices, Project Management'
 layout: lesson
 ---
 
 - This text is going to appear as html where the {{ content }} placeholder is in the template
-- This markdown list will be converted to an <ul>
-
-```
+- This markdown list will be converted to a &lt;ul&gt;</code></pre></div>
 
 In the top section between the triple dashes `---` we use the [yaml](http://yaml.org/) language to define some variables. We define a *title*, which will be accessible in the template as `{{ page.title }}`, and a *layout*. The layout declares which template to use. In this case, it's the *lesson* template, which refers to the `lesson.html` file shown above. We can make up variables as we need them, there are virtually no limits.
 
@@ -102,10 +99,12 @@ So there comes another advantage of this approach: Let's say i want to remove th
 In order to start a new jekyll project, `jekyll new project_name` can be issued, assuming that the [jekyll gem is installed](https://jekyllrb.com/docs/installation/), of course. This gives you a fairly basic website, which you can see after running `jekyll serve` from the project folder and visiting [http://127.0.0.1:4000](http://127.0.0.1:4000) in a browser. It should look something like this:
 
 {% endraw %}
+
 <div class="row">
 	<div class="col-sm-7"><img src="01-jekyll-initial-website.png" class="constrain shadow" /></div>
 	<div class="col-sm-4"><img src="02-jekyll-initial-files.png" class="constrain shadow" /></div>
 </div>
+
 {% raw %}
 
 This default setup contains three pages:
@@ -191,7 +190,9 @@ What this template says is basically "pass the content through to the base.html 
 So now let's make sure `jekyll serve` is running without errors, then open [http://127.0.0.1:4000](http://127.0.0.1:4000) again and see the result. This is what it should look like:
 
 {% endraw %}
+
 <img src="03-blank-theme.png" class="constrain shadow" />
+
 {% raw %}
 
 #### Including Twitter Bootstrap
@@ -312,13 +313,17 @@ What's left now is to include the `main.css` file in our the `<head>` section of
 After a page refresh, we should notice that the font has changed and a padding has been added to the content, which proves that we have set up bootstrap correctly:
 
 {% endraw %}
+
 <img src="04-blank-theme-with-bootstrap.png" class="constrain shadow" />
+
 {% raw %}
 
 At this point, our project should contain the following files and directories:
 
 {% endraw %}
+
 <img src="05-blank-theme-files.png" class="constrain shadow" />
+
 {% raw %}
 
 #### Using custom fonts
@@ -351,4 +356,6 @@ So here's the list:
 - Tom Preston-Werner's syntax.css
 
 Of course, countless other open source projects are less directly involved, such as GIT, the Javascript, Ruby or C languages or the Linux kernel or GNU toolsuite, to name just some very popular examples.
+
 {% endraw %}
+
