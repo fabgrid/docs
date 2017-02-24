@@ -19,3 +19,4 @@ We are encouraged to carefully document each step in order to ensure full reprod
 - [Week 1: Principles and Practices, Project Management]({{ site.baseurl }}/fabacademy/week-1)
 - [Week 2: Computer Aided Design]({{ site.baseurl }}/fabacademy/week-2)
 - [Week 3: Computer-Controlled Cutting]({{ site.baseurl }}/fabacademy/week-3)
+- [Week 4: Electronics Production]({{ site.baseurl }}/fabacademy/week-4)

@@ -8,6 +8,7 @@ links:
 
 layout: lesson
 previous: fabacademy/week-2/index.md
+next: fabacademy/week-4/index.md
 ---
 
 ## Table of Contents

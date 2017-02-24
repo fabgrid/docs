@@ -12,7 +12,7 @@
 						{% assign subres = site.pages | where:"path",subitem.path | first %}
 						<li>
 							<a {% if page.url == subres.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ subres.url }}">
-								{{ subitemitem.title | default:subres.title }}
+								{{ subitem.title | default:subres.title }}
 							</a>
 						</li>
 					{% endfor %}

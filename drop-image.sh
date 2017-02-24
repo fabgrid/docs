@@ -24,6 +24,12 @@ elif [ -d "$HOME/.Trash" ]; then
 	TRASH_PATH="$HOME/.Trash/"
 fi
 
+## Check if pbcopy exists
+if [ -x "$(which pbcopy)" ] ; then
+	PBCOPY_EXISTS=true
+else
+	PBCOPY_EXISTS=false
+fi
 
 ## Gather info on source file
 source=$1
@@ -107,6 +113,12 @@ if [ "$delete" == "y" ] || [ "$delete" == "yes" ] || [ "$delete" == "Y" ]; then
 		mv "$source" "$TRASH_PATH"
 		echo "File moved to trash"
 	fi
+fi
+
+## Copy path to clipboard?
+if [ $PBCOPY_EXISTS ]; then
+	echo -n "$filename"|pbcopy
+	echo "Filename copied to clipboard: $filename"
 fi
 
 exit 0
