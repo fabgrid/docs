@@ -31,3 +31,23 @@ pre {
 img.icon {
 	height: 1.3em;
 }
+
+table {
+	tr {
+		td, th {
+			padding: .2rem 1rem;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+
+	thead tr {
+		border-bottom: 1px solid $gray-lighter;
+	}
+}

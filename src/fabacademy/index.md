@@ -16,7 +16,10 @@ I will try to use each lesson to create a necessary part to my final project, th
 
 We are encouraged to carefully document each step in order to ensure full reproducibility of our work. Here is the documentation segmented by week/topic:
 
-- [Week 1: Principles and Practices, Project Management]({{ site.baseurl }}/fabacademy/week-1)
-- [Week 2: Computer Aided Design]({{ site.baseurl }}/fabacademy/week-2)
-- [Week 3: Computer-Controlled Cutting]({{ site.baseurl }}/fabacademy/week-3)
-- [Week 4: Electronics Production]({{ site.baseurl }}/fabacademy/week-4)
+- [Week 1: Principles and Practices, Project Management]({{ site.baseurl }}/fabacademy/week-1/)
+- [Week 2: Computer Aided Design]({{ site.baseurl }}/fabacademy/week-2/)
+- [Week 3: Computer-Controlled Cutting]({{ site.baseurl }}/fabacademy/week-3/)
+- [Week 4: Electronics Production]({{ site.baseurl }}/fabacademy/week-4/)
+- [Week 5: 3D Printing and Scanning]({{ site.baseurl }}/fabacademy/week-5/)
+- [Week 6: Electronics Design]({{ site.baseurl }}/fabacademy/week-6/)
+- [Week 7: Computer Machining]({{ site.baseurl }}/fabacademy/week-7/)

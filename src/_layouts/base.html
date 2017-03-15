@@ -18,14 +18,13 @@
 
 			{% include sidebar.html %}
 
-
 			{{ content }}
 
 		</div>
 	</body>
 
-	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/bundle.js" async></script>
-	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
 	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
 	<script>
 		(function() {
@@ -35,5 +34,7 @@
 			(d.head || d.body).appendChild(s);
 		})();
 	</script>
+
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/bundle.js" async></script>
 	<noscript>Please enable JavaScript to view the comments.</noscript>
 </html>

@@ -6,10 +6,17 @@
   "author": "Joseph Paul <joseph@sehrgute.software>",
   "license": "MIT",
   "dependencies": {
+    "av-ts": "^0.6.3",
     "bootstrap": "4.0.0-alpha.5",
+    "css-loader": "^0.26.2",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.2",
+    "throttle-debounce": "^1.0.1",
     "ts-loader": "^2.0.0",
     "typescript": "^2.1.6",
     "vue": "^2.1.10",
-    "vue-class-component": "^4.4.0"
+    "vue-loader": "^11.1.2",
+    "vue-template-compiler": "^2.1.10",
+    "vue-ts-loader": "^0.0.3"
   }
 }

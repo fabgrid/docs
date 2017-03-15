@@ -1,10 +1,10 @@
 import Vue = require('vue')
-import Component from 'vue-class-component'
+import { Component } from 'av-ts'
 
 
 // The @Component decorator indicates the class is a Vue component
 @Component({})
-export default class MyComponent extends Vue {
+export default class Sidebar extends Vue {
 
 	menuOpen: boolean = false
 

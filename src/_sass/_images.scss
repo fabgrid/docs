@@ -12,6 +12,11 @@ img {
 		margin: 0 auto;
 	}
 
+	&.small {
+		max-height: 30vh;
+		max-width: 70%;
+	}
+
 	&.shadow {
 	    margin: 5% auto;
 	    box-shadow: 0 1vh 3vh #999;
