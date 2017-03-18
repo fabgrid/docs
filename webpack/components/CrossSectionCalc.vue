@@ -121,7 +121,7 @@
 <script>
 import Vue = require('vue')
 import { debounce } from 'throttle-debounce'
-import { Component, Lifecycle, Watch } from 'av-ts'
+import { Component, Watch } from 'av-ts'
 
 declare var MathJax: any
 

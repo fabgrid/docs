@@ -1,7 +1,8 @@
 import Vue = require('vue')
 
 import Sidebar from './components/Sidebar'
-import CrossSectionCalc from './components/CrossSectionCalc.vue'
+import Zoom from './components/Zoom'
+import CrossSectionCalc from './components/CrossSectionCalc'
 
 var app = new Vue({
 
@@ -18,8 +19,9 @@ var app = new Vue({
 	},
 
 	components: {
-		Sidebar,
-		CrossSectionCalc
+		'sidebar': Sidebar,
+		'zoom': Zoom,
+		'cross-section-calc': CrossSectionCalc,
 	},
 
 }).$mount('#app')
