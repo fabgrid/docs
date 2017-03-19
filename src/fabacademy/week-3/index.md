@@ -24,7 +24,7 @@ Before i can use the Vinyl cutter (a *Silhouette Cameo* in our lab), i need to d
 
 The design is simply gonna be the fabgrid logo as a vinyl sticker. I'll do it in Sketch, based on the already exising logo. A rectangular border is added so the sticker can later be easily removed from the rest of the vinyl.
 
-<img src="09-vinyl-design.png" class="constrain" />
+<zoom src="09-vinyl-design.png"></zoom>
 
 I was told that the free version of Silhouette Studio couldn't open svg files. But it can open dxf, so i'm gonna save it as dxf using an Inkscape, tracing the outlines of all paths in the process.
 
@@ -123,7 +123,7 @@ FN = 100; //N_SLOTS*2;
 The full source code can be found under the link at the top of this page (#Further Resources
 ). Above settings yield a part that looks like so:
 
-<img src="01-openscad-kit.png" class="constrain" />
+<zoom src="01-openscad-kit.png"></zoom>
 
 ### Measuring the kerf
 
@@ -138,15 +138,15 @@ Before we can cut the first sample of our model, we need to measure the kerf of 
 
 This is the template:
 
-<img src="kerf-probe.svg" class="constrain shadow" />
+<img src="kerf-probe.svg" class="constrain shadow">
 
 I cut it on 2.9mm plywood, then use tape to hold everything together while taking it out of the cutter.
 
-<img src="03-cutter-tape.jpg" class="constrain shadow" />
+<zoom src="03-cutter-tape.jpg" shadow="true"></zoom>
 
 Three measurements are taken and averaged:
 
-<img src="04-measuring.jpg" class="constrain shadow" />
+<zoom src="04-measuring.jpg" shadow="true"></zoom>
 
 <math display="block">
 	<mrow>
@@ -173,12 +173,12 @@ I made another attempt (`power 100, speed 75`), which was *almost good*, but the
 This time i find the parts popping out well, so we can now start looking at and fine-tuning the fit of our joints. Looks like it'a bit too wide - the parts slip off each other easily. I add a clearance of <math><mrow><mo>-</mo></mrow><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>20</mn></mrow></mfrac></mrow><mrow><mi>mm</mi></mrow></math>. The resulting parts fit just right. Nice level of friction. I'll cut a couple of them with the same settings and see what i can build…
 
 <div class="row">
-	<div class="col-sm"><img src="05-visicut.png" class="constrain" /></div>
-	<div class="col-sm"><img src="06-more-parts.jpg" class="constrain shadow" /></div>
+	<div class="col-sm"><zoom src="05-visicut.png"></zoom></div>
+	<div class="col-sm"><zoom src="06-more-parts.jpg" shadow="true"></zoom></div>
 </div>
 <div class="row">
-	<div class="col-sm"><img src="07-triangles.jpg" class="constrain shadow" /></div>
-	<div class="col-sm"><img src="08-hexagon.jpg" class="constrain shadow" /></div>
+	<div class="col-sm"><zoom src="07-triangles.jpg" shadow="true"></zoom></div>
+	<div class="col-sm"><zoom src="08-hexagon.jpg" shadow="true"></zoom></div>
 </div>
 
 Pretty basic stuff so far and it takes lots of parts to build bigger structures. Should add bigger disks or elongated parts. Also, playing with the angle/number of slots would be interesting. Multiples of 4 as slots count would make it easy to create rectangular structures. Currently, with 6 slots, we're bound to 60° steps…

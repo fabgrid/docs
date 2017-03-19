@@ -35,10 +35,10 @@ The scan is a bit skewed so our first task is to transform it in GIMP. We want t
 
 <div class="row">
 	<div class="col-sm-6">
-		<img src="02-gimp-screenshot-1.png" class="constrain shadow" />
+		<zoom src="02-gimp-screenshot-1.png" shadow="true"></zoom>
 	</div>
 	<div class="col-sm-6">
-		<img src="03-gimp-screenshot-2.png" class="constrain shadow" />
+		<zoom src="03-gimp-screenshot-2.png" shadow="true"></zoom>
 	</div>
 </div>
 
@@ -46,19 +46,19 @@ Now, export that file as `png`. The `jpeg` format is not recommended here, as th
 
 I prefer to vectorize this file manually for the cleaner svg output and as a further "filter" to smoothen out the imprecision of the scan. We could use Inkscape here, but for this simple task, [Sketch](https://www.sketchapp.com/) is totally fine and a bit easier to operate. So i start by adding my aligned png drawing as a layer in a blank Sketch file. Again, i add some guides to help me with the manual tracing.
 
-<img src="04-sketch-guides.png" class="constrain" />
+<zoom src="04-sketch-guides.png"></zoom>
 
 After that, i start drawing the outer shape of the relevant area in my plan as a <img alt="Vector" src="05-sketch-vector-tool.png" class="icon"/> . Then i subtract the interior walls from that. Pretty simple if everything is straight.
 
-<img src="06-sketch-interior.png" class="constrain" />
+<zoom src="06-sketch-interior.png"></zoom>
 
 Finally, i need to take note of the scale. To achieve this, i draw a vector that has a known length in my plan, for example the `3.02m` at the bottom of the drawing. Then, i divide the length of that vector by our known 3.02, which gives me a line that represents exactly one meter in our original plan. Label
 
-<img src="07-sketch-scale.png" class="constrain" />
+<zoom src="07-sketch-scale.png"></zoom>
 
 Last thing i do is hide the background layer, resize the artboard and add a description. Done with the plan so far, now let's add our components to it!
 
-<img src="08-sketch-ground-plan.png" class="constrain" />
+<zoom src="08-sketch-ground-plan.png"></zoom>
 
 <div class="alert alert-warning">
 	<strong>What i could have done better:</strong> Measure the scale first and resize the drawing before vectorization so that for example <code>1px = 1cm</code>. This way, i could have used all measures stated on the scan to create an exact plan in easy-to-convert units. Realized too late, not necessary for now, lesson for next time…
@@ -72,7 +72,7 @@ The red triangle <img alt="triangle" src="09-outlet-symbol.png" class="icon"/> i
 
 The outlets are all placed in a common group called `Outlets`, which should also facilitate automated processing or evaluation.
 
-<img src="10-sketch-outlets.png" class="constrain" />
+<zoom src="10-sketch-outlets.png"></zoom>
 
 ### 3. Place CPU and routes
 
@@ -80,7 +80,7 @@ The outlets are all placed in a common group called `Outlets`, which should also
 
 *Distribution grid* means wires at the ceiling, whose task is to distribute the power across the room to where it's needed – in contrast to the *Access grid*, which is a set of blank, vertically wall-mount copper strips where our DC can be tapped anywhere over the entire length.
 
-<img src="00-installation.svg" class="constrain shadow" />
+<img src="00-installation.svg" class="constrain shadow">
 
 What's missing now are the routes for the access grid. They go vertically upwards from each outlet to the respective end of the distribution grid - so they're pretty difficult to depict in our 2D top view. Let's go 3D!
 
@@ -116,11 +116,11 @@ The `current` argument to the `ConductorProfile` module is there to allow the co
 
 As i currently imagine it, the first version will be made out of copper sheet metal, bent into an L-shape. Here's what the cross section looks like in openSCAD:
 
-<img src="11-scad-l-profile.png" class="constrain" />
+<zoom src="11-scad-l-profile.png"></zoom>
 
 In a different file, i defined a helper module, to extrude any conductor profile into a 3D-shape, and another module that renders a series of them next to each other:
 
-<img src="12-scad-conductor-3d.png" class="constrain" />
+<zoom src="12-scad-conductor-3d.png"></zoom>
 
 ### 2. Acces Grid: Wall Mounts
 
@@ -132,11 +132,11 @@ The API for that is quite simple: Again, we need an openSCAD file providing a si
 
 And here's a first design draft:
 
-<img src="13-scad-laser-wallmount.png" class="constrain" />
+<zoom src="13-scad-laser-wallmount.png"></zoom>
 
 This model is just a draft, lacking the fitted joints. But it's already fully parametric and adapts to my conductors config. Shound i decide to use now 6 round wires, instead of 4 L-shaped ones, it automatically adapts:
 
-<img src="14-scad-laser-wallmount-variant.png" class="constrain" />
+<zoom src="14-scad-laser-wallmount-variant.png"></zoom>
 
 #### Optimizations
 

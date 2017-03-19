@@ -101,8 +101,12 @@ In order to start a new jekyll project, `jekyll new project_name` can be issued,
 {% endraw %}
 
 <div class="row">
-	<div class="col-sm-7"><img src="01-jekyll-initial-website.png" class="constrain shadow" /></div>
-	<div class="col-sm-4"><img src="02-jekyll-initial-files.png" class="constrain shadow" /></div>
+	<div class="col-sm-7">
+		<zoom src="01-jekyll-initial-website.png" shadow="true"></zoom>
+	</div>
+	<div class="col-sm-4">
+		<zoom src="02-jekyll-initial-files.png" shadow="true"></zoom>
+	</div>
 </div>
 
 {% raw %}
@@ -191,7 +195,7 @@ So now let's make sure `jekyll serve` is running without errors, then open [http
 
 {% endraw %}
 
-<img src="03-blank-theme.png" class="constrain shadow" />
+<zoom src="03-blank-theme.png" shadow="true"></zoom>
 
 {% raw %}
 
@@ -314,7 +318,7 @@ After a page refresh, we should notice that the font has changed and a padding h
 
 {% endraw %}
 
-<img src="04-blank-theme-with-bootstrap.png" class="constrain shadow" />
+<zoom src="04-blank-theme-with-bootstrap.png" shadow="true"></zoom>
 
 {% raw %}
 
@@ -322,7 +326,7 @@ At this point, our project should contain the following files and directories:
 
 {% endraw %}
 
-<img src="05-blank-theme-files.png" class="constrain shadow" />
+<zoom src="05-blank-theme-files.png" shadow="true"></zoom>
 
 {% raw %}
 

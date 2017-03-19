@@ -8,6 +8,7 @@ links:
 
 layout: lesson
 previous: fabacademy/week-3/index.md
+next: fabacademy/week-5/index.md
 ---
 
 ## Table of Contents
@@ -36,12 +37,10 @@ First, the traces need to be milled. Mod provides a preset for PCB traces with a
 
 <div class="row">
 	<div class="col-sm">
-		<img src="02-mod-traces.png" class="constrain" />
-		<span class="img-caption">Processing the traces using fabmodules</span>
+		<zoom src="02-mod-traces.png" caption="Processing the traces using fabmodules"></zoom>
 	</div>
 	<div class="col-sm">
-		<img src="03-otherplan-traces.png" class="constrain" />
-		<span class="img-caption">GCode opened in Otherplan, ready to mill…</span>
+		<zoom src="03-otherplan-traces.png" caption="GCode opened in Otherplan, ready to mill…"></zoom>
 	</div>
 </div>
 
@@ -62,10 +61,10 @@ After all settings in Otherplan are ensured to be correct, we stick the raw PCB 
 
 <div class="row">
 	<div class="col-sm">
-		<img src="04-pcb-tape.jpg" class="constrain shadow">
+		<zoom src="04-pcb-tape.jpg" shadow="true"></zoom>
 	</div>
 	<div class="col-sm">
-		<img src="05-pcb-inserted.jpg" class="constrain shadow">
+		<zoom src="05-pcb-inserted.jpg" shadow="true"></zoom>
 	</div>
 </div>
 
@@ -75,7 +74,7 @@ This time the traces come out nicely:
 
 <div class="row">
 	<div class="col-sm">
-		<img src="06-traces-done.jpg" class="constrain shadow">
+		<zoom src="06-traces-done.jpg" shadow="true"></zoom>
 	</div>
 	<div class="col-sm">
 		<iframe class="constrain" width="560" height="315" src="https://www.youtube.com/embed/kywhPTGDRKE" frameborder="0" allowfullscreen></iframe>
@@ -103,7 +102,7 @@ An here's how it looks:
 - Carefully remove the board with a knife or sharp screwdriver
 - Clean board with water and soap or alcohol
 
-<img src="07-finished-pcb.jpg" class="constrain shadow" />
+<zoom src="07-finished-pcb.jpg" shadow="true"></zoom>
 
 ## Collecting the components
 
@@ -113,7 +112,7 @@ An here's how it looks:
 - Have only one 3v3 zener, salvage another board…
 - LEDs: yellow and blue instead of green and red - resistors should still match approximately
 
-<img src="08-components-sheet.jpg" class="constrain shadow" />
+<zoom src="08-components-sheet.jpg" shadow="true"></zoom>
 
 ## Solder
 
@@ -130,7 +129,7 @@ Then, for each component:
 
 I first did the resistors, z-diodes and the capacitor next to the USB plug, then the LEDs and their series resistors, then the ATTiny and finally the ISP header. Everything was easily accessible to solder.
 
-<img src="09-soldered-pcb.jpg" class="constrain shadow" />
+<zoom src="09-soldered-pcb.jpg" shadow="true"></zoom>
 
 ## Check Board
 
@@ -164,12 +163,10 @@ Now we do a few checks before we power up the board for the first time.
 
 <div class="row">
 	<div class="col-sm">
-		<img src="10-isp-cable.jpg" class="constrain shadow" />
-		<span class="img-caption">Pin 1 is top left</span>
+		<zoom src="10-isp-cable.jpg" shadow="true" caption="Pin 1 is top left"></zoom>
 	</div>
 	<div class="col-sm">
-		<img src="11-sysinfo.png" class="constrain" />
-		<span class="img-caption">Make sure USBtinySPI is there!</span>
+		<zoom src="11-sysinfo.png" caption="Make sure USBtinySPI is there!"></zoom>
 	</div>
 </div>
 
@@ -178,7 +175,7 @@ Now we do a few checks before we power up the board for the first time.
 - We need to ensure proper contact of the USB plug – the PCB itself is too thin
 - Cut out the shape from an old credit card or something and glue it to the bottom of the board
 
-<img src="12-extra-thickness.jpg" class="constrain shadow" />
+<zoom src="12-extra-thickness.jpg" shadow="true"></zoom>
 
 ## Program something!
 

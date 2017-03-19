@@ -55,12 +55,10 @@ The correct center of the circle is on a 45° diagonal, offset by the radius fro
 
 <div class="row">
 	<div class="col-sm-6">
-		<img src="02-fillets-mickey-mouse.png" class="constrain" alt="bad mickey mouse fillets" />
-		<span class="img-caption">Wrong placed "<strong>Mickey Mouse</strong>" fillets</span>
+		<zoom src="02-fillets-mickey-mouse.png" alt="bad mickey mouse fillets" caption="Wrong placed »<strong>Mickey Mouse</strong>« fillets"></zoom>
 	</div>
 	<div class="col-sm-6">
-		<img src="03-fillets-dog-bone.png" class="constrain" alt="calculating dogbone fillets positions" />
-		<span class="img-caption">Well placed, <strong>actual dog bone</strong> fillets</span>
+		<zoom src="03-fillets-dog-bone.png" alt="calculating dogbone fillets positions" caption="Well placed, <strong>actual dog bone</strong> fillets"></zoom>
 	</div>
 </div>
 
@@ -103,8 +101,7 @@ $fn = 50;                   // Number of circle segments. Set this to ≥50 for 
 
 Make a visual check of the assembled model to see if everything is there and in the right place. Also check if all holes for the joints are present. Set `FLAT = false;` and refresh the OpenSCAD *Preview*, then pan/rotate around with the mouse to inspect everything.
 
-<img src="04-design-screenshot-openscad.png" class="constrain" alt="jsphpl/standesk OpenSCAD design" />
-<span class="img-caption">"Assembled" view of the final design</span>
+<zoom src="04-design-screenshot-openscad.png" alt="jsphpl/standesk OpenSCAD design" caption='"Assembled" view of the final design'></zoom>
 
 #### 2. Flat
 
@@ -116,8 +113,7 @@ PROJECTION = false;
 ```
 Again, refresh the preview. **Check if everything fits inside the gray box**, which represents your stock panel minus the safety margins (values entered for `STOCK_WIDTH` and `STOCK_LENGTH`).
 
-<img src="05-design-screenshot-flat.png" class="constrain" alt="Flat view of the jshpl/standesk design" />
-<span class="img-caption">"Flat" view – all parts packed into a single board (gray)</span>
+<zoom src="05-design-screenshot-flat.png" alt="Flat view of the jshpl/standesk design" caption='"Flat" view – all parts packed into a single board (gray)'></zoom>
 
 ### Render & Export
 
@@ -125,7 +121,7 @@ When all checks have passed, we switch both `FLAT` and `PROJECTION` variables to
 
 At the end of the process, we get our exact 2D outlines which we'll export to DXF format.
 
-<img src="06-openscad-export.png" class="constrain shadow">
+<zoom src="06-openscad-export.png" shadow="true"></zoom>
 
 ### CAM Preprocessing
 
@@ -137,7 +133,7 @@ Our task is to group together all paths that need to be processed using the same
 
 **2. Select everything (CMD+A) and `join` all segments in order to close paths**
 
-<img src="07-rhino-close-paths.png" class="constrain" />
+<zoom src="07-rhino-close-paths.png"></zoom>
 
 **3. Create four different layers and move the respective elements there. Assign each layer a distinct color.**
 
@@ -146,7 +142,7 @@ Our task is to group together all paths that need to be processed using the same
 - Inside cut: Main
 - Outside cut: Main
 
-<img src="08-rhino-layers.png" class="constrain" />
+<zoom src="08-rhino-layers.png"></zoom>
 
 **4. Export to DXF with the `R12 Lines & Arcs` scheme**
 
@@ -165,8 +161,12 @@ When the machine is set up, we mill a test joint in order check and adjust for t
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZpRVwqPG5-I" frameborder="0" allowfullscreen class="constrain"></iframe>
 
 <div class="row">
-	<div class="col-sm-6"><img src="10-joint-test-1.jpg" class="constrain shadow" /></div>
-	<div class="col-sm-6"><img src="11-joint-test-2.jpg" class="constrain shadow" /></div>
+	<div class="col-sm-6">
+		<zoom src="10-joint-test-1.jpg" shadow="true"></zoom>
+	</div>
+	<div class="col-sm-6">
+		<zoom src="11-joint-test-2.jpg" shadow="true"></zoom>
+	</div>
 </div>
 
 The joint looks great, it just fits a tiny bit too tightly. But the error is so small, we're gonna leave if for now. Later I find out that i have to sand each joint in order to make them slip a bit easier.
@@ -176,61 +176,62 @@ The joint looks great, it just fits a tiny bit too tightly. But the error is so 
 Now that the joint looks good, we can run the two remaining jobs for the actual *Outside* and *Inside Cuts*. Instead of showing you another boring video, you'll just get a snapshot of the result. Search youtube for "cnc milling wood" if you want to watch machines at work.
 
 <div class="row">
-	<div class="col-sm-6"><img src="12-cutting-almost-done.jpg" class="constrain shadow" /></div>
-	<div class="col-sm-6"><img src="13-cutting-done.jpg" class="constrain shadow" /></div>
+	<div class="col-sm-6">
+		<zoom src="12-cutting-almost-done.jpg" shadow="true"></zoom>
+	</div>
+	<div class="col-sm-6">
+		<zoom src="13-cutting-done.jpg" shadow="true"></zoom>
+	</div>
 </div>
 
 ### Finishing
 
 After the cutting we notice that our parts have fringed edges. This is especially obvious for cuts perpendicular to the grain of the top wood layer. Cuts that went parallel to the grain look quite smooth:
 
-<img src="14-fizzy-edges.jpg" class="constrain shadow" />
+<zoom src="14-fizzy-edges.jpg" shadow="true"></zoom>
 
 We use sand paper to clean all edges on all our parts:
 
 <div class="row">
 	<div class="col-sm-4">
-		<img src="15-sanding-before.jpg" class="constrain shadow" />
-		<span class="img-caption">Before sanding</span>
+		<zoom src="15-sanding-before.jpg" shadow="true" caption="Before sanding"></zoom>
 	</div>
 	<div class="col-sm-4">
-		<img src="16-sanding-after.jpg" class="constrain shadow" />
-		<span class="img-caption">After sanding</span>
+		<zoom src="16-sanding-after.jpg" shadow="true" caption="After sanding"></zoom>
 	</div>
 	<div class="col-sm-4">
-		<img src="17-sanding.jpg" class="constrain shadow" />
-		<span class="img-caption">Also the tiny parts ;)</span>
+		<zoom src="17-sanding.jpg" shadow="true" caption="Also the tiny parts ;)"></zoom>
 	</div>
 </div>
 
 
 ## Assembly
 
-<img src="18-assembly-0.jpg" class="constrain shadow" />
+<zoom src="18-assembly-0.jpg" shadow="true"></zoom>
 
 <div class="row">
 	<div class="col-sm-6">
-		<img src="19-assembly-1.jpg" class="constrain shadow" />
+		<zoom src="19-assembly-1.jpg" shadow="true"></zoom>
 	</div>
 	<div class="col-sm-6">
-		<img src="20-assembly-2.jpg" class="constrain shadow" />
+		<zoom src="20-assembly-2.jpg" shadow="true"></zoom>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-sm-6">
-		<img src="21-assembly-3.jpg" class="constrain shadow" />
+		<zoom src="21-assembly-3.jpg" shadow="true"></zoom>
 	</div>
 	<div class="col-sm-6">
-		<img src="22-assembly-4.jpg" class="constrain shadow" />
+		<zoom src="22-assembly-4.jpg" shadow="true"></zoom>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-sm-6">
-		<img src="23-assembly-5.jpg" class="constrain shadow" />
+		<zoom src="23-assembly-5.jpg" shadow="true"></zoom>
 	</div>
 	<div class="col-sm-6">
-		<img src="24-finished-outside.jpg" class="constrain shadow" />
+		<zoom src="24-finished-outside.jpg" shadow="true"></zoom>
 	</div>
 </div>

@@ -16,13 +16,14 @@ img {
 		max-height: 30vh;
 		max-width: 70%;
 	}
+}
 
-	&.shadow {
-	    margin: 5% auto;
-	    box-shadow: 0 1vh 3vh #999;
-	    max-width: 90%;
-	    border-radius: 2*$border-radius;
-	}
+.shadow {
+    margin: 5% auto;
+    box-shadow: 0 1vh 3vh #999;
+    max-width: 90%;
+    border-radius: 2*$border-radius;
+    margin-bottom: 5vh !important;
 }
 
 iframe.constrain {
