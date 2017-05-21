@@ -51,7 +51,7 @@ fi
 
 
 ## Determine subdirectory
-default_sub="`find $base_dir -type d -iname "week-*" | tail -n1`"  # last folder matching week-*
+default_sub="`find $base_dir -type d -iname "week-*" | sort -t '-' -k 2n | tail -n1`"  # last folder matching week-*
 default_sub="${default_sub##$base_dir/}"  # remove leading 'fabacademy/'
 
 read -p "Subdirectory [$default_sub]: " -e sub_dir

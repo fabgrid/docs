@@ -2,7 +2,7 @@
 title: 'Lecture Notes'
 layout: page
 
-previous: fabacademy/week-7/index.md
+previous: fabacademy/week-8/index.md
 ---
 
 [http://academy.cba.mit.edu/classes/embedded_programming/index.html](http://academy.cba.mit.edu/classes/embedded_programming/index.html)

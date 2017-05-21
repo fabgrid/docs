@@ -12,6 +12,11 @@
     - path: fabacademy/week-6/index.md
     - path: fabacademy/week-7/index.md
     - path: fabacademy/week-8/index.md
+    - path: fabacademy/week-9/index.md
+    - path: fabacademy/week-10/index.md
+    - path: fabacademy/week-11/index.md
+    - path: fabacademy/week-12/index.md
+    - path: fabacademy/week-13/index.md
 
 - title: Resources
   path: resources/index.md

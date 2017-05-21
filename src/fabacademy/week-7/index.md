@@ -47,7 +47,7 @@ Some adjustments to the design had to be made:
 
 #### Dog vs. Mouse
 
-Back when i created it, i wasn't aware that the original design – without accounting for the tool diameter – would be useless for a CNC router. So one thing i had to change was to add that little dogbone fillets. Of course, they too are parametric and their radius is calculated as <math><mfrac><mrow><mn>1</mn></mrow><mrow><mn>1.9</mn></mrow></mfrac><mrow><mo>&times;</mo><mi>tool diameter</mi></mrow></math> in order to leave just a little tolerance so the CAM processor doesn't ignore those areas as too small for the tool.
+Back when i created it, i wasn't aware that the original design – without accounting for the tool diameter – would be useless for a CNC router. So one thing i had to change was to add that little dogbone fillets. Of course, they too are parametric and their radius is calculated as <math><mfrac><mrow><mn>1</mn></mrow><mrow><mn>1.9</mn></mrow></mfrac><mrow><mo>×</mo><mi>tool diameter</mi></mrow></math> in order to leave just a little tolerance so the CAM processor doesn't ignore those areas as too small for the tool.
 
 The position of the circle relative to the rectangle whose corners it's trying to ensure is actually quite easy to calculate. First, i did it wrong and placed the center of the circle right on top of the corner, which gives you rather a *Mickey Mouse* than a *Dog Bone*.
 

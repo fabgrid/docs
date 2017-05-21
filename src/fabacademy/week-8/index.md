@@ -7,6 +7,8 @@ links:
    text: Arietta Documentation
  - url: https://github.com/jsphpl/arietta-ring-benchmark
    text: Ring oscillator source code
+ - url: http://www.atmel.com/products/microcontrollers/arm/sam9g.aspx
+   text: Atmel info on SAM9G ARM9
 
 layout: lesson
 previous: fabacademy/week-7/index.md
@@ -179,7 +181,7 @@ gpiolib.c:155:6: note: previous definition of 'main' was here
 
 #### The Result
 
-The oscilloscope shows a quite disillusioning result: *roughly 200 Hz with both Python and C – that's 2 million CPU cycles @ 400 MHz!*
+The oscilloscope shows a quite disillusioning result: *roughly **200 Hz** with both Python and C – that's 2 million CPU cycles @ 400 MHz!*
 
 <div class="row">
     <div class="col-sm-6">
@@ -240,3 +242,12 @@ Searching Wikipedia for ARM compatible open-source [real time operating systems]
 - [Wombat_OS](https://en.wikipedia.org/wiki/Wombat_OS) (no website)
 - [Xenomai](https://en.wikipedia.org/wiki/Xenomai) ([website](http://xenomai.org/))
 - [Zephyr](https://en.wikipedia.org/wiki/Zephyr_(operating_system)) ([website](https://www.zephyrproject.org/))
+
+None of the above seems to be portable to my platform within a few hours, so i start to search for alternatives. Building from scratch without operating system is the idea.
+
+[Atmel Studio](http://www.atmel.com/Microsite/atmel-studio/default.aspx) could ease that work, but i have no Windows machine configured. [Atmel Start](http://start.atmel.com/) works in the browser, but brings no definitions for my SAM9G25 chip.
+
+I end up downloading the [SAM9G25 Software Package](http://www.atmel.com/tools/SAM9G25SOFTWAREPACKAGE.aspx) for GNU from the Atmel website, which promises "full source code, examples of usage, rich html documentation and ready-to-use projects". Let's see if i can work my way through this…
+
+- Install arm-gcc: `brew tap osx-cross/arm; brew install arm-gcc-bin`
+- Compile the pwm example: ``
