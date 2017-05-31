@@ -23,7 +23,7 @@ A color- and brightness-adjustable LED-lamp that imitates sunlight during the co
 
 ### Who's done what beforehand?
 
-I've done a small experiment in that direction beforehand, using an Arduiono, two different types of Nichia LEDs and two separate PT4115E driver boards.
+I've done a small experiment in that direction about two years ago, using a pre-made Arduino, pre-made LED modules  and PT4115E driver boards.
 
 ### What materials and components will be required? / Where will they come from?
 

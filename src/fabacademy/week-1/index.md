@@ -347,7 +347,7 @@ At this point, our project should contain the following files and directories:
 
 ## Open Source tools used
 
-Not quite a minimalist setup, but at least i managed to keep away from webpack, gulp and the like. Still, this website is built using a handful of wide-spread open source tools, that considerably ease the work of today's web developer. ;) In the end, it all helps to create a website that is both fun to use and fun to develop. And "fun to develop" means not only to develop once and never look at it anymore. It means to constantly care about and improve your code. And this process should be designed as easy and joyful as possible.
+Not quite a minimalist setup<del>, but at least i managed to keep away from webpack, gulp and the like</del>. Still, this website is built using a handful of wide-spread open source tools, that considerably ease the work of today's web developer. ;) In the end, it all helps to create a website that is both fun to use and fun to develop. And "fun to develop" means not only to develop once and never look at it anymore. It means to constantly care about and improve your code. And this process should be designed as easy and joyful as possible.
 
 So here's the list:
 
@@ -363,3 +363,10 @@ Of course, countless other open source projects are less directly involved, such
 
 {% endraw %}
 
+---
+
+## A note on GIT
+
+In case the presence of this website on the fabacademy servers doesn't make my proficiency with GIT obvious enough, here's a video demonstrating me using it:
+
+> TBD: Embed
