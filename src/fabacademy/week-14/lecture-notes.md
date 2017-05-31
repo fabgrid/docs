@@ -1,3 +1,9 @@
+---
+title: 'Lecture Notes'
+layout: page
+previous: fabacademy/week-14/index.md
+---
+
 ## Composites:
 
 - Compression & Tension

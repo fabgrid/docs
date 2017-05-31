@@ -29,3 +29,6 @@ We are encouraged to carefully document each step in order to ensure full reprod
 - [Week 11: Machine Building]({{ site.baseurl }}/fabacademy/week-11/)
 - [Week 12: Molding & Casting]({{ site.baseurl }}/fabacademy/week-12/)
 - [Week 13: Input Devices]({{ site.baseurl }}/fabacademy/week-13/)
+- [Week 14: Composites]({{ site.baseurl }}/fabacademy/week-14/)
+- [Week 15: Networking & Communications]({{ site.baseurl }}/fabacademy/week-15/)
+- [Week 16: Interface & Application Programming]({{ site.baseurl }}/fabacademy/week-16/)

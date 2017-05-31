@@ -9,9 +9,9 @@ I²DC is an ATTiny-enhanced N-Channel MOSFET with a series inductance and curren
 
 - 72W N-Channel MOSFET
 - ATTiny85
-- Voltage dividers for voltage sensing
-- Shunts for current sensing
-- I²C interface
+- Voltage sensing
+- High-side current sensing
+- I²C interface (read values, set voltage & current limit)
 
 ## Specs
 
@@ -72,7 +72,7 @@ Okay let's use a special op-amp that's made for exactly our job, the [INA169](ht
 
 #### Shunt Resistor
 
-What's gonna be the value of the shunt? According to its datasheet, the INA169 operates best if the upper input voltage is between 50 and 100mV. Let's choose the lower bound because it's gonna cut down losses and will surely yield a nice 1e^x resistor value with our 5A spec:
+What's gonna be the value of the shunt? According to its datasheet, the INA169 operates best if the upper input voltage is between 50 and 100mV. Let's choose the lower bound in order to minimize voltage drop and because surely yields a nice <math><msup><mn>10</mn><mi>x</mi></msup></math> resistor value with our 5A spec:
 
 <math>
 	<mi>R</mi>
@@ -86,7 +86,7 @@ What's gonna be the value of the shunt? According to its datasheet, the INA169 o
 	<mn>10</mn><mi>mΩ</mi>
 </math>
 
-What power is it gonna turn into heat?
+Perfect, nice value. And just what we guessed earlier. But what power is it gonna turn into heat?
 
 <math>
 <mi>P</mi> <mo>=</mo> <msup><mi>I</mi><mn>2</mn></msup> <mo>×</mo> <mi>R</mi>
@@ -98,7 +98,7 @@ So for some safety margin we should probably go with a <math><mo>≥</mo><mfrac>
 
 #### Load Resistor
 
-Sparkfun also tell us in their "hookup guide" how to calculate the values of the additional resistor. We need a seconday resistor at the output of the opamp, that converts the "known current" output into a "known voltage". The formula goes as follows:
+Sparkfun also tells us in their "hookup guide" how to calculate the values of the additional resistor. We need a seconday resistor at the output of the opamp, that converts the "known current" output into a "known voltage". The formula goes as follows:
 
 <math>
 	<msub><mi>I</mi><mi>s</mi></msub>
@@ -158,10 +158,19 @@ As always, I use the digikey search for its excellent filter options to find app
 | Shunt (<math><msub><mi>R</mi><mi>s</mi></msub></math>) | [LVK12R010DER](http://www.ohmite.com/cat/res_lvk.pdf) | SMD 0.01 OHM 0.5% 1/2W 1206 |
 | Load Resistor (<math><msub><mi>R</mi><mi>l</mi></msub></math>) | [RC1206FR-07100KL](http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_7.pdf) | (Fab Inventory) |
 
+Pushing 5A through a 1206 component sound unreasonable to me, but well – seems like this is physics. Otherwise i did not yet understand it properly, but hopefully will do so after producing some smoke. But hey, that's also just a way of learning…
+
+#### Alternative method
+
+An alternative method would be to use a premade hall-effect based IC, like the [Allegro ACS712](http://datasheet.octopart.com/ACS712ELCTR-05B-T-Allegro-datasheet-13439546.pdf), but that somehow feels like cheating, though it's a perfectly valid and accurate solution.
+
+Also, a standard opamp from the fab inventory could be used. But as we don't have them in stock at the Lab, and i have to order from Digikey anyway, i'll choose the application-specific solution. Of course, i'll order some of the standard [AD8615AUJZ](https://www.digikey.com/product-detail/en/analog-devices-inc/AD8615AUJZ-REEL7/AD8615AUJZ-REEL7CT-ND/951443)'s as well – who knows what comes next ;)
+
 ### Voltage Sensing
 
+For the voltage sensing, we just need to divide down 36V (max output voltage) to 5V (Aref of the attiny), which is a ratio of 0.13889. Using an [online calculator](http://jansson.us/resistors.html), we can easiy find the appropriate values. It suggests 10k and 62k as a perfect match from the E24 series. I don't know which series that is we have in the lab, but there is a 61.9kΩ, which should be just fine. We can still account for that in the calculation taking place on the attiny later on.
 
-### I2C Interface
+### I²C Interface
 
 We need a pull-up on the SDA line. According to what i've read elsewhere, a 4.7k should be used. I see Neil use 10k ones in his examples, guessing that's because they're in the standard inventory. So anything in between 4.7k and 10k should be fine, assuming short wire lengths and low device count per bus.
 
@@ -172,14 +181,18 @@ http://academy.cba.mit.edu/classes/networking_communications/I2C/hello.I2C.45.no
 
 Besides all that, we need a small voltage regulator in order to power our microcontroller and opamp. This way we can use the board as a "programmable" step-down converter, where we set the parameters once (it should store them in EEPROM), and then operate it without any external control input.
 
-#### How much current?
+#### But which one?
 
-- The attiny itself takes less than 10mA when operating at 5V (8MHz)
-- The INA169 says "Input current into any pin 10 mA MAX". Let's take it for that
-- Our swiching pin will
+- The attiny itself takes less than *10mA* when operating at 5V (8MHz).
+- The INA169 says "Input current into any pin *10mA* MAX". Let's take it for that!
+- Our swiching pin will be connected to ground via the 1k gate pull-down. That's another *5mA* at 5V.
+- More current will be drawn when the I²C bus is active
 
+Those should be about the main consumers. So if we choose a *100-150mA* linear regulator, we should be quite on the safe side. Our max Vin is 36V. Burning 100mA at 31V causes 3.1W of global warming. Out min Vin is 6V so the maximum allowed dropout is 1V. That's the specs. Yeah, and don't forget to add some capacitance.
 
-## Further Lecture
+And the winner is: [MIC5233-5.0YM5-TR](http://datasheet.octopart.com/MIC5233-5.0YM5-TR-Microchip-datasheet-8332515.pdf) – I chose by package size because it'll run on the lower end of its specs and therefore we can trade off worse cooling for smaller footprint. Unfortunately, it's got an "enable" pin and the datasheed doesn't mention an internal pull-up, so we'll have to add an external one to be sure it's on by default.
+
+### Further Lecture
 
 - [https://en.wikipedia.org/wiki/Buck_converter](https://en.wikipedia.org/wiki/Buck_converter)
 - [https://www.allaboutcircuits.com/textbook/alternating-current/chpt-8/low-pass-filters/](https://www.allaboutcircuits.com/textbook/alternating-current/chpt-8/low-pass-filters/)
@@ -193,3 +206,5 @@ Besides all that, we need a small voltage regulator in order to power our microc
 - [Choosing the optimum switching frequency of your DC/DC converter](http://www.eetimes.com/document.asp?doc_id=1272335)
 - [Effects of High Switching Frequency on Buck Regulators](https://www.onsemi.com/pub/Collateral/TND388-D.PDF)
 - [High-Side Current-Sense Measurement: Circuits and Principles](https://www.maximintegrated.com/en/app-notes/index.mvp/id/746)
+
+

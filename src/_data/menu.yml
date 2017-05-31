@@ -2,7 +2,20 @@
 - title: About
   path: index.md
 
-- path: fabacademy/index.md
+- title: "Final Project: IllumiNative"
+  path: illuminative/index.md
+  children:
+    - title: Hardware
+      path: illuminative/hardware.md
+    - title: Electronics
+      path: illuminative/electronics.md
+    - title: Firmware
+      path: illuminative/firmware.md
+    - title: Android App
+      path: illuminative/android-app.md
+
+- title: Weekly Assignments
+  path: fabacademy/index.md
   children:
     - path: fabacademy/week-1/index.md
     - path: fabacademy/week-2/index.md
@@ -17,6 +30,15 @@
     - path: fabacademy/week-11/index.md
     - path: fabacademy/week-12/index.md
     - path: fabacademy/week-13/index.md
+    - path: fabacademy/week-14/index.md
+    - path: fabacademy/week-15/index.md
+    - path: fabacademy/week-16/index.md
+
+- title: I²DC
+  path: i2dc/index.md
+
+- title: fabgrid
+  path: fabgrid/index.md
 
 - title: Resources
   path: resources/index.md
