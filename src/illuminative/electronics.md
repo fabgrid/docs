@@ -10,6 +10,10 @@ layout: page
 - Current monitor per channel
 - Bluetooth interface
 
+# PCB Material
+
+The PCB for the driver circuit will be on a regular 2-sided Expoxy base material. The LED arrays themselves are going to be milled from aluminium base material, allowing lots of thermal energy to transit.
+
 # Parts Choice
 
 ## LEDs

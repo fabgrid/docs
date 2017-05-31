@@ -32,3 +32,4 @@ We are encouraged to carefully document each step in order to ensure full reprod
 - [Week 14: Composites]({{ site.baseurl }}/fabacademy/week-14/)
 - [Week 15: Networking & Communications]({{ site.baseurl }}/fabacademy/week-15/)
 - [Week 16: Interface & Application Programming]({{ site.baseurl }}/fabacademy/week-16/)
+- [Week 17: Applications & Implications]({{ site.baseurl }}/fabacademy/week-17/)
