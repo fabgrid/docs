@@ -3,7 +3,9 @@ title: 'W7: Computer Machining'
 assignment: Make something big
 goal: Finally make my standing desk
 links:
- - text: jsphpl/standesk (OpenSCAD model)
+ - text: Design Snapshot
+   url: standesk-master.zip
+ - text: Recent Design (github)
    url: https://github.com/jsphpl/standesk
  - text: MasterPro 2513 (CNC mill)
    url: http://www.elsign-cnc.com/milling-machines/easyworker-masterpro/2513.html

@@ -367,6 +367,6 @@ Of course, countless other open source projects are less directly involved, such
 
 ## A note on GIT
 
-In case the presence of this website on the fabacademy servers doesn't make my proficiency with GIT obvious enough, here's a video demonstrating me using it:
+In case the sole presence of this website on the fabacademy servers doesn't make my proficiency with GIT obvious enough, here's a video demonstrating me using it:
 
 > TBD: Embed

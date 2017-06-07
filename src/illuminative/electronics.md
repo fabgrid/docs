@@ -26,7 +26,23 @@ Warm: http://www.nichia.co.jp/specification/products/led_spec/NSSLT02AT-V2-E(437
 
 ## Drivers
 
-- I²DC
+- 2 channels
+- 0-1A / 24V per channel
+- Settable current
+
+So as described below, a voltage controlled constant current sink will be used to drive the LEDs throug an op-amp/mosfet combination. The op-amp is configured in a way that the current on the output matches the voltage on the input. This is achieved by connecting the output to GND via a known value resistor. If this resistor is 1Ω, the output current will equal 1A if the input voltage is 1V.
+
+### Low pass filter
+
+A 2-stage RC low-pass filter is between the µC and the opamp's input. I choose 2x (2kΩ and 1µF) in series, which gives quite a smooth DC @244Hz, 50% duty cycle. Another µF is added at the opamp's output. The simulation (link below) shows that our resulting output current has a ripple of roughly ±10mA. I hope that is small enough to not be noticable on the LEDs.
+
+### Voltage divider
+
+As our target current range is 0-1A, we need a 1/5 voltage divider to convert our µC's 5V (@ 100% PWM duty cycle) signal to a 1V opamp input, which should yield a 1A constant output. Our filter already adds 4kΩ of series resistance. Adding another 5.9k in series and 2.49k to ground gives us the following divider ratio:
+
+(4k+5.9k+2.49k) / 2.49k = 4.9759036145
+
+That's close enough to our 1/5 target ratio, as we don't need an exactly know current. We only need to know the maximum current fairly exactly and need to control it linearly.
 
 ## Bluetooth Adapter
 
@@ -94,4 +110,10 @@ Timer1 on the 328 has 16 bit and two output compare registers. We can use that t
 
 So we have to do some sort of trade-off between switching frequency and resolution. Also, increasing the clock frequency would help. We could run the Mega328 at 20MHz or even swap it for an XMega, which runs at 32MHz. If we don't want to fall below, say 2kHz switching frequency, with a 32MHz clock, the resolution would be <math><mfrac><mrow><mn>32</mn><mi>MHz</mi></mrow><mrow><mn>2</mn><mi>kHz</mi></mrow></mfrac><mo>=</mo><mn>16000</mn><mo>≈</mo><msup><mn>2</mn><mn>14</mn></msup></math>. 14 bit – let's go with that for the beginning…
 
+##### Better solution:
 
+I found a nice circuit called the *Voltage Controlled Current Sink*. It uses an opamp to generate a constant current through a ground resistor from a control voltage. The advantage is that there's no need to filter the high current signal after the MOSFET, but only the small control voltage. This lets me use a much smaller filter circuit between the µC and the opamp.
+
+An [online simulator](http://www.falstad.com/circuit/) helps me to validate the circuit before bulding it:
+
+<a href="http://www.falstad.com/circuit/circuitjs.html?cct=$+1+0.000005+16.13108636308289+36+5+43%0Aa+208+176+336+176+1+24+-24+1000000+1.0030980213359555+1.0032232070914697%0Af+448+176+496+176+0+1.5+0.02%0Ag+496+336+496+384+0%0Ar+368+176+448+176+0+100%0Ar+368+272+448+272+0+1000%0Ac+352+176+352+272+0+0.000001+11.515477530072522%0Aw+336+176+352+176+0%0Aw+352+176+368+176+0%0Aw+352+272+368+272+0%0Aw+448+272+496+272+0%0Aw+496+272+496+192+0%0Ar+496+272+496+336+0+1%0Ar+496+80+496+160+0+1%0Aw+208+192+208+272+0%0Aw+208+272+352+272+0%0AR+496+80+496+48+0+0+40+24+0+0+0.5%0Ag+-176+272+-176+336+0%0Ac+-176+160+-176+272+0+0.000001+4.19419822723698%0Ar+-176+160+-240+160+0+2000%0AR+-240+160+-272+160+0+2+244+2.5+2.5+0+1%0Ap+208+160+208+64+1+0%0Ar+-96+160+-16+160+0+2000%0Ar+-176+160+-96+160+0+2000%0Ac+-96+160+-96+272+0+0.000001+3.3883964544733853%0Ag+-96+272+-96+336+0%0Ac+-16+160+-16+272+0+0.000001+2.5825946817093755%0Ag+-16+272+-16+336+0%0Aw+-16+160+48+160+0%0Ag+128+272+128+336+0%0Aw+128+160+208+160+0%0Ar+48+160+128+160+0+3920%0Ar+128+160+128+272+0+2490%0Ao+12+16+0+4099+1.25+1.6+0+2+12+3%0Ao+20+16+0+4098+1.25+0.1+1+1%0A"><img src="circuit-simulator.png" />

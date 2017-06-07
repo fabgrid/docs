@@ -63,3 +63,10 @@ I've done a small experiment in that direction about two years ago, using a pre-
 
 
 ### How will it be evaluated?
+
+- Successful production of the hardware is necessary. This includes:
+	- Molding the shade
+	- Casting the end caps
+- A working 2-channel PWM driver is required
+- Smartphone control is mandatory (color & brightness)
+- Sun tracking is optional

@@ -3,16 +3,18 @@ title: 'W13: Input Devices'
 assignment: "Measure something: Add a sensor to a microcontroller board that you have designed and read it"
 goal: "Check the current on the USB charger i recently built"
 links:
-  - text: "Input Board Design"
+  - text: "Board Design (Upverter)"
     url: "https://upverter.com/jsphpl/e92e2d39c8118dc0/attiny-current-display/"
+  - text: "Board Design (zip)"
+    url: "board.zip"
+  - text: "Source Code"
+    url: "code.zip"
   - text: "Allegro ACS712 Datasheet"
     url: "http://datasheet.octopart.com/ACS712ELCTR-05B-T-Allegro-datasheet-13439546.pdf"
   - text: "Atmel ATTiny x4 Datasheet"
     url: "http://www.atmel.com/images/doc8006.pdf#page=5&zoom=auto,-193,713"
   - text: "USB Charger Design"
     url: "https://upverter.com/jsphpl/667db3f77daca370/step-down-usb-monitored-smt-alt/"
-  - text: "Source Code"
-    url: "code.zip"
 
 layout: lesson
 previous: fabacademy/week-12/index.md
