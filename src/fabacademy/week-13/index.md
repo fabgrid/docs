@@ -125,7 +125,7 @@ Before actually hooking up the LCD, i first check if the analog values are read 
 	</div>
 </div>
 
-I also implement a function to wrap the "protocol" that my LCD display understands and inspect the output through `miniterm.py` on my pc.
+I also implement a function to wrap the "protocol" that my LCD display understands. Before hooking up the LCD, i connect the FTDI adapter and inspect the output through `miniterm.py`.
 
 ```c
 /**
@@ -162,6 +162,9 @@ void lcd_print(byte line, char text[8]) {
 - Probably the different input voltage (3.3 from the FTDI cable vs 5 from the DC supply) made the internal oscillator behave differently
 - Also, the lack of a capacitor on the board's VCC might bring in some trouble
 - Conclusion: Re-design the board, add external oscillator, add input capacitance
-- BTW: choose a processor with hardware UART if your project's gonna need UART
 
 <zoom src="10-result.jpg" caption="The best result i could get. The value doesn't make any sense but at least we know it's mA ;)"></zoom>
+
+<div class="alert alert-info">
+  <strong>Pro tip:</strong> Choose a processor with hardware UART if your project requires UART ;)
+</div>

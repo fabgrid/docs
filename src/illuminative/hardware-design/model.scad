@@ -6,7 +6,7 @@ DIAMETER = 60;
 RIM = 5;
 
 HEATSINK_THICKNESS = 1;
-COVER_THICKNESS = 1;
+SHADE_THICKNESS = 1;
 
 ENCODER_FIXTURE_WIDTH = 15;
 ENCODER_CUTOUT_DEPTH = 15;
@@ -68,16 +68,16 @@ module cover()
 			difference() {
 				cylinder(d = DIAMETER, h = LENGTH);
 				translate([0, 0, -0.001])
-				cylinder(d = DIAMETER - 2*COVER_THICKNESS, h = LENGTH+0.002);
+				cylinder(d = DIAMETER - 2*SHADE_THICKNESS, h = LENGTH+0.002);
 			}
 			translate([0, -0.001, -DIAMETER/2])
 			cube([DIAMETER, LENGTH+0.002, DIAMETER/2+HEATSINK_THICKNESS/2]);
 		}
 		// Rim
-		translate([COVER_THICKNESS/2, 0, HEATSINK_THICKNESS/2])
-		cube([RIM, LENGTH, COVER_THICKNESS]);
-		translate([DIAMETER - RIM - COVER_THICKNESS/2, 0, HEATSINK_THICKNESS/2])
-		cube([RIM, LENGTH, COVER_THICKNESS]);
+		translate([SHADE_THICKNESS/2, 0, HEATSINK_THICKNESS/2])
+		cube([RIM, LENGTH, SHADE_THICKNESS]);
+		translate([DIAMETER - RIM - SHADE_THICKNESS/2, 0, HEATSINK_THICKNESS/2])
+		cube([RIM, LENGTH, SHADE_THICKNESS]);
 	}
 }
 
@@ -106,6 +106,37 @@ module dial()
 	}
 }
 
+module shade_mold_outer()
+{
+	wall_thickness = 10;
+	width = DIAMETER + 2*wall_thickness;
+	length = LENGTH + 2*wall_thickness;
+	height = width/2;
+	difference() {
+		cube([width, length, height]);
+		translate([width/2, length, width/2])
+		rotate([90, 0, 0])
+			cylinder(h=length, d=DIAMETER);
+	}
+	echo(width = width);
+	echo(height = height);
+	echo(length = length);
+}
+
+module shade_mold_inner()
+{
+	wall_thickness = 10;
+	length = LENGTH + 2*wall_thickness;
+	diameter = DIAMETER - 2*SHADE_THICKNESS;
+	difference() {
+		translate([diameter/2, length, 0])
+		rotate([90, 0, 0])
+			cylinder(h=length, d=diameter);
+		translate([0, 0, -diameter])
+			#cube([diameter, length, diameter]);
+	}
+}
+
 // Copper Base
 color("PeachPuff")
 heatsink();
@@ -118,3 +149,5 @@ covers();
 color("DimGray")
 dial();
 
+// shade_mold_outer();
+// shade_mold_inner();

@@ -6,13 +6,13 @@ layout: page
 # Requirements
 
 - Total of 1500 - 2000 lumen of luminous flux
-- Two-channel PWM drive
-- Current monitor per channel
+- Two-channel constant current PWM drive
 - Bluetooth interface
+- RTC (for sunlight tracking)
 
 # PCB Material
 
-The PCB for the driver circuit will be on a regular 2-sided Expoxy base material. The LED arrays themselves are going to be milled from aluminium base material, allowing lots of thermal energy to transit.
+The PCB for the driver circuit will be on a regular 2-sided Expoxy base material. The LED arrays themselves are going to be milled from copper-plated aluminium base material, allowing lots of thermal energy to transit.
 
 # Parts Choice
 
@@ -30,11 +30,11 @@ Warm: http://www.nichia.co.jp/specification/products/led_spec/NSSLT02AT-V2-E(437
 - 0-1A / 24V per channel
 - Settable current
 
-So as described below, a voltage controlled constant current sink will be used to drive the LEDs throug an op-amp/mosfet combination. The op-amp is configured in a way that the current on the output matches the voltage on the input. This is achieved by connecting the output to GND via a known value resistor. If this resistor is 1Ω, the output current will equal 1A if the input voltage is 1V.
+So as described below, a *voltage controlled current sink (VCCS)* will be used to drive the LEDs through an op-amp/mosfet combination. The op-amp is configured in a way that the current on the output matches the voltage on the input. This is achieved by connecting the output to GND via a known value resistor. If this resistor is 1Ω, the output current will be equal to 1A if the input voltage is 1V.
 
 ### Low pass filter
 
-A 2-stage RC low-pass filter is between the µC and the opamp's input. I choose 2x (2kΩ and 1µF) in series, which gives quite a smooth DC @244Hz, 50% duty cycle. Another µF is added at the opamp's output. The simulation (link below) shows that our resulting output current has a ripple of roughly ±10mA. I hope that is small enough to not be noticable on the LEDs.
+A 2-stage RC low-pass filter is between the µC and the opamp's input. I choose 2x (2kΩ and 1µF) in series, which gives quite a smooth DC @244Hz with 50% duty cycle. Another µF is added at the opamp's output. The simulation (link below) shows that our resulting output current remains a ripple of roughly ±10mA. I hope that's small enough to not be noticable on the LEDs.
 
 ### Voltage divider
 
@@ -48,11 +48,31 @@ That's close enough to our 1/5 target ratio, as we don't need an exactly know cu
 
 ## Microcontroller
 
-- 2-4 ADC channels
-- Serial port (for bluetooth adapter)
-- 2 hi-res PWM channels
+### Requirements
 
-328P Datasheet: http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf
+- Serial interface (for bluetooth adapter)
+- 2 hi-res PWM channels
+- Something to interface with the RTC
+- 2 interrupts to read the rotary encoder
+- Another interrupt for the encoder push button
+
+[328P Datasheet](http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf)
+
+The two external interrupts available on the 328 will take care of the rotary encoder. A pin change interrupt will monitor its push button.
+
+A serial bluetooth module will interface with the hardware serial port.
+
+### Pin mapping
+
+| Pin Name | Pin # | Function       |
+|----------|------:|----------------|
+| PB1      |    13 | LED cold     |
+| PB2      |    14 | LED warm     |
+| PD0      |    30 | BT Rx        |
+| PD1      |    31 | BT Tx        |
+| PD2      |    32 | Encoder -    |
+| PD3      |     1 | Encoder +    |
+| PD4      |     2 | Encoder push |
 
 ### Brightness steps
 
@@ -114,6 +134,53 @@ So we have to do some sort of trade-off between switching frequency and resoluti
 
 I found a nice circuit called the *Voltage Controlled Current Sink*. It uses an opamp to generate a constant current through a ground resistor from a control voltage. The advantage is that there's no need to filter the high current signal after the MOSFET, but only the small control voltage. This lets me use a much smaller filter circuit between the µC and the opamp.
 
-An [online simulator](http://www.falstad.com/circuit/) helps me to validate the circuit before bulding it:
+An [online simulator](http://www.falstad.com/circuit/) helps me validate the circuit before bulding it:
 
 <a href="http://www.falstad.com/circuit/circuitjs.html?cct=$+1+0.000005+16.13108636308289+36+5+43%0Aa+208+176+336+176+1+24+-24+1000000+1.0030980213359555+1.0032232070914697%0Af+448+176+496+176+0+1.5+0.02%0Ag+496+336+496+384+0%0Ar+368+176+448+176+0+100%0Ar+368+272+448+272+0+1000%0Ac+352+176+352+272+0+0.000001+11.515477530072522%0Aw+336+176+352+176+0%0Aw+352+176+368+176+0%0Aw+352+272+368+272+0%0Aw+448+272+496+272+0%0Aw+496+272+496+192+0%0Ar+496+272+496+336+0+1%0Ar+496+80+496+160+0+1%0Aw+208+192+208+272+0%0Aw+208+272+352+272+0%0AR+496+80+496+48+0+0+40+24+0+0+0.5%0Ag+-176+272+-176+336+0%0Ac+-176+160+-176+272+0+0.000001+4.19419822723698%0Ar+-176+160+-240+160+0+2000%0AR+-240+160+-272+160+0+2+244+2.5+2.5+0+1%0Ap+208+160+208+64+1+0%0Ar+-96+160+-16+160+0+2000%0Ar+-176+160+-96+160+0+2000%0Ac+-96+160+-96+272+0+0.000001+3.3883964544733853%0Ag+-96+272+-96+336+0%0Ac+-16+160+-16+272+0+0.000001+2.5825946817093755%0Ag+-16+272+-16+336+0%0Aw+-16+160+48+160+0%0Ag+128+272+128+336+0%0Aw+128+160+208+160+0%0Ar+48+160+128+160+0+3920%0Ar+128+160+128+272+0+2490%0Ao+12+16+0+4099+1.25+1.6+0+2+12+3%0Ao+20+16+0+4098+1.25+0.1+1+1%0A"><img src="circuit-simulator.png" />
+
+# PCB Design
+
+Again, i choose [Upverter](https://upverter.com/) for the electronics design and layout process. I like the globally shared parts library and the ease of creating new ones.
+
+## VCCS module
+
+First, i create the VCCS including input filter and driver MOSFET as a separate module. This makes it easier to maintain and update that sub-circuit, whithout applying each change in two separate places. Plus, it keeps the final board schematic much tidier, by treating that section the same as an IC with a single symbol.
+
+> Link to VCCS module
+
+## General Process
+
+The general process goes as follows:
+
+### Schematic
+
+First step is always to design the schematic, which defines the desired relationships between the components in electrical terms.
+
+1. **RTFM** for each critical part ("Typical Application" often gives a quick overview over the required external components)
+2. **Place symbols**
+3. **Draw connections** between components
+4. **Use flags** if too many connections would cross
+5. **Check** that all required connections are established, and that there are no unintended ones
+
+<div class="alert alert-warning">
+    <strong>Note:</strong> Many active components need a decoupling capacitor close to their VCC, in order to provide them with enough current on occasional load spikes, and to keep noise they generate from affecting other components on the same line. <em>You should never spare them!</em> Otherwise, you might get unpredictable behaviour and time-consuming errors later on…
+</div>
+
+### Layout
+
+#### Parts Placement
+
+When the first version of the schematic is complete, i move over to the board layout. Upverter typically puts all components from the schematic in a straight horizontal line. Pins that need an electrical connection according to the schematic are connected by thin green lines. I rearrange them so that those green lines become short and don't cross.
+
+Usually, i place large (& high pin count) components first, and arrange the small ones (& low pin count) around them.
+
+<div class="alert alert-info">
+    <strong>Hint:</strong> When placing components close to each other, keep in mind your soldering process. Hand soldering requires quite some extra clearance so you can access all pins with the soldering iron, without frying any other parts.
+</div>
+
+#### Traces
+
+As soon as all components have been arranged, i start to draw the traces. Before that, i set up a *clearace constraint* in the software to ensure that no pads or traces are closer together than the tool is capable to separate. Usually, i choose a minimum trace clearance of .3mm, to ensure the Othermill can work it with a 1/100" end mill, at least. In case i underrun that constraint while lying out the traces, Upverter would create a warning and highlight the affected areas in red.
+
+For standard signal and low current power lines, i use the default .508mm trace width set in Upverter. For higher current lines (~1A and above), i use an [online calculator](http://circuitcalculator.com/wordpress/2006/01/31/pcb-trace-width-calculator/) to determine the appropriate trace width for given current rating and trace length. The 35mil copper layer on most standard PCB materials equals a weigth of <math><mn>1</mn><mfrac><mi>oz</mi><msup><mi>ft</mi><mn>2</mn></msup></mfrac></math>.
+

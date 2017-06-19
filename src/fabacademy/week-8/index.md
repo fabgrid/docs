@@ -51,7 +51,9 @@ This means, we can now prepare our SD card using the `diskutil` command with roo
 diskutil partitionDisk /dev/disk3 2 MBR fat32 BOOT 128M UFSD_EXTFS4 rootfs R
 ```
 
-**Explanation:** The above command asks the system to create a *MBR* layout with *2* partitions. The first partition will be formatted with *fat32*, named *BOOT* and have a size of *128MB*. The second partition will be formatted using *UFSD_EXTFS4* (= ext4) and named *rootfs*, spanning all the *R*emaining free space.
+<div class="alert alert-success">
+    <strong>Explanation:</strong> The above command asks the system to create a <strong>MBR</strong> layout with <strong>2</strong> partitions. The first partition will be formatted with <strong>fat32</strong>, named <strong>BOOT</strong> and have a size of <strong>128MB</strong>. The second partition will be formatted using <strong>UFSD_EXTFS4</strong> (= ext4) and named <strong>rootfs</strong>, spanning all the <strong>R</strong>emaining free space.
+</div>
 
 On success, the two new partitions should be mounted at `/Volumes/BOOT` and `/Volumes/rootfs`, respectively.
 
@@ -245,9 +247,4 @@ Searching Wikipedia for ARM compatible open-source [real time operating systems]
 
 None of the above seems to be portable to my platform within a few hours, so i start to search for alternatives. Building from scratch without operating system is the idea.
 
-[Atmel Studio](http://www.atmel.com/Microsite/atmel-studio/default.aspx) could ease that work, but i have no Windows machine configured. [Atmel Start](http://start.atmel.com/) works in the browser, but brings no definitions for my SAM9G25 chip.
-
-I end up downloading the [SAM9G25 Software Package](http://www.atmel.com/tools/SAM9G25SOFTWAREPACKAGE.aspx) for GNU from the Atmel website, which promises "full source code, examples of usage, rich html documentation and ready-to-use projects". Let's see if i can work my way through this…
-
-- Install arm-gcc: `brew tap osx-cross/arm; brew install arm-gcc-bin`
-- Compile the pwm example: ``
+I drop the idea of an operating system entirely and end up downloading the [SAM9G25 Software Package](http://www.atmel.com/tools/SAM9G25SOFTWAREPACKAGE.aspx) for GNU from the Atmel website. I didn't get this to work so far…
