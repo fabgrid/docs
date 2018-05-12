@@ -1,9 +1,11 @@
 ---
 title: 'Lecture Notes'
 layout: page
-previous: fabacademy/week-16/index.md
+previous: fabacademy/week-15/index.md
 ---
 
-## UI
+## Communication
 
-- Serial is becoming part of browser APIs
+- SLIP
+- "Practical Antenna Handbook"
+- FabFi

@@ -7,8 +7,8 @@ layout: page
 
 - **Final Project:** [IllumiNative]({{ site.baseurl }}/illuminative/)
 - **Weekly Assignments:** [FabAcademy]({{ site.baseurl }}/fabacademy/)
-- Old Final Project: [fabgrid]({{ site.baseurl }}/fabgrid/)
-- A Side Project: [I²DC]({{ site.baseurl }}/i2dc/)
+<!-- - Old Final Project: [fabgrid]({{ site.baseurl }}/fabgrid/) -->
+<!-- - A Side Project: [I²DC]({{ site.baseurl }}/i2dc/) -->
 
 ## About
 

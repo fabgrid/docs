@@ -10,7 +10,7 @@
 %ADD10RR-H1300000-W4000000-R120000-RO0.500*%
 D10*
 %LNbottom paste_traces*%
-%LNbottom paste component 78b70137abdd44bd*%
+%LNbottom paste component eceea0cbb67eeceb*%
 G01*
 X5080Y18000D03*
 X2540Y18000D03*

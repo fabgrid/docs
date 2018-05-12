@@ -1,5 +1,5 @@
 ---
-title: 'W16: Interface & Application Programming'
+title: 'W16: Networking & Communications'
 assignment: ""
 goal: ""
 links: []
@@ -16,4 +16,4 @@ next: fabacademy/week-17/index.md
 
 ---
 
-## Interface & Application Programming
+## Networking & Communications

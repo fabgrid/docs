@@ -17,15 +17,15 @@
 - title: Weekly Assignments
   path: fabacademy/index.md
   children:
-    - path: fabacademy/week-1/index.md
-    - path: fabacademy/week-2/index.md
-    - path: fabacademy/week-3/index.md
-    - path: fabacademy/week-4/index.md
-    - path: fabacademy/week-5/index.md
-    - path: fabacademy/week-6/index.md
-    - path: fabacademy/week-7/index.md
-    - path: fabacademy/week-8/index.md
-    - path: fabacademy/week-9/index.md
+    - path: fabacademy/week-01/index.md
+    - path: fabacademy/week-02/index.md
+    - path: fabacademy/week-03/index.md
+    - path: fabacademy/week-04/index.md
+    - path: fabacademy/week-05/index.md
+    - path: fabacademy/week-06/index.md
+    - path: fabacademy/week-07/index.md
+    - path: fabacademy/week-08/index.md
+    - path: fabacademy/week-09/index.md
     - path: fabacademy/week-10/index.md
     - path: fabacademy/week-11/index.md
     - path: fabacademy/week-12/index.md
@@ -34,18 +34,20 @@
     - path: fabacademy/week-15/index.md
     - path: fabacademy/week-16/index.md
     - path: fabacademy/week-17/index.md
+    - path: fabacademy/week-18/index.md
+    - path: fabacademy/week-19/index.md
 
-- title: I²DC
-  path: i2dc/index.md
+# - title: I²DC
+#   path: i2dc/index.md
 
-- title: fabgrid
-  path: fabgrid/index.md
+# - title: fabgrid
+#   path: fabgrid/index.md
 
 - title: Resources
   path: resources/index.md
 
-- title: Tools
-  path: tools/index.md
-  children:
-    - title: Conductor cross-section
-      path: tools/cross-section-calc.md
+# - title: Tools
+#   path: tools/index.md
+#   children:
+#     - title: Conductor cross-section
+#       path: tools/cross-section-calc.md

@@ -1,5 +1,5 @@
 ---
-title: 'W15: Networking & Communications'
+title: 'W15: * Week: Composites'
 assignment: ""
 goal: ""
 links: []
@@ -16,4 +16,4 @@ next: fabacademy/week-16/index.md
 
 ---
 
-## Networking & Communications
+## Composites

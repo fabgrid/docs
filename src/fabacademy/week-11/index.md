@@ -1,5 +1,5 @@
 ---
-title: 'W11: Machine Building'
+title: 'W11: Machine Design'
 assignment:
 goal:
 links: []
@@ -15,4 +15,3 @@ next: fabacademy/week-12/index.md
 {:toc}
 
 ---
-
