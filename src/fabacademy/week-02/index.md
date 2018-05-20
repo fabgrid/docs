@@ -217,7 +217,7 @@ Now that we have a `package.json` file, we can specify bootstrap as a dependency
 yarn add bootstrap@4.0.0-alpha.6
 ```
 
-This places bootstrap into the newly created `node_modules` folder. Now we're going to create a SCSS file that loads all the Bootstrap files so jekyll can compile them into a CSS file, that is going to be loaded on all our pages. As an entry point we're going to create an `assets/css/main.scss` file, which will be built into `_site/assets/css/main.css` by jekyll (note the different file extensions).
+This downloads bootstrap to the newly created `node_modules` folder. Now we're going to create a SCSS file that loads all the Bootstrap files so jekyll can compile them into a CSS file, that is going to be loaded on all our pages. As an entry point we're going to create an `assets/css/main.scss` file, which will be built into `_site/assets/css/main.css` by jekyll (note the different file extensions).
 
 **assets/css/main.scss**
 ```scss
@@ -347,13 +347,9 @@ At this point, our project should contain the following files and directories:
 
 ## Open Source tools used
 
-Not quite a minimalist setup<del>, but at least i managed to keep away from webpack, gulp and the like</del>. Still, this website is built using a handful of wide-spread open source tools, that considerably ease the work of today's web developer. ;) In the end, it all helps to create a website that is both fun to use and fun to develop. And "fun to develop" means not only to develop once and never look at it anymore. It means to constantly care about and improve your code. And this process should be designed as easy and joyful as possible.
-
-So here's the list:
-
 - Jekyll
 - Twitter Bootstrap
-- Yarn
+- Yarn/NPM
 - SASS
 - TypeScript
 - Vue.js
@@ -365,8 +361,16 @@ Of course, countless other open source projects are less directly involved, such
 
 ---
 
-## A note on GIT
+## VCS
 
-In case the sole presence of this website on the fabacademy servers doesn't make my proficiency with GIT obvious enough, here's a video demonstrating me using it:
+The assignment says, we should "Identify version control protocols". At the same time, fabacademy requires us to check in our documentation using GIT, so there's no real alternative to it for this project. I skimmed over the list at https://en.wikipedia.org/wiki/Comparison_of_version_control_software. Some names i've seen in use by other open source projects: SVN, Mercurial, Bazaar. Assignment fulfilled?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fLXrM1FDP0c" frameborder="0" allowfullscreen></iframe>
+### Tutorial
+
+Also, we're required to "Work through a git tutorial". Github provides a nice, [interactive git tutorial](https://try.github.io). I worked through it long time ago.
+
+## Build / deploy
+
+1. From the project root, run `webpack`. It compiles and bundles our assets (TS->JS, SCSS->CSS)
+2. Then, run `./build.sh`. The script generates a static page using jekyll
+3. Push it to the fabacademy gitlab: `cd ../gitlab; git add .; git commit -m "some descriptive commit message"; git push`
