@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W14: Input Devices – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W14: Input Devices</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					Design and build a wired &/or wireless network connecting at least two processors
+				</p>
+			</div>
+		</div>
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Personal Goal</h5>
+				<p class="card-text">
+					Check the current on the USB charger i recently built
+				</p>
+			</div>
+		</div>
+		
+
+		
+		
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Further Resources</h5>
+			</div>
+			<ul class="links list-group list-group-flush">
+				
+					
+					<li class="list-group-item">
+						
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+		
+				<a href="https://upverter.com/jsphpl/e92e2d39c8118dc0/attiny-current-display/">Board Design (Upverter)</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="board.zip">Board Design (zip)</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="code.zip">Source Code</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="http://datasheet.octopart.com/ACS712ELCTR-05B-T-Allegro-datasheet-13439546.pdf">Allegro ACS712 Datasheet</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="http://www.atmel.com/images/doc8006.pdf#page=5&zoom=auto,-193,713">Atmel ATTiny x4 Datasheet</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="https://upverter.com/jsphpl/667db3f77daca370/step-down-usb-monitored-smt-alt/">USB Charger Design</a>
+					</li>
+				
+					
+			</ul>
+		</div>
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#input-devices" id="markdown-toc-input-devices">Input Devices</a></li>
+  <li><a href="#hardware" id="markdown-toc-hardware">Hardware</a>    <ul>
+      <li><a href="#design" id="markdown-toc-design">Design</a></li>
+      <li><a href="#production" id="markdown-toc-production">Production</a></li>
+    </ul>
+  </li>
+  <li><a href="#software" id="markdown-toc-software">Software</a>    <ul>
+      <li><a href="#basic-test" id="markdown-toc-basic-test">Basic Test</a></li>
+      <li><a href="#serial-communication" id="markdown-toc-serial-communication">Serial Communication</a></li>
+      <li><a href="#analog-input" id="markdown-toc-analog-input">Analog Input</a></li>
+      <li><a href="#so-far-so-good" id="markdown-toc-so-far-so-good">So far so good…</a></li>
+      <li><a href="#where-it-failed" id="markdown-toc-where-it-failed">Where it failed</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="input-devices">Input Devices</h2>
+
+<p>A few weeks ago, i buit a USB charging station for our Fablab’s booth at an arts festival. It features a 10A step-down converter (<a href="http://www.ti.com/lit/ds/symlink/lmz22010.pdf">TI LMZ22010</a>) to supply 4 USB ports with lots of power. The data pins on the USB connectors were configured so that two of the ports would allow Android devices to draw full current and two to allow the same thing to iOS devices.</p>
+
+<p>It also contains a hall-effect based current sensor, that outputs a DC voltage corresponding to the current drawn, the <em>Allegro ACS712</em>. Let’s make a board that reads this voltage and displays some stats on an LCD, to see how much power our devices really draw.</p>
+
+<zoom src="01-usb-board.png" caption="Board layout of the usb charging circuit (link to source and schematic at the top of this page)"></zoom>
+
+<h2 id="hardware">Hardware</h2>
+
+<p>To read and disply the output from our USB charger, i design a really simple board:</p>
+
+<ul>
+  <li>ATTiny44</li>
+  <li>ISP header</li>
+  <li>An LED for debugging purposes</li>
+  <li>One analog in to read from our USB charger</li>
+  <li>Two digital I/Os to display some data on a serial LCD</li>
+</ul>
+
+<h3 id="design">Design</h3>
+
+<p>I am recently doing all my PCB designs on <a href="upverter.com">upverter.com</a>. Its parts library is okay and it’s got that beautiful feature called “Parts Concierge” - people making component footprints for you, according to datasheets you submit. I was using it for one of the USB connectors. After swapping the part for a different model for the third time, it’s such a good feeling to have someone help you on that detailed work ;)</p>
+
+<div class="row">
+	<div class="col-md-4"><zoom src="02-input-board-schematic.png" caption="Quite simple schematic"></zoom></div>
+	<div class="col-md-4"><zoom src="03-input-board-components.png" caption="Component Locations"></zoom></div>
+	<div class="col-md-4"><zoom src="04-input-board-traces.png" caption="Top Copper Layer"></zoom></div>
+</div>
+
+<h3 id="production">Production</h3>
+
+<p>I tried some <a href="https://www.bungard.de/index.php/de/produkte/oberflaechen/green-coat">Bungard Green Coat</a> on this board, looks like i took a bit too much.</p>
+
+<div class="row">
+	<div class="col-md-3"><zoom src="07-raw-board.jpg"></zoom></div>
+	<div class="col-md-3"><zoom src="08-green-board.jpg"></zoom></div>
+	<div class="col-md-3"><zoom src="11-components.jpg"></zoom></div>
+	<div class="col-md-3"><zoom src="12-board-soldered.jpg"></zoom></div>
+</div>
+
+<h2 id="software">Software</h2>
+
+<p>The ATTiny44 provides only little space (4KB) for our code. Using the SoftSerial library in Arduino would already occupy more than half of the program memory. Because fighting for each single bit sucks, we’re gonna implement this in “bare C”.</p>
+
+<h3 id="basic-test">Basic Test</h3>
+
+<p>Just a quick test upfront to see that the board is working and can be programmed – our good ole’ <em>Blink</em> sketch:</p>
+
+<zoom src="09-board-blink.jpg"></zoom>
+
+<h3 id="serial-communication">Serial Communication</h3>
+
+<p>For the serial communication i found a really small <a href="http://www.bot-thoughts.com/2013/11/attiny-software-serial.html">library on the internet</a>. I had to shift the table for the timings a bit, so it would correctly work at 8 MHz. Otherwise, i would have had to set the baud rate to 19200 for it to actually talk at 9600.</p>
+
+<h3 id="analog-input">Analog Input</h3>
+
+<p>With a little bit of testing and tweaking, i created two functions based on information from the Atmel datasheet and Neil’s example code:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * Enable the ADC, set mode and channel.
+ */</span>
+<span class="kt">void</span> <span class="nf">adc_init</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">ADMUX</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">REFS1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">REFS0</span><span class="p">)</span>  <span class="c1">// VCC ref</span>
+      <span class="o">|</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">MUX5</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">MUX4</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">MUX3</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">MUX2</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">MUX1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">MUX0</span><span class="p">);</span>  <span class="c1">// PA3 (ADC3)</span>
+    <span class="n">ADCSRA</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">ADEN</span><span class="p">)</span>  <span class="c1">// enable</span>
+      <span class="o">|</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">ADPS2</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">ADPS1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">ADPS0</span><span class="p">);</span>  <span class="c1">// prescaler /128</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+ * Read the ADC and return a 10-bit value as integer.
+ *
+ * @return int
+ */</span>
+<span class="kt">int</span> <span class="nf">adc_read</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">ADCSRA</span> <span class="o">|=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">ADSC</span><span class="p">);</span>  <span class="c1">// initiate adc reading</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ADCSRA</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">ADSC</span><span class="p">));</span>  <span class="c1">// wait for completion</span>
+
+    <span class="n">byte</span> <span class="n">less_significant</span> <span class="o">=</span> <span class="n">ADCL</span><span class="p">;</span>  <span class="c1">// Read ADC registers, ADCL has to be read first</span>
+    <span class="k">return</span> <span class="n">less_significant</span> <span class="o">|</span> <span class="n">ADCH</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="so-far-so-good">So far so good…</h3>
+
+<p>Before actually hooking up the LCD, i first check if the analog values are read correctly by feeding a UART signal back to my computer through an ordinary FTDI cable. Later i will connect the Rx of the LCD to the microcontroller’s Tx pin, instead of the FTDI adapter’s Rx, that is connected right now.</p>
+
+<div class="row">
+	<div class="col-md-6">
+		<zoom src="05-raw-values.png" caption="Raw values from free-floating ADC input"></zoom>
+	</div>
+	<div class="col-md-6">
+		<zoom src="06-current-output.png" caption="Input converted to mA and wrapped in LCD's protocol"></zoom>
+	</div>
+</div>
+
+<p>I also implement a function to wrap the “protocol” that my LCD display understands. Before hooking up the LCD, i connect the FTDI adapter and inspect the output through <code class="highlighter-rouge">miniterm.py</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * Print given string on given line of a 2x8-char
+ * serial LCD from iteadstudio.com
+ *
+ * @param line Line number (0|1)
+ * @param text
+ */</span>
+<span class="kt">void</span> <span class="nf">lcd_print</span><span class="p">(</span><span class="n">byte</span> <span class="n">line</span><span class="p">,</span> <span class="kt">char</span> <span class="n">text</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span> <span class="p">{</span>
+    <span class="c1">// Go to start of line</span>
+    <span class="kt">char</span> <span class="n">start</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+    <span class="n">sprintf</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="s">"sd%i,0;"</span><span class="p">,</span> <span class="n">line</span><span class="p">);</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
+
+    <span class="c1">// Clear line</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">"ss        ;"</span><span class="p">);</span>
+
+    <span class="c1">// Go to start again</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
+
+    <span class="c1">// Print actual message</span>
+    <span class="kt">char</span> <span class="n">message</span><span class="p">[</span><span class="mi">11</span><span class="p">];</span>
+    <span class="n">sprintf</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="s">"ss%s;"</span><span class="p">,</span> <span class="n">text</span><span class="p">);</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="where-it-failed">Where it failed</h3>
+
+<ul>
+  <li>Mostly nothing on the LCD</li>
+  <li>Only occasional (even meaninful) output</li>
+  <li>Using a logic sniffer, i couldn’t detect any meaninful conversation going on at a common baud rate</li>
+  <li>Probably the different input voltage (3.3 from the FTDI cable vs 5 from the DC supply) made the internal oscillator behave differently</li>
+  <li>Also, the lack of a capacitor on the board’s VCC might bring in some trouble</li>
+  <li>Conclusion: Re-design the board, add external oscillator, add input capacitance</li>
+</ul>
+
+<zoom src="10-result.jpg" caption="The best result i could get. The value doesn't make any sense but at least we know it's mA ;)"></zoom>
+
+<div class="alert alert-info">
+  <strong>Pro tip:</strong> Choose a processor with hardware UART if your project requires UART ;)
+</div>
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-15/">W15: * Week: Composites</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-13/">W13: Molding & Casting</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

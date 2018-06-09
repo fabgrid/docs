@@ -9,11 +9,4 @@ previous: fabacademy/week-14/index.md
 next: fabacademy/week-16/index.md
 ---
 
-## Table of Contents
-
-* TOC
-{:toc}
-
----
-
-## Composites
+See [IllumiNative/Hardware]({{ site.baseurl }}{% link illuminative/hardware.md %})

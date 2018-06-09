@@ -154,13 +154,13 @@ Our task is to group together all paths that need to be processed using the same
 
 Our data is now ready to be fed to the machine. This video documents the machine setup with [Karsten](https://www.hochschule-rhein-waal.de/en/faculties/communication-and-environment/organisation/professors/prof-dr-karsten-nebe) from the [FabLab Kamp Lintfort](http://fablab.hochschule-rhein-waal.de/index.php/en/):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PtMkJkBU450" frameborder="0" allowfullscreen class="constrain"></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PtMkJkBU450" frameborder="0" allowfullscreen class="constrain"></iframe>
 
 ### Test Joint
 
 When the machine is set up, we mill a test joint in order check and adjust for the material properties.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZpRVwqPG5-I" frameborder="0" allowfullscreen class="constrain"></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZpRVwqPG5-I" frameborder="0" allowfullscreen class="constrain"></iframe>
 
 <div class="row">
 	<div class="col-sm-6">

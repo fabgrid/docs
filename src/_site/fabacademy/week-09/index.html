@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W09: Embedded Programming – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W09: Embedded Programming</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					Program your board to do something, with as many different programming languages and programming environments as possible
+				</p>
+			</div>
+		</div>
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Personal Goal</h5>
+				<p class="card-text">
+					Use the Arietta G25 (ARMv9) that's been lying around for a couple of years
+				</p>
+			</div>
+		</div>
+		
+
+		
+		
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Further Resources</h5>
+			</div>
+			<ul class="links list-group list-group-flush">
+				
+					
+					<li class="list-group-item">
+						
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+				
+				<a href="/fabacademy/week-09/lecture-notes.html"><i class="fa fa-btn fa-sticky-note-o"></i> Lecture Notes</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+		
+				<a href="https://www.acmesystems.it/documentation">Arietta Documentation</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="https://github.com/jsphpl/arietta-ring-benchmark">Ring oscillator source code</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="http://www.atmel.com/products/microcontrollers/arm/sam9g.aspx">Atmel info on SAM9G ARM9</a>
+					</li>
+				
+					
+			</ul>
+		</div>
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#programming-an-avr-board" id="markdown-toc-programming-an-avr-board">Programming an AVR board</a></li>
+  <li><a href="#programming-an-arm-board" id="markdown-toc-programming-an-arm-board">Programming an ARM board</a>    <ul>
+      <li><a href="#1-preparing-the-microsd-card" id="markdown-toc-1-preparing-the-microsd-card">1. Preparing the microSD card</a></li>
+      <li><a href="#2-installing-the-pre-built-debian-os" id="markdown-toc-2-installing-the-pre-built-debian-os">2. Installing the pre-built Debian OS</a></li>
+      <li><a href="#3-checking-the-installation" id="markdown-toc-3-checking-the-installation">3. Checking the installation</a></li>
+      <li><a href="#4-attaching-a-serial-debug-terminal" id="markdown-toc-4-attaching-a-serial-debug-terminal">4. Attaching a serial debug terminal</a></li>
+      <li><a href="#5-ring-oscillator-benchmark" id="markdown-toc-5-ring-oscillator-benchmark">5. Ring oscillator benchmark</a>        <ul>
+          <li><a href="#test-code" id="markdown-toc-test-code">Test Code</a>            <ul>
+              <li><a href="#python" id="markdown-toc-python">Python</a></li>
+              <li><a href="#c" id="markdown-toc-c">C</a></li>
+            </ul>
+          </li>
+          <li><a href="#the-result" id="markdown-toc-the-result">The Result</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="programming-an-avr-board">Programming an AVR board</h2>
+
+<p>TBD…</p>
+
+<h2 id="programming-an-arm-board">Programming an ARM board</h2>
+
+<p>I have two of these <a href="https://www.acmesystems.it/arietta">Arietta G25</a> boards around, which i bought really cheaply a few years ago. They feature a 400MHz ARMv9 with 128MB of RAM and some 3V3 GPIO pins. Should be enough for some basic projects requiring a Linux kernel. Today, i’d rather buy a <a href="https://www.raspberrypi.org/products/pi-zero-w/">Raspberry Pi Zero W</a> at 11€. That’s a no-brainer, considering that they have WiFi and BTLE on board, plus much higher CPU frequency and RAM. The G25 is available today at their store at around 25€, but considering the Pi Zero, there’s no reason to buy it, except for a possibly lower power consumption.</p>
+
+<zoom src="01-arietta-g25.jpg" caption="An &lt;em&gt;Arietta G25&lt;/em&gt; ARM board"></zoom>
+
+<h3 id="1-preparing-the-microsd-card">1. Preparing the microSD card</h3>
+
+<p>The image provided by Acme Systems requires an SD card with two partitions:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>Filesystem</th>
+      <th>Label</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>FAT32</td>
+      <td>boot</td>
+      <td>&gt;64MB</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>EXT4</td>
+      <td>rootfs</td>
+      <td>&gt;800MB</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The process using gparted on Linux is described in the <a href="https://www.acmesystems.it/microsd_format">official instructions</a>. On macOS, things look a bit different, as there’s no native support for EXT filesystems. Being too lazy to switch to a Linux machine, i got around this by using the free trial version of <a href="https://www.paragon-software.com/home/extfs-mac/features.html">Paragon ExtFS</a>, a commercial EXT filesystem driver for Mac. After the installation, the computer needs a reboot. Then you can use any EXT2/3/4 filesystem just like a native one:</p>
+
+<zoom src="02-supported-filesystems-ext.png" caption="Supported filesystems after the installation of &lt;em&gt;Paragon ExtFS&lt;/em&gt;. Normally, all EXT2/3/4 entries wouldn't be there."></zoom>
+
+<p>This means, we can now prepare our SD card using the <code class="highlighter-rouge">diskutil</code> command with root privileges. When copying the code below, be sure to replace <code class="highlighter-rouge">/dev/disk3</code> with the actual location of your SD card.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diskutil partitionDisk /dev/disk3 2 MBR fat32 BOOT 128M UFSD_EXTFS4 rootfs R
+</code></pre></div></div>
+
+<div class="alert alert-success">
+    <strong>Explanation:</strong> The above command asks the system to create a <strong>MBR</strong> layout with <strong>2</strong> partitions. The first partition will be formatted with <strong>fat32</strong>, named <strong>BOOT</strong> and have a size of <strong>128MB</strong>. The second partition will be formatted using <strong>UFSD_EXTFS4</strong> (= ext4) and named <strong>rootfs</strong>, spanning all the <strong>R</strong>emaining free space.
+</div>
+
+<p>On success, the two new partitions should be mounted at <code class="highlighter-rouge">/Volumes/BOOT</code> and <code class="highlighter-rouge">/Volumes/rootfs</code>, respectively.</p>
+
+<h3 id="2-installing-the-pre-built-debian-os">2. Installing the pre-built Debian OS</h3>
+
+<p>Getting the Arietta G25 up and running is pretty straight-forward. Acme Systems, the vendor of the G25, provides a Debian Jessie 8.4 Image @Linux 4.4.8 <a href="https://www.acmesystems.it/binary_repository">on their website</a>. <em>Be sure to choose the correct device from the tab bar on the downloads page!</em></p>
+
+<ol>
+  <li>Download the <code class="highlighter-rouge">rootfs.tar.bz2</code> and <code class="highlighter-rouge">boot.tar.bz2</code> archives from the above link</li>
+  <li>Untar the rootfs to our newly partitioned SD card: <code class="highlighter-rouge">tar -xvjpSf rootfs.tar.bz2 -C /Volumes/rootfs</code></li>
+  <li>Also untar the BOOT partition image: <code class="highlighter-rouge">tar -xvjpSf boot.tar.bz2 -C /Volumes/BOOT</code></li>
+  <li>Unmount both volumes: <code class="highlighter-rouge">diskutil unmount /dev/disk3s1; diskutil unmount /dev/disk3s2</code></li>
+</ol>
+
+<p><strong>Done.</strong></p>
+
+<h3 id="3-checking-the-installation">3. Checking the installation</h3>
+
+<ol>
+  <li>Insert the microSD card into the Arietta</li>
+  <li>Connect the Board to a Linux or macOS machine using a Micro-USB cable</li>
+  <li>After a few seconds, the greed LED on the upper side of the Board should start to blink, indicating that the kernel is running</li>
+  <li>The Arietta’s USB port acts as a virtual network adapter. Configure it on your host machine, by assigning it a fixed IP address of <code class="highlighter-rouge">192.168.10.20</code> and the subnet mask <code class="highlighter-rouge">255.255.255.0</code></li>
+  <li>Ping arietta to see if the network connection works: <code class="highlighter-rouge">ping 192.168.10.10</code></li>
+  <li>Ping arietta using its hostname to test bonjour: <code class="highlighter-rouge">ping arietta.local</code></li>
+  <li>If both pings are successful, nothing should keep you away from <code class="highlighter-rouge">ssh root@arietta.local</code> using <em>acmesystems</em> as password</li>
+  <li>Running the <code class="highlighter-rouge">top</code> command on the arietta reveals that 99% of the system memory are occupied, but, at the same time, proves the G25 to be working ;)</li>
+</ol>
+
+<div class="row">
+    <div class="col-md-4">
+        <zoom src="07-kernel-led.jpg" shadow="true" caption="Kernel up → LED blinks"></zoom>
+    </div>
+    <div class="col-md-4">
+        <zoom src="03-network-static-ip.png" caption="Static IP configuration for the virtual network adapter"></zoom>
+    </div>
+    <div class="col-md-4">
+        <zoom src="04-top-memory-full.png" caption="The &lt;code&gt;top&lt;/code&gt; command reports 1976 KiB of free memory"></zoom>
+    </div>
+</div>
+
+<h3 id="4-attaching-a-serial-debug-terminal">4. Attaching a serial debug terminal</h3>
+
+<div class="row">
+    <div class="col-lg-3"><zoom src="06-shift-ftdi-adapter.jpg" class="shadow"></zoom></div>
+    <div class="col-lg-9"><p></p>
+        <p>Let's connect to the serial terminal in order to ensure a stable connection, should the networking/ssh path fail. This is also useful to catch boot messages when playing with the kernel or filesystem. Looking up the <a href="https://www.acmesystems.it/pinout_arietta">pinout</a>, turns out i can directly connect a standard 3.3V FTDI cable to the non-standard Shift-By-1® connector ;)</p>
+    </div>
+</div>
+
+<h3 id="5-ring-oscillator-benchmark">5. Ring oscillator benchmark</h3>
+
+<div class="row">
+    <div class="col-md-9">
+        <p>Now i want to use the GPIO pins on the Arietta G25 to perform a benchmark using the ring oscillator setup that <a href="http://fab.cba.mit.edu/collab/ring/">Neil mentioned</a>. In order to get a more realistic view of the raw throughput, i'll build a custom rootfs with just the required packages, following <a href="https://www.acmesystems.it/debian_jessie">these instructions</a>. But that's beyond the scope of this page…</p>
+
+        <p>The <a href="https://www.acmesystems.it/gpio">official documentation</a> on the Arietta GPIO states three different APIs to the GPIO: Sysfs, Python, and C. I will try to use the Python and C bindings, expecting C to yield higher frequencies than Python.</p>
+
+        <p>As suggested in the GPIO documentation, the <a href="https://raw.githubusercontent.com/tanzilli/gpiolib/master/gpiolib.c">gpiolib.c</a> (C) and <a href="https://github.com/acmesystems/acmepins">acmepins</a> (Python) libraries will be used for the tests.</p>
+
+        <p>All source code used in the tests can be found in the Github repository linked at the top of this page under <em>#Further Resources</em>.</p>
+    </div>
+    <div class="col-md-3">
+        <zoom src="05-g25-pinout.jpg" alt="Arietta G25 GPIO pinout" caption="&lt;a href='https://www.acmesystems.it/pinout_arietta'&gt;Arietta G25 GPIO pinout&lt;/zoom&gt;"></zoom>
+    </div>
+</div>
+
+<h4 id="test-code">Test Code</h4>
+
+<h5 id="python">Python</h5>
+
+<p>The identifiers for the pins can be found in the <a href="https://github.com/AcmeSystems/acmepins/blob/master/acmepins.py#L35...L63">acmepins source code</a>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">acmepins</span> <span class="kn">import</span> <span class="n">GPIO</span>
+
+<span class="n">pin_out</span> <span class="o">=</span> <span class="n">GPIO</span><span class="p">(</span><span class="s">'J4.39'</span><span class="p">,</span><span class="s">'OUTPUT'</span><span class="p">)</span>  <span class="c"># PC0</span>
+<span class="n">pin_in</span> <span class="o">=</span> <span class="n">GPIO</span><span class="p">(</span><span class="s">'J4.37'</span><span class="p">,</span><span class="s">'INPUT'</span><span class="p">)</span>    <span class="c"># PC1</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">pin_out</span><span class="o">.</span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">0</span> <span class="k">if</span> <span class="n">pin_in</span><span class="o">.</span><span class="n">digitalRead</span><span class="p">()</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>There seems to be a bug in GPIO.digitalRead(). It is fixed by <strong>replacing <code class="highlighter-rouge">pinlevel[level]</code> with just <code class="highlighter-rouge">level</code> in <code class="highlighter-rouge">acmepins.py:783</code>.</strong> This is the behaviour we expected, anyway…</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NameError: global name 'pinlevel' is not defined
+</code></pre></div></div>
+
+<h5 id="c">C</h5>
+
+<p>The kernel ids of the pins can be found here: <a href="https://www.acmesystems.it/pinout_kernelid">https://www.acmesystems.it/pinout_kernelid</a></p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdbool.h&gt;
+#include "gpiolib.c"
+</span>
+<span class="cp">#define DIR_IN  1
+#define DIR_OUT 0
+#define PIN_OUT 64
+#define PIN_IN  65
+</span>
+<span class="n">bool</span> <span class="n">input</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Read value from input</span>
+        <span class="n">gpioexport</span><span class="p">(</span><span class="n">PIN_IN</span><span class="p">);</span>
+        <span class="n">gpiosetdir</span><span class="p">(</span><span class="n">PIN_IN</span><span class="p">,</span> <span class="n">DIR_IN</span><span class="p">);</span>
+        <span class="n">input</span> <span class="o">=</span> <span class="n">gpiogetbits</span><span class="p">(</span><span class="n">PIN_IN</span><span class="p">);</span>
+
+        <span class="c1">// Write inverse value to output</span>
+        <span class="n">gpioexport</span><span class="p">(</span><span class="n">PIN_OUT</span><span class="p">);</span>
+        <span class="n">gpiosetdir</span><span class="p">(</span><span class="n">PIN_OUT</span><span class="p">,</span> <span class="n">DIR_OUT</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">input</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">gpioclearbits</span><span class="p">(</span><span class="n">PIN_OUT</span><span class="p">);</span>  <span class="c1">// set low</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">gpiosetbits</span><span class="p">(</span><span class="n">PIN_OUT</span><span class="p">);</span>    <span class="c1">// set high</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The abode code also produces an error on compilation, which can again be resolved by a small edit to the library: <strong>Remove the entire <code class="highlighter-rouge">main()</code> function from <code class="highlighter-rouge">gpiolib.c</code>.</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpiolib.c:155:6: note: previous definition of 'main' was here
+ void main(void) {
+      ^
+</code></pre></div></div>
+
+<h4 id="the-result">The Result</h4>
+
+<p>The oscilloscope shows a quite disillusioning result: <em>roughly <strong>200 Hz</strong> with both Python and C – that’s 2 million CPU cycles @ 400 MHz!</em></p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <zoom src="08-osci-result-py.jpg" shadow="true"></zoom>
+    </div>
+    <div class="col-sm-6">
+        <zoom src="09-osci-result-c.jpg" shadow="true"></zoom>
+    </div>
+</div>
+
+<p>On reptition of the experiment using a logic analyzer to measure the frequency, our fears shall be confirmed.</p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <zoom src="10-logic-analyzer-result-py.png" caption="Python performs at 213 Hz"></zoom>
+    </div>
+    <div class="col-sm-6">
+        <zoom src="11-logic-analyzer-result-c.png" caption="…C only 183 Hz – what's wrong?"></zoom>
+    </div>
+</div>
+
+<p>I doubt the experiment and test an Arduino with the same setup in order to make sure nothing’s wrong with my test equipment / code / procedure.</p>
+
+<p>For a quick test, i hack up the following code and load it onto a Trinket:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define PIN_OUT 0
+#define PIN_IN  1
+</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_OUT</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+    <span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_IN</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>  <span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">PIN_OUT</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">PIN_IN</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>At a frequency of around 90 KHz, the Arduino result is much closer to the expected range. This should confirm the methodology. The results are close to the Arduinos in the <a href="http://fab.cba.mit.edu/collab/ring/">chart</a>, so there’s no need for a plain-C test. Still, the result is disturbing: <strong>GPIO on a 16MHz AVR through Arduino is three orders of magnitude faster than on a 400MHz ARM through Linux-Sysfs-Python/C.</strong></p>
+
+<zoom src="12-arduino-results.png" caption="The AVR through Arduino performs much better"></zoom>
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-10/">W10: Mechanical Design</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-08/">W08: Computer Machining</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W06: 3D Scanning & Printing – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W06: 3D Scanning & Printing</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					(1) Design and 3D print an object (small, few cm) that could not be made subtractively. (2) 3D scan an object (and optionally print it)
+				</p>
+			</div>
+		</div>
+		
+
+		
+
+		
+		
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Further Resources</h5>
+			</div>
+			<ul class="links list-group list-group-flush">
+				
+					
+					<li class="list-group-item">
+						
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+		
+				<a href="additive.scad">additive.scad (source code)</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="additive.stl">additive.stl (rendered model)</a>
+					</li>
+				
+					
+			</ul>
+		</div>
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#a-3d-object-that-could-not-be-made-subtractively" id="markdown-toc-a-3d-object-that-could-not-be-made-subtractively">A 3D object that could not be made subtractively</a>    <ul>
+      <li><a href="#objective" id="markdown-toc-objective">Objective</a></li>
+      <li><a href="#design" id="markdown-toc-design">Design</a></li>
+      <li><a href="#slicing" id="markdown-toc-slicing">Slicing</a>        <ul>
+          <li><a href="#software-choice" id="markdown-toc-software-choice">Software choice</a></li>
+          <li><a href="#key-parameters" id="markdown-toc-key-parameters">Key parameters</a></li>
+        </ul>
+      </li>
+      <li><a href="#printing" id="markdown-toc-printing">Printing</a>        <ul>
+          <li><a href="#warming-up-the-printer" id="markdown-toc-warming-up-the-printer">Warming up the printer</a></li>
+          <li><a href="#loading-the-code" id="markdown-toc-loading-the-code">Loading the code</a></li>
+          <li><a href="#loading-the-filament" id="markdown-toc-loading-the-filament">Loading the filament</a></li>
+          <li><a href="#preparing-the-print-bed" id="markdown-toc-preparing-the-print-bed">Preparing the print bed</a></li>
+          <li><a href="#result" id="markdown-toc-result">Result</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#3d-scanning" id="markdown-toc-3d-scanning">3D Scanning</a></li>
+</ul>
+
+<hr />
+
+<h2 id="a-3d-object-that-could-not-be-made-subtractively">A 3D object that could not be made subtractively</h2>
+
+<h3 id="objective">Objective</h3>
+
+<p>One outstanding property of 3D printers is that they can build hollow objects, which couldn’t be made subtractively.</p>
+
+<blockquote>
+  <p><em>Hollow</em> in this context means that the object contains cavities (volumes filled with air) that are embedded in the object in a way that not every point of the cavity can be reached from outside the object by a straight line that does not intersect with solid material.</p>
+</blockquote>
+
+<p>This definition covers objects that cannot be made by classical machining from one piece. They could, however, be made using a milling machine (or other means) to produce individual parts that are assembled in a further step (eg. glue, welding, screws).</p>
+
+<h3 id="design">Design</h3>
+
+<p>So how do we do it? Quite simple, if we don’t want do make anything useful, but rather settle for art. We just need to make some kind of strucure inside of a structure. What about this:</p>
+
+<div class="row">
+	<div class="col-sm-4"><zoom src="01-base-structure.png" caption="Our base structure…" /></div>
+	<div class="col-sm-4"><zoom src="02-rotated.png" caption="…duplicated, rotated and scaled a couple of times" /></div>
+	<div class="col-sm-4"><zoom src="03-cross-section.png" caption="Cross section reveals cavities" /></div>
+</div>
+
+<h3 id="slicing">Slicing</h3>
+
+<p>Slicing is that step where the universal 3D model (usually as stl geometry) turns into machine-specific <strong>gcode</strong>. The latter is basically <em>assembly language for CNC-machines</em>, a series of raw instructions to the printer, telling it where to move (+ at which speed, + how much filament to extrude). It’s is called <em>slicing</em> because the results express the model as a series of <em>slices</em>, which the printer can layer on top of each other along the z-axis.</p>
+
+<p>Gcode is always more or less machine- and firmware-specific (just as assembly code is), as it is trimmed towards the machine’s physical properties, such as the length of the individual axes, gearing ratios, movement speed &amp; acceleration, filament diameter, etc.. It often is also specific to the type of material used, as it may contain information about nozzle and bed (sometimes also chamber) temperatures as well as control instructions for possible cooling systems. Some machines allow to choose those values directly at print time, accepting material-agnostic gcode without any temperature information.</p>
+
+<zoom src="04-slicr-screenshot.png" caption="Screenshot of the sliced model. Yellow is shell, red is fill, green is support material."></zoom>
+
+<p>The resulting instructions are quite easily readable by humans, as they’re typically encoded in ASCII. The only thing one needs to know (or have a lookup table for) is the meaning of the various G- and M-codes. G-codes typically address the primary features of the machine (movement, extrusion), while M-codes are used for configuration and auxiliary features. Here is the first portion of our model’s gcode (RepRap-compatible dialect) with some comments to explain what the instructions mean:</p>
+
+<pre><code class="language-gcode">M107
+M190 S65 ; set bed temperature and wait for it to be reached
+M104 S210 ; set temperature
+G28 ; home all axes
+G1 Z5 F5000 ; lift nozzle
+
+; Filament gcode
+
+M109 S210 ; set temperature and wait for it to be reached
+G21 ; set units to millimeters
+G90 ; use absolute coordinates
+M82 ; use absolute distances for extrusion
+G92 E0
+G1 Z0.200 F7800.000
+G1 E-1.00000 F2400.00000
+G92 E0
+G1 X103.627 Y78.865 F7800.000
+G1 E1.00000 F2400.00000
+G1 F1800
+G1 X104.732 Y77.730 E1.04704
+G1 X106.084 Y76.903 E1.09408
+G1 X107.598 Y76.436 E1.14112
+G1 X108.608 Y76.341 E1.17123
+G1 X125.848 Y76.179 E1.68315
+G1 X143.064 Y76.340 E2.19432
+G1 X143.957 Y76.416 E2.22093
+G1 X145.370 Y76.807 E2.26448
+…
+</code></pre>
+
+<p>Different printer firmwares support different sets of instructions. Here’s the gcode reference of the Marlin firmware, running on many open source, ATMega-based printer electronics: <a href="http://marlinfw.org/meta/gcode/">http://marlinfw.org/meta/gcode/</a>.</p>
+
+<h4 id="software-choice">Software choice</h4>
+
+<p>A variety of open- and closed-source software exists for the job. Manufacturers of 3D printers ship their own solutions, some of them being forks of open source tools, others being developed completely from scratch. Often times, they can be used with other types of printers by simply creating a profile for the machine (specifying dimensions, nozzle size, movement speeds, etc.). Some noteworthy tools that can be used with many different machines:</p>
+
+<ul>
+  <li><a href="https://github.com/alexrj/Slic3r">Slic3r</a> (<a href="https://github.com/prusa3d/Slic3r/">Prusa Edition</a>) <em>[open source]</em> – my preferred one for its comprehensive feature set</li>
+  <li><a href="http://reprap.org/wiki/Skeinforge">Skeinforge</a> <em>[open source]</em> – older generation open source slicer written in python</li>
+  <li><a href="https://www.simplify3d.com/">Simplify3D</a> <em>[commercial]</em> – very advanced machine-agnostic slicer</li>
+  <li><a href="https://ultimaker.com/en/products/cura-software">Cura</a> <em>[closed source]</em> – the one that ships with the Ultimakers</li>
+</ul>
+
+<h4 id="key-parameters">Key parameters</h4>
+
+<ul>
+  <li><strong>Layer height</strong> – thickness of each layer in z-direction. Should be smaller than the nozzle diameter</li>
+  <li><strong>Extruder &amp; bed temperature</strong> – according to the filament used</li>
+  <li><strong>Infill percentage &amp; pattern</strong> – influences the density and thereby rigidity of the resulting object as well as print duration</li>
+  <li><strong>Speed</strong> – various speeds may be defined for various moves eg. first layer, perimeters, infill, travel moves</li>
+  <li><strong>Support</strong> – extra structures to support overhangs and other shapes that would otherwise be impossible to print “in the air”</li>
+</ul>
+
+<h3 id="printing">Printing</h3>
+
+<h4 id="warming-up-the-printer">Warming up the printer</h4>
+
+<p>While the nozzle usually heats up quite quickly, the print bed can take a couple of minutes before it reaches its target temperature. In order to minimize waiting time, i usually tell the printer to heat up the printing bed, before even kicking off the slicing process.</p>
+
+<h4 id="loading-the-code">Loading the code</h4>
+
+<p>In case of the Craftbot printers in our lab, the gcode needs to be loaded onto a USB tumbdrive that can be connected to the printer. On the small touchscreen, the appropriate file can be selected for printing.</p>
+
+<h4 id="loading-the-filament">Loading the filament</h4>
+
+<p>The nozzle needs to be heated up, before the old filament can be removed an the new one can be inserted. I recommend unrolling the approximately required length from the spool, because it could contain loops and i don’t want my prints to fail because of a jammed filament spool. It is also recommended to wipe the filament before feeding it to the printer. This can be achieved by pushing it through a piece of sponge.</p>
+
+<h4 id="preparing-the-print-bed">Preparing the print bed</h4>
+
+<p>I typically put a layer of <em>Blue painter’s tape</em> on top of the printing surface. This makes the model stick much better and thereby reduces the risk of warping by a great deal. However, if you desire a smooth bottom surface on your model, this might not be ideal. In that case, make sure the build plate is super clean, using alcohol to remove any grease.</p>
+
+<p>As a final step before starting the print, i recommend checking if the bed is level. Most printer firmware offer an option to (automatically or manually) calibrate the bed level. Use it frequently!</p>
+
+<h4 id="result">Result</h4>
+
+<p>The video of the print got lost (What a shame, the internet is definitely lacking 3d printing timelapse videos ;P), but here are some photos of the result:</p>
+
+<div class="row">
+    <div class="col-sm-6"><zoom src="05-print-result-1.jpg"></zoom></div>
+    <div class="col-sm-6"><zoom src="06-print-result-2.jpg"></zoom></div>
+</div>
+
+<h2 id="3d-scanning">3D Scanning</h2>
+
+<p>In our fablab, we have an <a href="https://www.3dsystems.com/shop/isense/techspecs">iSense 3D Scanner</a>, that snaps onto an iPhone and allows 3D scanning with its dedicated iOS app. The process is fairly straight forward. After connecting the scanner to the phone and launching the app, it starts to detect its environment. I scanned a friend’s head by walking around him in a circle, pointing the scanner towards the center (dont forget the top of the head). As you walk around, the app constructs a 3D mesh of the scanned object, sorry, subject in this case, trying to isolate it from the background.</p>
+
+<div class="row">
+    <div class="col-sm-6"><zoom caption="The iSense camera mounted onto an iPhone" src="07-isense-on-iphone.jpg"></zoom></div>
+    <div class="col-sm-6"><zoom caption="Not much choice in the UI" src="08-isense-user-interface.jpg"></zoom></div>
+    <div class="col-sm-6"><zoom caption="Andreas scanning Benedikt" src="09-3d-scanning.jpg"></zoom></div>
+    <div class="col-sm-6"><zoom caption="The raw scan result" src="10-scan-result.jpg"></zoom></div>
+</div>
+
+<p>The only way to get the scanned model out of the iSense app is by email (lol). The received model looks quite good, but has some holes in it, that need to be patched. <a href="http://www.meshmixer.com/">Meshmixer</a> or Autodesk Fusion can be used for that job. After some frustration with Fusion, i switched to Meshmixer.</p>
+
+<div class="row">
+    <div class="col-sm-4"><zoom caption="Couldn't get Fusion 360 to do what i wanted it to" src="11-fusion-fail.png"></zoom></div>
+    <div class="col-sm-4"><zoom caption="After switching to Meshmixer…" src="12-meshmixer-1.png"></zoom></div>
+    <div class="col-sm-4"><zoom caption="…i somehow managed it." src="13-meshmixer-2.png"></zoom></div>
+</div>
+
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-07/">W07: Electronics Design</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-05/">W05: Electronics Production</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

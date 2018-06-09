@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>Electronics – IllumiNative – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="page">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>Electronics – IllumiNative</h1>
+	</header>
+
+	<article>
+		<h1 id="requirements">Requirements</h1>
+
+<ul>
+  <li>Total of 1500 - 2000 lumen of luminous flux</li>
+  <li>Two-channel constant current PWM drive</li>
+  <li>Bluetooth interface</li>
+  <li>RTC (for sunlight tracking)</li>
+</ul>
+
+<h1 id="pcb-material">PCB Material</h1>
+
+<p>The PCB for the driver circuit will be on a regular 2-sided Expoxy base material. The LED arrays themselves are going to be milled from copper-plated aluminium base material, allowing lots of thermal energy to transit.</p>
+
+<h1 id="parts-choice">Parts Choice</h1>
+
+<h2 id="leds">LEDs</h2>
+
+<ul>
+  <li>High CRi</li>
+  <li>Binned so we can drive them in parallel (ideally)</li>
+</ul>
+
+<p>Cold: http://www.nichia.co.jp/specification/products/led_spec/NSSWT02AT-V2-E(4368A)R8000%20R90.pdf
+Warm: http://www.nichia.co.jp/specification/products/led_spec/NSSLT02AT-V2-E(4371A)R8000%20R90.pdf</p>
+
+<h2 id="drivers">Drivers</h2>
+
+<ul>
+  <li>2 channels</li>
+  <li>0-1A / 24V per channel</li>
+  <li>Settable current</li>
+</ul>
+
+<p>So as described below, a <em>voltage controlled current sink (VCCS)</em> will be used to drive the LEDs through an op-amp/mosfet combination. The op-amp is configured in a way that the current on the output matches the voltage on the input. This is achieved by connecting the output to GND via a known value resistor. If this resistor is 1Ω, the output current will be equal to 1A if the input voltage is 1V.</p>
+
+<h3 id="low-pass-filter">Low pass filter</h3>
+
+<p>A 2-stage RC low-pass filter is between the µC and the opamp’s input. I choose 2x (2kΩ and 1µF) in series, which gives quite a smooth DC @244Hz with 50% duty cycle. Another µF is added at the opamp’s output. The simulation (link below) shows that our resulting output current remains a ripple of roughly ±10mA. I hope that’s small enough to not be noticable on the LEDs.</p>
+
+<h3 id="voltage-divider">Voltage divider</h3>
+
+<p>As our target current range is 0-1A, we need a 1/5 voltage divider to convert our µC’s 5V (@ 100% PWM duty cycle) signal to a 1V opamp input, which should yield a 1A constant output. Our filter already adds 4kΩ of series resistance. Adding another 5.9k in series and 2.49k to ground gives us the following divider ratio:</p>
+
+<p>(4k+5.9k+2.49k) / 2.49k = 4.9759036145</p>
+
+<p>That’s close enough to our 1/5 target ratio, as we don’t need an exactly know current. We only need to know the maximum current fairly exactly and need to control it linearly.</p>
+
+<h2 id="bluetooth-adapter">Bluetooth Adapter</h2>
+
+<h2 id="microcontroller">Microcontroller</h2>
+
+<h3 id="requirements-1">Requirements</h3>
+
+<ul>
+  <li>Serial interface (for bluetooth adapter)</li>
+  <li>2 hi-res PWM channels</li>
+  <li>Something to interface with the RTC</li>
+  <li>2 interrupts to read the rotary encoder</li>
+  <li>Another interrupt for the encoder push button</li>
+</ul>
+
+<p><a href="http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf">328P Datasheet</a></p>
+
+<p>The two external interrupts available on the 328 will take care of the rotary encoder. A pin change interrupt will monitor its push button.</p>
+
+<p>A serial bluetooth module will interface with the hardware serial port.</p>
+
+<h3 id="pin-mapping">Pin mapping</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pin Name</th>
+      <th style="text-align: right">Pin #</th>
+      <th>Function </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PB1</td>
+      <td style="text-align: right">13</td>
+      <td>LED cold</td>
+    </tr>
+    <tr>
+      <td>PB2</td>
+      <td style="text-align: right">14</td>
+      <td>LED warm</td>
+    </tr>
+    <tr>
+      <td>PD0</td>
+      <td style="text-align: right">30</td>
+      <td>BT Rx</td>
+    </tr>
+    <tr>
+      <td>PD1</td>
+      <td style="text-align: right">31</td>
+      <td>BT Tx</td>
+    </tr>
+    <tr>
+      <td>PD2</td>
+      <td style="text-align: right">32</td>
+      <td>Encoder -</td>
+    </tr>
+    <tr>
+      <td>PD3</td>
+      <td style="text-align: right">1</td>
+      <td>Encoder +</td>
+    </tr>
+    <tr>
+      <td>PD4</td>
+      <td style="text-align: right">2</td>
+      <td>Encoder push</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="brightness-steps">Brightness steps</h3>
+
+<p>The problem with our standard 8-bit PWM is that those steps are linearly spaced. 256 steps would be enough for our eye to notice no discrete steps, if only they were spaced logarithmically. Our eye’s perception of brightness is approximately logarithmic. This means doubling the perceived brightness requires four times the light. So at the lower end of the duty cycle, we’re gonna have too big increments in order to dim without noticable steps, while at the upper end the increments could be way bigger without us noticing any jumps in brightness.</p>
+
+<p>So what’s the solution? Logarithmic PWM, right? No idea if that exists – i’ve never heard of it. Instead, we can increase the resolution of our PWM to a lot more steps, and then choose a tiny subset of logarithmically-spaced duty cycle values. Assuming our LEDs have a near-linear power-to-brighness curve, looping through that subset should give us almost linear dimming.</p>
+
+<p>These lookup tables for different bit depths, created by the fine guys at mikrocontroller.net forum, should illustrate what i’m saying:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">const</span> <span class="kt">uint16_t</span> <span class="n">pwmtable_8D</span><span class="p">[</span><span class="mi">32</span><span class="p">]</span> <span class="n">PROGMEM</span> <span class="o">=</span>
+<span class="p">{</span>
+    <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span>
+    <span class="mi">27</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">255</span>
+<span class="p">};</span>
+
+<span class="k">const</span> <span class="kt">uint16_t</span> <span class="n">pwmtable_10</span><span class="p">[</span><span class="mi">64</span><span class="p">]</span> <span class="n">PROGMEM</span> <span class="o">=</span>
+<span class="p">{</span>
+    <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span>
+    <span class="mi">61</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">131</span><span class="p">,</span> <span class="mi">146</span><span class="p">,</span> <span class="mi">162</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span>
+    <span class="mi">279</span><span class="p">,</span> <span class="mi">311</span><span class="p">,</span> <span class="mi">346</span><span class="p">,</span> <span class="mi">386</span><span class="p">,</span> <span class="mi">430</span><span class="p">,</span> <span class="mi">479</span><span class="p">,</span> <span class="mi">534</span><span class="p">,</span> <span class="mi">595</span><span class="p">,</span> <span class="mi">663</span><span class="p">,</span> <span class="mi">739</span><span class="p">,</span> <span class="mi">824</span><span class="p">,</span> <span class="mi">918</span><span class="p">,</span> <span class="mi">1023</span>
+<span class="p">};</span>
+
+<span class="k">const</span> <span class="kt">uint16_t</span> <span class="n">pwmtable_16</span><span class="p">[</span><span class="mi">256</span><span class="p">]</span> <span class="n">PROGMEM</span> <span class="o">=</span>
+<span class="p">{</span>
+    <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span>
+    <span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span>
+    <span class="mi">61</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span>
+    <span class="mi">117</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">146</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">166</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">197</span><span class="p">,</span>
+    <span class="mi">206</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">267</span><span class="p">,</span> <span class="mi">279</span><span class="p">,</span> <span class="mi">292</span><span class="p">,</span> <span class="mi">304</span><span class="p">,</span> <span class="mi">318</span><span class="p">,</span> <span class="mi">332</span><span class="p">,</span> <span class="mi">347</span><span class="p">,</span>
+    <span class="mi">362</span><span class="p">,</span> <span class="mi">378</span><span class="p">,</span> <span class="mi">395</span><span class="p">,</span> <span class="mi">412</span><span class="p">,</span> <span class="mi">431</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">470</span><span class="p">,</span> <span class="mi">490</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">535</span><span class="p">,</span> <span class="mi">558</span><span class="p">,</span> <span class="mi">583</span><span class="p">,</span> <span class="mi">609</span><span class="p">,</span>
+    <span class="mi">636</span><span class="p">,</span> <span class="mi">664</span><span class="p">,</span> <span class="mi">693</span><span class="p">,</span> <span class="mi">724</span><span class="p">,</span> <span class="mi">756</span><span class="p">,</span> <span class="mi">790</span><span class="p">,</span> <span class="mi">825</span><span class="p">,</span> <span class="mi">861</span><span class="p">,</span> <span class="mi">899</span><span class="p">,</span> <span class="mi">939</span><span class="p">,</span> <span class="mi">981</span><span class="p">,</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">1069</span><span class="p">,</span>
+    <span class="mi">1117</span><span class="p">,</span> <span class="mi">1166</span><span class="p">,</span> <span class="mi">1218</span><span class="p">,</span> <span class="mi">1272</span><span class="p">,</span> <span class="mi">1328</span><span class="p">,</span> <span class="mi">1387</span><span class="p">,</span> <span class="mi">1448</span><span class="p">,</span> <span class="mi">1512</span><span class="p">,</span> <span class="mi">1579</span><span class="p">,</span> <span class="mi">1649</span><span class="p">,</span> <span class="mi">1722</span><span class="p">,</span>
+    <span class="mi">1798</span><span class="p">,</span> <span class="mi">1878</span><span class="p">,</span> <span class="mi">1961</span><span class="p">,</span> <span class="mi">2048</span><span class="p">,</span> <span class="mi">2139</span><span class="p">,</span> <span class="mi">2233</span><span class="p">,</span> <span class="mi">2332</span><span class="p">,</span> <span class="mi">2435</span><span class="p">,</span> <span class="mi">2543</span><span class="p">,</span> <span class="mi">2656</span><span class="p">,</span> <span class="mi">2773</span><span class="p">,</span>
+    <span class="mi">2896</span><span class="p">,</span> <span class="mi">3025</span><span class="p">,</span> <span class="mi">3158</span><span class="p">,</span> <span class="mi">3298</span><span class="p">,</span> <span class="mi">3444</span><span class="p">,</span> <span class="mi">3597</span><span class="p">,</span> <span class="mi">3756</span><span class="p">,</span> <span class="mi">3922</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="mi">4277</span><span class="p">,</span> <span class="mi">4467</span><span class="p">,</span>
+    <span class="mi">4664</span><span class="p">,</span> <span class="mi">4871</span><span class="p">,</span> <span class="mi">5087</span><span class="p">,</span> <span class="mi">5312</span><span class="p">,</span> <span class="mi">5547</span><span class="p">,</span> <span class="mi">5793</span><span class="p">,</span> <span class="mi">6049</span><span class="p">,</span> <span class="mi">6317</span><span class="p">,</span> <span class="mi">6596</span><span class="p">,</span> <span class="mi">6889</span><span class="p">,</span> <span class="mi">7194</span><span class="p">,</span>
+    <span class="mi">7512</span><span class="p">,</span> <span class="mi">7845</span><span class="p">,</span> <span class="mi">8192</span><span class="p">,</span> <span class="mi">8555</span><span class="p">,</span> <span class="mi">8933</span><span class="p">,</span> <span class="mi">9329</span><span class="p">,</span> <span class="mi">9742</span><span class="p">,</span> <span class="mi">10173</span><span class="p">,</span> <span class="mi">10624</span><span class="p">,</span> <span class="mi">11094</span><span class="p">,</span>
+    <span class="mi">11585</span><span class="p">,</span> <span class="mi">12098</span><span class="p">,</span> <span class="mi">12634</span><span class="p">,</span> <span class="mi">13193</span><span class="p">,</span> <span class="mi">13777</span><span class="p">,</span> <span class="mi">14387</span><span class="p">,</span> <span class="mi">15024</span><span class="p">,</span> <span class="mi">15689</span><span class="p">,</span> <span class="mi">16384</span><span class="p">,</span>
+    <span class="mi">17109</span><span class="p">,</span> <span class="mi">17867</span><span class="p">,</span> <span class="mi">18658</span><span class="p">,</span> <span class="mi">19484</span><span class="p">,</span> <span class="mi">20346</span><span class="p">,</span> <span class="mi">21247</span><span class="p">,</span> <span class="mi">22188</span><span class="p">,</span> <span class="mi">23170</span><span class="p">,</span> <span class="mi">24196</span><span class="p">,</span>
+    <span class="mi">25267</span><span class="p">,</span> <span class="mi">26386</span><span class="p">,</span> <span class="mi">27554</span><span class="p">,</span> <span class="mi">28774</span><span class="p">,</span> <span class="mi">30048</span><span class="p">,</span> <span class="mi">31378</span><span class="p">,</span> <span class="mi">32768</span><span class="p">,</span> <span class="mi">34218</span><span class="p">,</span> <span class="mi">35733</span><span class="p">,</span>
+    <span class="mi">37315</span><span class="p">,</span> <span class="mi">38967</span><span class="p">,</span> <span class="mi">40693</span><span class="p">,</span> <span class="mi">42494</span><span class="p">,</span> <span class="mi">44376</span><span class="p">,</span> <span class="mi">46340</span><span class="p">,</span> <span class="mi">48392</span><span class="p">,</span> <span class="mi">50534</span><span class="p">,</span> <span class="mi">52772</span><span class="p">,</span>
+    <span class="mi">55108</span><span class="p">,</span> <span class="mi">57548</span><span class="p">,</span> <span class="mi">60096</span><span class="p">,</span> <span class="mi">62757</span><span class="p">,</span> <span class="mi">65535</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p><em>Source: <a href="https://www.mikrocontroller.net/articles/LED-Fading">mikrocontroller.net/articles/LED-Fading</a> (german language)</em></p>
+
+<h4 id="resolution-vs-clock-frequency">Resolution vs. Clock frequency</h4>
+
+<p>Timer1 on the 328 has 16 bit and two output compare registers. We can use that to drive two PWM outputs with up to 16 bit resolution (0-65535). But – and here’s the next issue – this would reduce out PWM <em>frequency</em> to <math><mfrac><mrow><mn>16</mn><mi>MHz</mi></mrow><mrow><msup><mn>2</mn><mn>16</mn></msup></mrow></mfrac><mo>≈</mo><mn>244</mn><mi>Hz</mi></math>. That would require huge filter components after the MOSFETs.</p>
+
+<p>So we have to do some sort of trade-off between switching frequency and resolution. Also, increasing the clock frequency would help. We could run the Mega328 at 20MHz or even swap it for an XMega, which runs at 32MHz. If we don’t want to fall below, say 2kHz switching frequency, with a 32MHz clock, the resolution would be <math><mfrac><mrow><mn>32</mn><mi>MHz</mi></mrow><mrow><mn>2</mn><mi>kHz</mi></mrow></mfrac><mo>=</mo><mn>16000</mn><mo>≈</mo><msup><mn>2</mn><mn>14</mn></msup></math>. 14 bit – let’s go with that for the beginning…</p>
+
+<h5 id="better-solution">Better solution:</h5>
+
+<p>I found a nice circuit called the <em>Voltage Controlled Current Sink</em>. It uses an opamp to generate a constant current through a ground resistor from a control voltage. The advantage is that there’s no need to filter the high current signal after the MOSFET, but only the small control voltage. This lets me use a much smaller filter circuit between the µC and the opamp.</p>
+
+<p>An <a href="http://www.falstad.com/circuit/">online simulator</a> helps me validate the circuit before bulding it:</p>
+
+<p><a href="http://www.falstad.com/circuit/circuitjs.html?cct=$+1+0.000005+16.13108636308289+36+5+43%0Aa+208+176+336+176+1+24+-24+1000000+1.0030980213359555+1.0032232070914697%0Af+448+176+496+176+0+1.5+0.02%0Ag+496+336+496+384+0%0Ar+368+176+448+176+0+100%0Ar+368+272+448+272+0+1000%0Ac+352+176+352+272+0+0.000001+11.515477530072522%0Aw+336+176+352+176+0%0Aw+352+176+368+176+0%0Aw+352+272+368+272+0%0Aw+448+272+496+272+0%0Aw+496+272+496+192+0%0Ar+496+272+496+336+0+1%0Ar+496+80+496+160+0+1%0Aw+208+192+208+272+0%0Aw+208+272+352+272+0%0AR+496+80+496+48+0+0+40+24+0+0+0.5%0Ag+-176+272+-176+336+0%0Ac+-176+160+-176+272+0+0.000001+4.19419822723698%0Ar+-176+160+-240+160+0+2000%0AR+-240+160+-272+160+0+2+244+2.5+2.5+0+1%0Ap+208+160+208+64+1+0%0Ar+-96+160+-16+160+0+2000%0Ar+-176+160+-96+160+0+2000%0Ac+-96+160+-96+272+0+0.000001+3.3883964544733853%0Ag+-96+272+-96+336+0%0Ac+-16+160+-16+272+0+0.000001+2.5825946817093755%0Ag+-16+272+-16+336+0%0Aw+-16+160+48+160+0%0Ag+128+272+128+336+0%0Aw+128+160+208+160+0%0Ar+48+160+128+160+0+3920%0Ar+128+160+128+272+0+2490%0Ao+12+16+0+4099+1.25+1.6+0+2+12+3%0Ao+20+16+0+4098+1.25+0.1+1+1%0A"><img src="circuit-simulator.png" /></a></p>
+
+<h1 id="pcb-design">PCB Design</h1>
+
+<p>Again, i choose <a href="https://upverter.com/">Upverter</a> for the electronics design and layout process. I like the globally shared parts library and the ease of creating new ones.</p>
+
+<h2 id="vccs-module">VCCS module</h2>
+
+<p>First, i create the VCCS including input filter and driver MOSFET as a separate module. This makes it easier to maintain and update that sub-circuit, whithout applying each change in two separate places. Plus, it keeps the final board schematic much tidier, by treating that section the same as an IC with a single symbol.</p>
+
+<blockquote>
+  <p>Link to VCCS module</p>
+</blockquote>
+
+<h2 id="general-process">General Process</h2>
+
+<p>The general process goes as follows:</p>
+
+<h3 id="schematic">Schematic</h3>
+
+<p>First step is always to design the schematic, which defines the desired relationships between the components in electrical terms.</p>
+
+<ol>
+  <li><strong>RTFM</strong> for each critical part (“Typical Application” often gives a quick overview over the required external components)</li>
+  <li><strong>Place symbols</strong></li>
+  <li><strong>Draw connections</strong> between components</li>
+  <li><strong>Use flags</strong> if too many connections would cross</li>
+  <li><strong>Check</strong> that all required connections are established, and that there are no unintended ones</li>
+</ol>
+
+<div class="alert alert-warning">
+    <strong>Note:</strong> Many active components need a decoupling capacitor close to their VCC, in order to provide them with enough current on occasional load spikes, and to keep noise they generate from affecting other components on the same line. <em>You should never spare them!</em> Otherwise, you might get unpredictable behaviour and time-consuming errors later on…
+</div>
+
+<h3 id="layout">Layout</h3>
+
+<h4 id="parts-placement">Parts Placement</h4>
+
+<p>When the first version of the schematic is complete, i move over to the board layout. Upverter typically puts all components from the schematic in a straight horizontal line. Pins that need an electrical connection according to the schematic are connected by thin green lines. I rearrange them so that those green lines become short and don’t cross.</p>
+
+<p>Usually, i place large (&amp; high pin count) components first, and arrange the small ones (&amp; low pin count) around them.</p>
+
+<div class="alert alert-info">
+    <strong>Hint:</strong> When placing components close to each other, keep in mind your soldering process. Hand soldering requires quite some extra clearance so you can access all pins with the soldering iron, without frying any other parts.
+</div>
+
+<h4 id="traces">Traces</h4>
+
+<p>As soon as all components have been arranged, i start to draw the traces. Before that, i set up a <em>clearace constraint</em> in the software to ensure that no pads or traces are closer together than the tool is capable to separate. Usually, i choose a minimum trace clearance of .3mm, to ensure the Othermill can work it with a 1/100” end mill, at least. In case i underrun that constraint while lying out the traces, Upverter would create a warning and highlight the affected areas in red.</p>
+
+<p>For standard signal and low current power lines, i use the default .508mm trace width set in Upverter. For higher current lines (~1A and above), i use an <a href="http://circuitcalculator.com/wordpress/2006/01/31/pcb-trace-width-calculator/">online calculator</a> to determine the appropriate trace width for given current rating and trace length. The 35mil copper layer on most standard PCB materials equals a weigth of <math><mn>1</mn><mfrac><mi>oz</mi><msup><mi>ft</mi><mn>2</mn></msup></mfrac></math>.</p>
+
+
+
+	</article>
+
+	
+
+	<footer>
+		
+
+	</footer>
+</main>
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

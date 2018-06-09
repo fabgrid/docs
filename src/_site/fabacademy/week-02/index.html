@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W02: Project Management – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W02: Project Management</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					Build a personal site describing you and your final project. Upload it to the class archive. Work through a git tutorial.
+				</p>
+			</div>
+		</div>
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Personal Goal</h5>
+				<p class="card-text">
+					I'm going to create a website about the fabgrid project. As a small challenge, i'll try to use Vue.js with TypeScript
+				</p>
+			</div>
+		</div>
+		
+
+		
+		
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Further Resources</h5>
+			</div>
+			<ul class="links list-group list-group-flush">
+				
+					
+					<li class="list-group-item">
+						
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+				
+				<a href="/fabacademy/week-02/lecture-notes.html"><i class="fa fa-btn fa-sticky-note-o"></i> Lecture Notes</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+		
+				<a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid Short Reference</a>
+					</li>
+				
+					
+			</ul>
+		</div>
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#notes-on-jekyll" id="markdown-toc-notes-on-jekyll">Notes on Jekyll</a>    <ul>
+      <li><a href="#theme" id="markdown-toc-theme">Theme</a></li>
+      <li><a href="#templates" id="markdown-toc-templates">Templates</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-by-step-guide" id="markdown-toc-step-by-step-guide">Step-by-step Guide</a>    <ul>
+      <li><a href="#1-setup-jekyll" id="markdown-toc-1-setup-jekyll">1. Setup Jekyll</a></li>
+      <li><a href="#2-theme-creation" id="markdown-toc-2-theme-creation">2. Theme creation</a>        <ul>
+          <li><a href="#cleanup" id="markdown-toc-cleanup">Cleanup</a></li>
+          <li><a href="#creating-a-blank-theme" id="markdown-toc-creating-a-blank-theme">Creating a blank Theme</a></li>
+          <li><a href="#including-twitter-bootstrap" id="markdown-toc-including-twitter-bootstrap">Including Twitter Bootstrap</a></li>
+          <li><a href="#using-custom-fonts" id="markdown-toc-using-custom-fonts">Using custom fonts</a></li>
+          <li><a href="#further-customization" id="markdown-toc-further-customization">Further customization</a></li>
+        </ul>
+      </li>
+      <li><a href="#3-adding-some-content" id="markdown-toc-3-adding-some-content">3. Adding some content</a></li>
+      <li><a href="#4-building-the-slide-menu" id="markdown-toc-4-building-the-slide-menu">4. Building the slide menu</a></li>
+    </ul>
+  </li>
+  <li><a href="#open-source-tools-used" id="markdown-toc-open-source-tools-used">Open Source tools used</a></li>
+  <li><a href="#vcs" id="markdown-toc-vcs">VCS</a>    <ul>
+      <li><a href="#tutorial" id="markdown-toc-tutorial">Tutorial</a></li>
+    </ul>
+  </li>
+  <li><a href="#build--deploy" id="markdown-toc-build--deploy">Build / deploy</a></li>
+</ul>
+
+<hr />
+
+<h2 id="notes-on-jekyll">Notes on Jekyll</h2>
+
+<p>In order to create a website that offers both good user experience <em>and</em> developer experience, i decided to build upon <a href="https://jekyllrb.com/">jekyll</a>.</p>
+
+<p>Cool thing about jekyll is, as with all static site generators, you can use complex logic with bad performance in your templates without taking any influence on the resulting page load time. Everything is compiled to plain html (plus css and js) before it is deployed to a server, so all the server needs to do is deliver static files. No additinal computing. This has an influence on the security of the website, as well.</p>
+
+<h3 id="theme">Theme</h3>
+
+<p>As i wanted something clean to start with, i created a theme from scratch using <a href="http://v4-alpha.getbootstrap.com/">Bootstrap v4</a>. I didn’t use the plain CSS but rather the <a href="http://sass-lang.com/">SCSS</a> version to allow for better customization options without dirty overrides. Also, jekyll has SCSS capabilities built-in so there is no additional setup required to have CSS built from our sources.</p>
+
+<p>Fonts are provided by <a href="https://fonts.google.com/">google webfonts</a>, and the <a href="http://fontawesome.io/icons/">font awesome</a> icon font offers half a ton of icons and symbols. The latter is probably an overkill, but well – it’s just so much easier to write that one line of css and have hundreds of icons available than to pull each one in as a separate svg or even start to mess with a sprite sheet.</p>
+
+<h3 id="templates">Templates</h3>
+
+<p>Jekyll uses the <a href="https://shopify.github.io/liquid/">Liquid</a> templating engine. It lets you define “blueprints” of the structure of a page. After that, you can use plain <a href="https://en.wikipedia.org/wiki/Markdown">markdown</a> and not worry about any styling and stuff when writing the content – it will be rendered as you specified it in the template.</p>
+
+<p>This is an example of the template that is being used for the page you are currently looking at:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: base
+---
+<span class="nt">&lt;main&gt;</span>
+	<span class="nt">&lt;header&gt;</span>
+		<span class="nt">&lt;h1&gt;</span>{{ page.title }}<span class="nt">&lt;/h1&gt;</span>
+
+		{% include lesson-metaboxes.html %}
+	<span class="nt">&lt;/header&gt;</span>
+
+	<span class="nt">&lt;article&gt;</span>
+		{{ content }}
+	<span class="nt">&lt;/article&gt;</span>
+
+	<span class="nt">&lt;footer&gt;</span>
+		{% include pagination.html %}
+	<span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/main&gt;</span>
+</code></pre></div></div>
+
+<p>At the very top, it says <code class="highlighter-rouge">layout: base</code>, which indicates to use in turn another file <code class="highlighter-rouge">base.html</code> as a layout and render the current template into it. In the <em>base</em> layout, the outermost html structure is defined. It contains the <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> <code class="highlighter-rouge">&lt;head&gt;</code> and <code class="highlighter-rouge">&lt;body&gt;</code> with all the meta stuff and things common to all pages, like the sidebar. You can check the <a href="https://github.com/fabgrid/docs/tree/master/_layouts">full template file at github</a>.</p>
+
+<p><code class="highlighter-rouge">{% include lesson-metaboxes.html %}</code> instructs the templating engine to load another template from the mentioned file and insert it into the document instead of the <code class="highlighter-rouge">{% include … %}</code> statement.</p>
+
+<p>The <code class="highlighter-rouge">{{ content }}</code> placeholder in the above template is where the actual text body of the page is going to be placed. It is very common in templating engines to use double curly braces <code class="highlighter-rouge">{{ }}</code> to indicate placeholders. At <code class="highlighter-rouge">{{ page.title }}</code>, the value of the <code class="highlighter-rouge">title</code> variable of the current page is going to be inserted. The variable is defined in the corresponding markdown files. Of course, an arbitrary number of markdown (or html) files can use the same template. An example:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight" v-pre=""><code>---
+title: 'W1: Principles and Practices, Project Management'
+layout: lesson
+---
+
+- This text is going to appear as html where the {{ content }} placeholder is in the template
+- This markdown list will be converted to a &lt;ul&gt;</code></pre></div>
+
+<p>In the top section between the triple dashes <code class="highlighter-rouge">---</code> we use the <a href="http://yaml.org/">yaml</a> language to define some variables. We define a <em>title</em>, which will be accessible in the template as <code class="highlighter-rouge">{{ page.title }}</code>, and a <em>layout</em>. The layout declares which template to use. In this case, it’s the <em>lesson</em> template, which refers to the <code class="highlighter-rouge">lesson.html</code> file shown above. We can make up variables as we need them, there are virtually no limits.</p>
+
+<p>So in the end, using templates saves us time, even though it takes more effort upfront to create the template. But this saves us time on a task that we repeat much more often than that: writing the content. I’m going to use the template for the fabacademy lessons roughly around 20 times. That’s how many lessons there are in the fabacademy. When writing the documentation, i can follow a far more <em>data-driven</em> approach: Some information, that will be there on most lessons is stored in additional variables. Look at the three boxes at the very top of this page. The information shown in them is pulled from the following variables at the top of my source file:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">assignment</span><span class="pi">:</span> <span class="s">Build an html page describing your project. Use git for version control and for deployment to the fabacademy server.</span>
+<span class="na">goal</span><span class="pi">:</span> <span class="s">I'm going to create a website about the fabgrid project. As a small challenge, i'll try to use Vue.js with TypeScript</span>
+<span class="na">links</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">text</span><span class="pi">:</span> <span class="s">Liquid Short Reference</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">https://github.com/Shopify/liquid/wiki/Liquid-for-Designers</span>
+</code></pre></div></div>
+
+<p>I implemented a check on the variable presence so i can hide the box by not specifying the variable at all in my markdown file. In addition, the <em>Lecture Notes</em> link is dynamically added when a file named <code class="highlighter-rouge">lecture-notes.md</code> is present next to the source file of this page. Remember, we can easily afford all this extra logic through our offline build process? To see how this is implemented in detail, <a href="https://github.com/fabgrid/docs/blob/master/_includes/lesson-metaboxes.html">use the source</a>.</p>
+
+<p>Now all i need to do when creating a new page is to fill in that variables and it’s gonna be displayed correctly. I don’t have to remember how the markup has to be structured or look it up in the bootstrap docs. So i don’t write the same code, or more precisely markup, over and over again, implementing the <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY principle</a> which is one of the keys to keeping code maintainable.</p>
+
+<p>So there comes another advantage of this approach: Let’s say i want to remove those boxes and display their contents in a table at the bottom of each page. With this setup, it’s fairly easy. There is only one place to make the edits, no copies that need syncing.</p>
+
+<hr />
+
+<h2 id="step-by-step-guide">Step-by-step Guide</h2>
+
+<h3 id="1-setup-jekyll">1. Setup Jekyll</h3>
+
+<p>In order to start a new jekyll project, <code class="highlighter-rouge">jekyll new project_name</code> can be issued, assuming that the <a href="https://jekyllrb.com/docs/installation/">jekyll gem is installed</a>, of course. This gives you a fairly basic website, which you can see after running <code class="highlighter-rouge">jekyll serve</code> from the project folder and visiting <a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a> in a browser. It should look something like this:</p>
+
+<div class="row">
+	<div class="col-sm-7">
+		<zoom src="01-jekyll-initial-website.png" shadow="true"></zoom>
+	</div>
+	<div class="col-sm-4">
+		<zoom src="02-jekyll-initial-files.png" shadow="true"></zoom>
+	</div>
+</div>
+
+<p>This default setup contains three pages:</p>
+
+<ul>
+  <li>index.md</li>
+  <li>about.md</li>
+  <li>_posts/2017-01-28-welcome-to-jekyll.markdown</li>
+</ul>
+
+<p>They are by default rendered using the <em>minima</em> theme. The content ends up as html pages in the <code class="highlighter-rouge">_site</code> folder, along with the assets. So we <strong>never change anything in the _site folder</strong>, as it will be lost on our next build (which happens btw on every file change as long as  <code class="highlighter-rouge">jekyll serve</code> is running).</p>
+
+<h3 id="2-theme-creation">2. Theme creation</h3>
+
+<h4 id="cleanup">Cleanup</h4>
+
+<p>As mentioned before, this version of jekyll uses the <em>minimal</em> theme by default. Which theme to use is configured in <code class="highlighter-rouge">_config.yml</code> and the package is required in the <code class="highlighter-rouge">Gemfile</code>. We want to build our own theme so we edit both those files to make them look like this (eg. remove everything theme specific):</p>
+
+<p><strong>Gemfile</strong></p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span> <span class="s2">"https://rubygems.org"</span>
+<span class="n">ruby</span> <span class="no">RUBY_VERSION</span>
+
+<span class="c1"># This will help ensure the proper Jekyll version is running.</span>
+<span class="c1"># Happy Jekylling!</span>
+<span class="n">gem</span> <span class="s2">"jekyll"</span><span class="p">,</span> <span class="s2">"3.3.1"</span>
+</code></pre></div></div>
+
+<p><strong>_config.yml</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Your awesome title</span>
+
+<span class="c1"># Build settings</span>
+<span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="na">exclude</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">Gemfile</span>
+  <span class="pi">-</span> <span class="s">Gemfile.lock</span>
+  <span class="pi">-</span> <span class="s">package.json</span>
+  <span class="pi">-</span> <span class="s">yarn.lock</span>
+</code></pre></div></div>
+
+<p>The entire <code class="highlighter-rouge">_posts</code> folder can be deleted, as we don’t want a blog for now. <code class="highlighter-rouge">about.md</code> can also be deleted. We just keep the <code class="highlighter-rouge">index.md</code> file and make it look like the following:</p>
+
+<p><strong>index.md</strong></p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">fabgrid</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="nn">---</span>
+
+Hello FabAcademy
+
+</code></pre></div></div>
+
+<h4 id="creating-a-blank-theme">Creating a blank Theme</h4>
+
+<p>Now our page is broken – because jekyll can’t find the templates anymore. So we need to create <code class="highlighter-rouge">_layouts/page.html</code>, as we specified the <code class="highlighter-rouge">layout</code> to be <code class="highlighter-rouge">page</code> in our index page. This file is fairly simple:</p>
+
+<p><strong>_layouts/page.html</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: base
+---
+
+{{ content }}
+</code></pre></div></div>
+
+<p>What this template says is basically “pass the content through to the base.html template”. So we need to create that as well. This is to keep common definitions in one place for use by other layouts added later besides the <em>page</em> layout.</p>
+
+<p><strong>_layouts/base.html</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;title&gt;</span>{{ page.title }} – {{ site.title }}<span class="nt">&lt;/title&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+
+	<span class="nt">&lt;body&gt;</span>
+		{{ content }}
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>So now let’s make sure <code class="highlighter-rouge">jekyll serve</code> is running without errors, then open <a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a> again and see the result. This is what it should look like:</p>
+
+<zoom src="03-blank-theme.png" shadow="true"></zoom>
+
+<h4 id="including-twitter-bootstrap">Including Twitter Bootstrap</h4>
+
+<p>Great, looks like we’ve created a jekyll theme. Well, it’s quite basic but yet, it does what it’s supposed to: Let us control how our content is going to be displayed. So let’s start with that.</p>
+
+<p>First, we’re going to include Twitter Bootstrap - that’s basically a huge bunch of CSS providing a <a href="https://v4-alpha.getbootstrap.com/layout/grid/">grid system</a> and lots of other <a href="https://v4-alpha.getbootstrap.com/components">fancy stuff</a>. We’re going to use the v4-alpha, as it uses <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a>. All that is done mainly for the sake of <a href="https://en.wikipedia.org/wiki/Responsive_web_design">responsiveness</a>.</p>
+
+<p>As we’re not going to manually copy any external dependencies around, we need a package manager first. And as there has recently a shiny alternative to npm come alive, well try that one now. After <a href="https://yarnpkg.com/en/docs/install">installing yarn</a>, we first need to initialize our <code class="highlighter-rouge">package.json</code> by answering a few questions (most of them can be left at their defaults):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn init
+</code></pre></div></div>
+
+<p>Now that we have a <code class="highlighter-rouge">package.json</code> file, we can specify bootstrap as a dependency:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add bootstrap@4.0.0-alpha.6
+</code></pre></div></div>
+
+<p>This downloads bootstrap to the newly created <code class="highlighter-rouge">node_modules</code> folder. Now we’re going to create a SCSS file that loads all the Bootstrap files so jekyll can compile them into a CSS file, that is going to be loaded on all our pages. As an entry point we’re going to create an <code class="highlighter-rouge">assets/css/main.scss</code> file, which will be built into <code class="highlighter-rouge">_site/assets/css/main.css</code> by jekyll (note the different file extensions).</p>
+
+<p><strong>assets/css/main.scss</strong></p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span>
+<span class="nt">---</span>
+<span class="o">@</span><span class="nt">import</span> <span class="s2">"custom-bootstrap"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>The jekyll header (<code class="highlighter-rouge">---</code>) must be present, otherwise jekyll will just copy the file without compiling SCSS to CSS.</p>
+
+<p>Now, we’re going to create a <code class="highlighter-rouge">_sass</code> folder in our project root. This is where jekyll will search for SCSS includes. Inside that folder, we put a <code class="highlighter-rouge">_custom-bootstrap.scss</code>, which we’ve referenced in our <code class="highlighter-rouge">main.scss</code> file:</p>
+
+<p><strong>_sass/_custom-bootstrap.scss</strong></p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*!
+ * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */</span>
+
+<span class="c1">// Core variables and mixins</span>
+<span class="k">@import</span> <span class="s2">"bootstrap_variables"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/custom"</span><span class="p">;</span>
+
+<span class="c1">// Reset and dependencies</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/normalize"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/print"</span><span class="p">;</span>
+
+<span class="c1">// Core CSS</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/type"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/images"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/code"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/grid"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/tables"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/forms"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/buttons"</span><span class="p">;</span>
+
+<span class="c1">// Components</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/transitions"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/dropdown"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/button-group"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/input-group"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/custom-forms"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/nav"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/navbar"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/card"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/breadcrumb"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/pagination"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/badge"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/jumbotron"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/alert"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/progress"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/media"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/list-group"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/responsive-embed"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/close"</span><span class="p">;</span>
+
+<span class="c1">// Components w/ JavaScript</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/modal"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/tooltip"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/popover"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/carousel"</span><span class="p">;</span>
+
+<span class="c1">// Utility classes</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/utilities"</span><span class="p">;</span>
+
+</code></pre></div></div>
+
+<p>Here we import all the bootstrap files from the <code class="highlighter-rouge">node_modules</code> folder. We could leave out many of the imports, giving up the respective bootstrap features, while cutting down the size of the resulting file.</p>
+
+<p>At the very top, it says <code class="highlighter-rouge">@import "bootstrap_variables"</code> - this file we need to create inside our <code class="highlighter-rouge">_sass</code> folder. Actually it’s just a renamed copy of <code class="highlighter-rouge">node_modules/bootstrap/scss/_variables.scss</code>. So go ahead and copy it to <code class="highlighter-rouge">_sass/bootstrap_variables.scss</code>. The reason for this is that we want to edit that file. Everything inside <code class="highlighter-rouge">node_modules</code> is an external dependency managed by yarn - we don’t ever touch those files. But the <code class="highlighter-rouge">_variables.scss</code> file sets some critical details that we want to adjust, like colors, spacing or font attributes.</p>
+
+<p>What’s left now is to include the <code class="highlighter-rouge">main.css</code> file in our the <code class="highlighter-rouge">&lt;head&gt;</code> section of our <code class="highlighter-rouge">base.html</code> template and wrap the entire body content in a <code class="highlighter-rouge">.containter</code> so bootstrap keeps our content from becoming wider than 1140px on large screens:</p>
+
+<p><strong>_layouts/base.html</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;title&gt;</span>{{ page.title }} – {{ site.title }}<span class="nt">&lt;/title&gt;</span>
+
+		<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"assets/css/main.css"</span> <span class="nt">/&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+			{{ content }}
+		<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>After a page refresh, we should notice that the font has changed and a padding has been added to the content, which proves that we have set up bootstrap correctly:</p>
+
+<zoom src="04-blank-theme-with-bootstrap.png" shadow="true"></zoom>
+
+<p>At this point, our project should contain the following files and directories:</p>
+
+<zoom src="05-blank-theme-files.png" shadow="true"></zoom>
+
+<h4 id="using-custom-fonts">Using custom fonts</h4>
+
+<h4 id="further-customization">Further customization</h4>
+
+<ul>
+  <li>Primary color</li>
+  <li>Border-radius</li>
+  <li>Heading margins</li>
+  <li>Syntax highlighting</li>
+</ul>
+
+<h3 id="3-adding-some-content">3. Adding some content</h3>
+
+<h3 id="4-building-the-slide-menu">4. Building the slide menu</h3>
+
+<hr />
+
+<h2 id="open-source-tools-used">Open Source tools used</h2>
+
+<ul>
+  <li>Jekyll</li>
+  <li>Twitter Bootstrap</li>
+  <li>Yarn/NPM</li>
+  <li>SASS</li>
+  <li>TypeScript</li>
+  <li>Vue.js</li>
+  <li>Tom Preston-Werner’s syntax.css</li>
+</ul>
+
+<p>Of course, countless other open source projects are less directly involved, such as GIT, the Javascript, Ruby or C languages or the Linux kernel or GNU toolsuite, to name just some very popular examples.</p>
+
+<hr />
+
+<h2 id="vcs">VCS</h2>
+
+<p>The assignment says, we should “Identify version control protocols”. At the same time, fabacademy requires us to check in our documentation using GIT, so there’s no real alternative to it for this project. I skimmed over the list at https://en.wikipedia.org/wiki/Comparison_of_version_control_software. Some names i’ve seen in use by other open source projects: SVN, Mercurial, Bazaar. Assignment fulfilled?</p>
+
+<h3 id="tutorial">Tutorial</h3>
+
+<p>Also, we’re required to “Work through a git tutorial”. Github provides a nice, <a href="https://try.github.io">interactive git tutorial</a>. I worked through it long time ago.</p>
+
+<h2 id="build--deploy">Build / deploy</h2>
+
+<ol>
+  <li>From the project root, run <code class="highlighter-rouge">webpack</code>. It compiles and bundles our assets (TS-&gt;JS, SCSS-&gt;CSS)</li>
+  <li>Then, run <code class="highlighter-rouge">./build.sh</code>. The script generates a static page using jekyll</li>
+  <li>Push it to the fabacademy gitlab: <code class="highlighter-rouge">cd ../gitlab; git add .; git commit -m "some descriptive commit message"; git push</code></li>
+</ol>
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-03/">W03: Computer Aided Design</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-01/">W01: Principles and Practices</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

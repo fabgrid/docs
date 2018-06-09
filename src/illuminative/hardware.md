@@ -26,7 +26,7 @@ For the lamp shade, i want to produce some semi-transparent composite material.
 	<div class="col-md-4"><zoom src="hardware-design/05-finished-part.jpg"></zoom></div>
 </div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fki-Q7MSlRA" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fki-Q7MSlRA" frameborder="0" allowfullscreen></iframe>
 
 #### References:
 

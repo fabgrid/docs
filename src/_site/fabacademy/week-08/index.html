@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W08: Computer Machining – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W08: Computer Machining</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					Make something big
+				</p>
+			</div>
+		</div>
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Personal Goal</h5>
+				<p class="card-text">
+					Finally make my standing desk
+				</p>
+			</div>
+		</div>
+		
+
+		
+		
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Further Resources</h5>
+			</div>
+			<ul class="links list-group list-group-flush">
+				
+					
+					<li class="list-group-item">
+						
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+				
+				<a href="/fabacademy/week-08/lecture-notes.html"><i class="fa fa-btn fa-sticky-note-o"></i> Lecture Notes</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+		
+				<a href="standesk-master.zip">Design Snapshot</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="https://github.com/jsphpl/standesk">Recent Design (github)</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="http://www.elsign-cnc.com/milling-machines/easyworker-masterpro/2513.html">MasterPro 2513 (CNC mill)</a>
+					</li>
+				
+					
+			</ul>
+		</div>
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<hr />
+
+<p><img src="01-standesk-cover.jpg" class="img-fluid" /></p>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#design" id="markdown-toc-design">Design</a>    <ul>
+      <li><a href="#design-improvements" id="markdown-toc-design-improvements">Design Improvements</a>        <ul>
+          <li><a href="#dog-vs-mouse" id="markdown-toc-dog-vs-mouse">Dog vs. Mouse</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#production" id="markdown-toc-production">Production</a>    <ul>
+      <li><a href="#outline" id="markdown-toc-outline">Outline</a></li>
+      <li><a href="#model-parameters" id="markdown-toc-model-parameters">Model Parameters</a></li>
+      <li><a href="#final-checks" id="markdown-toc-final-checks">Final Checks</a>        <ul>
+          <li><a href="#1-assembled" id="markdown-toc-1-assembled">1. Assembled</a></li>
+          <li><a href="#2-flat" id="markdown-toc-2-flat">2. Flat</a></li>
+        </ul>
+      </li>
+      <li><a href="#render--export" id="markdown-toc-render--export">Render &amp; Export</a></li>
+      <li><a href="#cam-preprocessing" id="markdown-toc-cam-preprocessing">CAM Preprocessing</a></li>
+      <li><a href="#machine-setup" id="markdown-toc-machine-setup">Machine Setup</a></li>
+      <li><a href="#test-joint" id="markdown-toc-test-joint">Test Joint</a></li>
+      <li><a href="#let-the-mills-grind" id="markdown-toc-let-the-mills-grind">Let the mills grind</a></li>
+      <li><a href="#finishing" id="markdown-toc-finishing">Finishing</a></li>
+    </ul>
+  </li>
+  <li><a href="#assembly" id="markdown-toc-assembly">Assembly</a></li>
+</ul>
+
+<hr />
+
+<h2 id="design">Design</h2>
+
+<p>I made the original design of the desk back in 2014, when i thought i needed a standing desk to relieve my back (The table was never made in lack of a large enough CNC mill – until last week). The principles of the design were the following:</p>
+
+<ul>
+  <li>Only wood, no screws or other fixture</li>
+  <li>As little waste as possible (from a single 2.50m x 1.25m multiplex board)</li>
+  <li>No other tools than a CNC mill</li>
+  <li>Fully parametric</li>
+</ul>
+
+<h3 id="design-improvements">Design Improvements</h3>
+
+<p>Some adjustments to the design had to be made:</p>
+
+<ul>
+  <li>Add dogbones to make it machinable on the cnc router</li>
+  <li>Add fillets to concave corners to make them machinable</li>
+  <li>Round convex corners in order not to kill ourselves</li>
+  <li>Add an extra joint to test how tight everything will fit</li>
+  <li>Add a supportive strut right below the tabletop</li>
+</ul>
+
+<h4 id="dog-vs-mouse">Dog vs. Mouse</h4>
+
+<p>Back when i created it, i wasn’t aware that the original design – without accounting for the tool diameter – would be useless for a CNC router. So one thing i had to change was to add that little dogbone fillets. Of course, they too are parametric and their radius is calculated as <math><mfrac><mrow><mn>1</mn></mrow><mrow><mn>1.9</mn></mrow></mfrac><mrow><mo>×</mo><mi>tool diameter</mi></mrow></math> in order to leave just a little tolerance so the CAM processor doesn’t ignore those areas as too small for the tool.</p>
+
+<p>The position of the circle relative to the rectangle whose corners it’s trying to ensure is actually quite easy to calculate. First, i did it wrong and placed the center of the circle right on top of the corner, which gives you rather a <em>Mickey Mouse</em> than a <em>Dog Bone</em>.</p>
+
+<p>The correct center of the circle is on a 45° diagonal, offset by the radius from the corner towards the center of the rectangle. This way, the circle goes right through the corner, ensuring that just enough material is removed. Thanks to <a href="http://fabacademy.org/archives/2013/students/meier.ferdinand/index.html">Ferdy</a> for helping me figure this out!</p>
+
+<div class="row">
+	<div class="col-sm-6">
+		<zoom src="02-fillets-mickey-mouse.png" alt="bad mickey mouse fillets" caption="Wrong placed »&lt;strong&gt;Mickey Mouse&lt;/strong&gt;« fillets"></zoom>
+	</div>
+	<div class="col-sm-6">
+		<zoom src="03-fillets-dog-bone.png" alt="calculating dogbone fillets positions" caption="Well placed, &lt;strong&gt;actual dog bone&lt;/strong&gt; fillets"></zoom>
+	</div>
+</div>
+
+<h2 id="production">Production</h2>
+
+<h3 id="outline">Outline</h3>
+
+<p>When the design is ready, the process continues as follows:</p>
+
+<ol>
+  <li>Measure stock thickness (12.15mm)</li>
+  <li>Enter the correct tool diameter (4mm)</li>
+  <li>Recalculate the model based on the obtained values</li>
+  <li>Mill a test joint from the same panel that’s gonna be used for the actual table</li>
+  <li>Adjust clearance or stock thickness if joint doesn’t fit as desired</li>
+  <li>Mill the table (first inside cuts, then outside)</li>
+  <li>Clean the cutting edges (sand paper)</li>
+  <li>Assemble everything</li>
+  <li>Oil?</li>
+</ol>
+
+<h3 id="model-parameters">Model Parameters</h3>
+
+<p>The model has to be adjusted by setting some variables inside the OpenSCAD file.</p>
+
+<ul>
+  <li>Take the diameter of the end mill from its data sheet</li>
+  <li>Measure the width and length of the stock. Subtract about 10mm on each side as a safety margin, depending on how exact you can place it on the milling table</li>
+  <li>Measure the exact thickness of the stock. Use a caliper to take multiple measurements on each side. Average them.</li>
+</ul>
+
+<pre><code class="language-openscad">TOOL_DIAMETER = 4;          // in mm
+STOCK_WIDTH = 1210;         // in mm
+STOCK_LENGTH = 2480;        // in mm
+STOCK_THICKNESS = 12.15;    // in mm
+$fn = 50;                   // Number of circle segments. Set this to ≥50 for production (≤30 for development)
+</code></pre>
+
+<h3 id="final-checks">Final Checks</h3>
+
+<h4 id="1-assembled">1. Assembled</h4>
+
+<p>Make a visual check of the assembled model to see if everything is there and in the right place. Also check if all holes for the joints are present. Set <code class="highlighter-rouge">FLAT = false;</code> and refresh the OpenSCAD <em>Preview</em>, then pan/rotate around with the mouse to inspect everything.</p>
+
+<zoom src="04-design-screenshot-openscad.png" alt="jsphpl/standesk OpenSCAD design" caption="&quot;Assembled&quot; view of the final design"></zoom>
+
+<h4 id="2-flat">2. Flat</h4>
+
+<p>Switch the model back to flat:</p>
+
+<pre><code class="language-openscad">FLAT = true;
+PROJECTION = false;
+</code></pre>
+<p>Again, refresh the preview. <strong>Check if everything fits inside the gray box</strong>, which represents your stock panel minus the safety margins (values entered for <code class="highlighter-rouge">STOCK_WIDTH</code> and <code class="highlighter-rouge">STOCK_LENGTH</code>).</p>
+
+<zoom src="05-design-screenshot-flat.png" alt="Flat view of the jshpl/standesk design" caption="&quot;Flat&quot; view – all parts packed into a single board (gray)"></zoom>
+
+<h3 id="render--export">Render &amp; Export</h3>
+
+<p>When all checks have passed, we switch both <code class="highlighter-rouge">FLAT</code> and <code class="highlighter-rouge">PROJECTION</code> variables to <code class="highlighter-rouge">true</code>. This time, we use the <em>Render</em> function (F6) instead of <em>Preview</em>. This process will take a couple of minutes, mainly depending on the tasked machine’s performance and the chosen value for <code class="highlighter-rouge">$fn</code>.</p>
+
+<p>At the end of the process, we get our exact 2D outlines which we’ll export to DXF format.</p>
+
+<zoom src="06-openscad-export.png" shadow="true"></zoom>
+
+<h3 id="cam-preprocessing">CAM Preprocessing</h3>
+
+<p>Now these DXF outlines need to be prepared for the CAM step which will take place directly on the PC that controls the milling machine.</p>
+
+<p>Our task is to group together all paths that need to be processed using the same strategy. The CAM-software we’re using requires them to have different colors. We take <a href="https://www.rhino3d.com/">Rhino</a> for this purpose.</p>
+
+<p><strong>1. Import DXF into Rhino</strong></p>
+
+<p><strong>2. Select everything (CMD+A) and <code class="highlighter-rouge">join</code> all segments in order to close paths</strong></p>
+
+<zoom src="07-rhino-close-paths.png"></zoom>
+
+<p><strong>3. Create four different layers and move the respective elements there. Assign each layer a distinct color.</strong></p>
+
+<ul>
+  <li>Inside cut: Joint test</li>
+  <li>Outside cut: Joint test</li>
+  <li>Inside cut: Main</li>
+  <li>Outside cut: Main</li>
+</ul>
+
+<zoom src="08-rhino-layers.png"></zoom>
+
+<p><strong>4. Export to DXF with the <code class="highlighter-rouge">R12 Lines &amp; Arcs</code> scheme</strong></p>
+
+<p><img src="09-rhino-export.png" class="constrain small" /></p>
+
+<h3 id="machine-setup">Machine Setup</h3>
+
+<p>Our data is now ready to be fed to the machine. This video documents the machine setup with <a href="https://www.hochschule-rhein-waal.de/en/faculties/communication-and-environment/organisation/professors/prof-dr-karsten-nebe">Karsten</a> from the <a href="http://fablab.hochschule-rhein-waal.de/index.php/en/">FabLab Kamp Lintfort</a>:</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PtMkJkBU450" frameborder="0" allowfullscreen="" class="constrain"></iframe>
+
+<h3 id="test-joint">Test Joint</h3>
+
+<p>When the machine is set up, we mill a test joint in order check and adjust for the material properties.</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZpRVwqPG5-I" frameborder="0" allowfullscreen="" class="constrain"></iframe>
+
+<div class="row">
+	<div class="col-sm-6">
+		<zoom src="10-joint-test-1.jpg" shadow="true"></zoom>
+	</div>
+	<div class="col-sm-6">
+		<zoom src="11-joint-test-2.jpg" shadow="true"></zoom>
+	</div>
+</div>
+
+<p>The joint looks great, it just fits a tiny bit too tightly. But the error is so small, we’re gonna leave if for now. Later I find out that i have to sand each joint in order to make them slip a bit easier.</p>
+
+<h3 id="let-the-mills-grind">Let the mills grind</h3>
+
+<p>Now that the joint looks good, we can run the two remaining jobs for the actual <em>Outside</em> and <em>Inside Cuts</em>. Instead of showing you another boring video, you’ll just get a snapshot of the result. Search youtube for “cnc milling wood” if you want to watch machines at work.</p>
+
+<div class="row">
+	<div class="col-sm-6">
+		<zoom src="12-cutting-almost-done.jpg" shadow="true"></zoom>
+	</div>
+	<div class="col-sm-6">
+		<zoom src="13-cutting-done.jpg" shadow="true"></zoom>
+	</div>
+</div>
+
+<h3 id="finishing">Finishing</h3>
+
+<p>After the cutting we notice that our parts have fringed edges. This is especially obvious for cuts perpendicular to the grain of the top wood layer. Cuts that went parallel to the grain look quite smooth:</p>
+
+<zoom src="14-fizzy-edges.jpg" shadow="true"></zoom>
+
+<p>We use sand paper to clean all edges on all our parts:</p>
+
+<div class="row">
+	<div class="col-sm-4">
+		<zoom src="15-sanding-before.jpg" shadow="true" caption="Before sanding"></zoom>
+	</div>
+	<div class="col-sm-4">
+		<zoom src="16-sanding-after.jpg" shadow="true" caption="After sanding"></zoom>
+	</div>
+	<div class="col-sm-4">
+		<zoom src="17-sanding.jpg" shadow="true" caption="Also the tiny parts ;)"></zoom>
+	</div>
+</div>
+
+<h2 id="assembly">Assembly</h2>
+
+<zoom src="18-assembly-0.jpg" shadow="true"></zoom>
+
+<div class="row">
+	<div class="col-sm-6">
+		<zoom src="19-assembly-1.jpg" shadow="true"></zoom>
+	</div>
+	<div class="col-sm-6">
+		<zoom src="20-assembly-2.jpg" shadow="true"></zoom>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-6">
+		<zoom src="21-assembly-3.jpg" shadow="true"></zoom>
+	</div>
+	<div class="col-sm-6">
+		<zoom src="22-assembly-4.jpg" shadow="true"></zoom>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-6">
+		<zoom src="23-assembly-5.jpg" shadow="true"></zoom>
+	</div>
+	<div class="col-sm-6">
+		<zoom src="24-finished-outside.jpg" shadow="true"></zoom>
+	</div>
+</div>
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-09/">W09: Embedded Programming</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-07/">W07: Electronics Design</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

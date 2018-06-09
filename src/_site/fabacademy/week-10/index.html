@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W10: Mechanical Design – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W10: Mechanical Design</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					Make a machine, including the end effector, build the passive parts and operate it manually
+				</p>
+			</div>
+		</div>
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Personal Goal</h5>
+				<p class="card-text">
+					Design and build a pen plotter
+				</p>
+			</div>
+		</div>
+		
+
+		
+		
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Further Resources</h5>
+			</div>
+			<ul class="links list-group list-group-flush">
+				
+					
+					<li class="list-group-item">
+						
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+				
+				<a href="/fabacademy/week-10/lecture-notes.html"><i class="fa fa-btn fa-sticky-note-o"></i> Lecture Notes</a>
+					</li>
+				
+					
+			</ul>
+		</div>
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#design" id="markdown-toc-design">Design</a>    <ul>
+      <li><a href="#parts-library" id="markdown-toc-parts-library">Parts Library</a></li>
+      <li><a href="#process" id="markdown-toc-process">Process</a>        <ul>
+          <li><a href="#linear-actuator" id="markdown-toc-linear-actuator">Linear actuator</a></li>
+          <li><a href="#x-and-y-axis" id="markdown-toc-x-and-y-axis">X and Y axis</a></li>
+          <li><a href="#end-effector" id="markdown-toc-end-effector">End effector</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#improvements" id="markdown-toc-improvements">Improvements</a></li>
+</ul>
+
+<hr />
+
+<p>I have some spare <a href="http://openbuildspartstore.com/v-slot-20x40-linear-rail/">V-Slot</a> linear extrusions along with accessories. Let’s use them to build a simple pen plotter. It could later be rebuilt into a general purpose 2.5-3 axis CNC machine, which would likely require a more rigid design in most cases.</p>
+
+<zoom src="http://cdn8.bigcommerce.com/s-itwgldve/images/stencil/608x608/products/312/2498/V-Slot_20x40_clear_s_w_2__95354.1510262987.png"></zoom>
+
+<h2 id="design">Design</h2>
+
+<p>Currently, i’m thinking of a simple “T” style design with only one linear actuator per axis. As we’re not building a heavy-duty CNC machine, but rather just a plotter, forces should be small enough to allow for that kind of setup.</p>
+
+<h3 id="parts-library">Parts Library</h3>
+
+<p>The design is developed around the V-Slot extrusions, so using the <a href="https://github.com/mazerte/openscad-openbuilds">Openbuilds OpenSCAD library</a> can save us some time.</p>
+
+<p>A quick test to see if it’s working:</p>
+
+<div class="row">
+    <div class="col-md-6"><zoom src="01-library-code.png"></zoom></div>
+    <div class="col-md-6"><zoom src="02-library-result.png"></zoom></div>
+</div>
+
+<h3 id="process">Process</h3>
+
+<ol>
+  <li>Design a common linear actuator</li>
+  <li>Design the Y-axis</li>
+  <li>Design the X-axis</li>
+  <li>Design the Z-axis (end effector)</li>
+  <li>Assemble everything</li>
+  <li>Animate</li>
+</ol>
+
+<h4 id="linear-actuator">Linear actuator</h4>
+
+<p>A linear actuator consists of:</p>
+
+<ul>
+  <li>a length of extrusion</li>
+  <li>a “passive end” with the idler pulley</li>
+  <li>an “active end” with the stepper motor</li>
+  <li>the gantry</li>
+  <li>the belt (maybe omit that from the CAD)</li>
+</ul>
+
+<p>The motor stems from the <code class="highlighter-rouge">MCAD</code> library, which is bundeled with OpenSCAD. The pulleys are included in <code class="highlighter-rouge">openscad-openbuilds</code>. I couldn’t find a model of the <em>end mount</em> for the motor and idler pulley, so i designed it myself. I likely would have needed that custom model anyway, because i want to print them, instead of buying them for 10€ each.</p>
+
+<h4 id="x-and-y-axis">X and Y axis</h4>
+
+<p>After modelling the linear actuator, “assembling the axes” is quite simple: Just put two of them on top of each other:</p>
+
+<zoom src="03-axes.png" caption="X- and Y-axes"></zoom>
+
+<p>The X motor kind of acts as a counterweight</p>
+
+<h4 id="end-effector">End effector</h4>
+
+<p>The end effector (Z axis) will slide on cheap 8mm smooth rod with LM8UU linear bearings. It will push the pen downwards using a spring and be able to lift it with a servo. The assembly could be mounted upside down to inverse this logic so that the pen would be pushed <strong>up</strong> by the spring and <strong>down</strong> by the servo. I prefer the former approach because this way the spring acts as a suspension while drawing, smoothing out any irregularities in the drawing surface and reducing forces at the pen tip.</p>
+
+<zoom src="04-end-effector.png" caption="The end effector (bearings and servo lever missing)"></zoom>
+
+<h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li>Add end stops</li>
+  <li>Smarter pen holder</li>
+  <li>Increase counterweight or add wheel to the loose end of the X axis</li>
+  <li>Use thinner rod for the end effector 4 or 6mm (8mm is what i happened to have around)</li>
+</ul>
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-11/">W11: Machine Design</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-09/">W09: Embedded Programming</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

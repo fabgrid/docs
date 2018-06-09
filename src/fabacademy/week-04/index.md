@@ -168,7 +168,7 @@ On the first attempt on cutting the parts, i had the settings in visicut to weak
 
 I made another attempt (`power 100, speed 75`), which was *almost good*, but the part still stuck a little bit. Thus the lower edges are not smooth. I'll give it another try at `power 100, speed 65` before i go into fine-tuning the clearance.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hcEFxzhH-BA" frameborder="0" allowfullscreen class="constrain"></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hcEFxzhH-BA" frameborder="0" allowfullscreen class="constrain"></iframe>
 
 This time i find the parts popping out well, so we can now start looking at and fine-tuning the fit of our joints. Looks like it'a bit too wide - the parts slip off each other easily. I add a clearance of <math><mrow><mo>-</mo></mrow><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>20</mn></mrow></mfrac></mrow><mrow><mi>mm</mi></mrow></math>. The resulting parts fit just right. Nice level of friction. I'll cut a couple of them with the same settings and see what i can build…
 

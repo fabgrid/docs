@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>I²DC – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="page">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>I²DC</h1>
+	</header>
+
+	<article>
+		<p>I²DC is an ATTiny-enhanced N-Channel MOSFET with a series inductance and current sensing shunt. Output voltage and current can be read and set through I²C.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>72W N-Channel MOSFET</li>
+  <li>ATTiny85</li>
+  <li>Voltage sensing</li>
+  <li>High-side current sensing</li>
+  <li>I²C interface (read values, set voltage &amp; current limit)</li>
+</ul>
+
+<h2 id="specs">Specs</h2>
+
+<ul>
+  <li>Ptotal = 72W</li>
+  <li>Vin = 6…36V</li>
+  <li>Vout = 8…Vin</li>
+  <li>Iout: 5A</li>
+</ul>
+
+<h2 id="hardware-design">Hardware Design</h2>
+
+<p>In essence, the hardware consists of the following parts:</p>
+
+<ul>
+  <li>Switch (MOSFET)</li>
+  <li>Low pass filter (Coil + Cap)</li>
+  <li>Current sensing circuit (Shunt + opamp)</li>
+  <li>Voltage sensing circuit (Voltage divider)</li>
+  <li>I²C interface (ATTiny)</li>
+</ul>
+
+<h3 id="switch-choice">Switch Choice</h3>
+
+<p>The choice of an N-Channel MOSFET is quite straight forward. We just pick it from the Fab inventory (<a href="https://www.fairchildsemi.com/datasheets/RF/RFD16N05LSM.pdf">RFD16N05LSM Datasheet</a>).</p>
+
+<p>But … we need to consider how to drive it. In other designs i’ve seen the gate driven from a 5V µC through a 100Ω resistor, with a 1kΩ pull-down to ground, so let’s just copy that. The gate on a MOSFET has high capacitance and super high resistance to source, so can use low value resistor to drive it strongly without it drawing any significant current.</p>
+
+<p>The pull-down is there to quickly turn the gate off when the PWM’ed pin on the µC goes low. Also, it prevents the gate from floating freely. A floating gate would lead to unpredicatble switching activity while the µC is off (or in case it fails), which could damage the connected load.</p>
+
+<blockquote>
+  <p>MOSFET circuit</p>
+</blockquote>
+
+<h3 id="output-filter-design">Output Filter Design</h3>
+
+<p>As we don’t want to add any resistance to the drain path, a typical RC design won’t work so we’re left with coils for the low-pass filter. The entire filter involves an inductor (coil), a capacitor, and a flyback diode. Roughly speaking, the coil is there to filter out the high PWM frequencies, the capacitor feeds the load during MOSFET’s “off” phases, and the flyback diode allows the coil to discharge at the same time.</p>
+
+<p>Higher switching frequencies allow us to use smaller coils and capacitors. The maximum native PWM frequency we can bang out of that little ATTiny85 is <strong>62.5kHz</strong>. Let’s <a href="http://www.falstad.com/circuit/">simulate</a> that with an 8Ω load (3A @ 24V):</p>
+
+<blockquote>
+  <p>Video</p>
+</blockquote>
+
+<p>Dont ask me how i found those values, but a <strong>33µH inductor</strong> and a <strong>220µF capacitor</strong> seem to provide a smooth enough DC. The settle duration, when changing the duty cycle/voltage is of minor importance for now, we can tweak that later…</p>
+
+<p>The flyback diode must be able to handle the same current that flows through our inductor. And that’s the same as our maximum current rating, 5 amps. As there will be no continuous load on the diode, only pulses, i think it’s fine to choose a diode rated at 5A (continuously) without any additional safety margin. In a <a href="https://en.wikipedia.org/wiki/Buck_converter#Synchronous_rectification">“synchrounous”</a> design, the flyback diode would be replaced by a secondary switch, which would be turned “on” during the “off” phase of the main switch, effectively cutting down losses.</p>
+
+<p>So these are the parts for the low-pass filter:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Purpose</th>
+      <th>Part Number</th>
+      <th>Specs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Coil</td>
+      <td><a href="http://www.bourns.com/docs/Product-Datasheets/SRP1265A.pdf">SRP1265A-330M</a></td>
+      <td>33uH 8A 58mΩ SMD</td>
+    </tr>
+    <tr>
+      <td>Capacitor</td>
+      <td><a href="http://datasheet.octopart.com/UCW1H221MNL1GS-Nichicon-datasheet-81472606.pdf">UCW1H221MNL1GS</a></td>
+      <td>220uF 50V 20% (10 X 10mm) SMD 670mA 7000h 105°C T/R</td>
+    </tr>
+    <tr>
+      <td>Diode</td>
+      <td><a href="http://datasheet.octopart.com/PDU620-13-Diodes-Inc.-datasheet-8398636.pdf">PDU620-13</a></td>
+      <td>200V 6A Surface Mount Ultra-Fast Recovery Rectifier - PowerDI-5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="current-sensing">Current Sensing</h3>
+
+<p>For current sensig we’re gonna use a very small series resistor with an accurately known value. The voltage drop accross this resistor can be measured and converted into a current using the known resistance.</p>
+
+<p>But now comes the problem: our spcifications say we want to support a maximum current of up to 5A. So if we want to convert 5 amps into the maximum sensing range of out ATTiny – let’s assume we’re running at 5V, so 5V – we’d need a 1Ω resistor. One ohm, thats way too much voltage drop and power dissipation. So what’s the solution? An opamp, right! It lets us use a way smaller resistor, say 10mΩ, and “amplifies” the voltage drop into the full range of our µC.</p>
+
+<p>And by the way, as we’re using an op-amp already, let’s sense the current on the high side. This comes for free as a side-effect of using an op-amp and is more reliable because it also covers current drawn through alternative ground paths on the load, that we’re not in control of.</p>
+
+<p>Okay let’s use a special op-amp that’s made for exactly our job, the <a href="http://www.ti.com/lit/ds/symlink/ina139.pdf">INA169</a>. It’s also used in a <a href="https://www.sparkfun.com/products/12040">sparkfun breakout board</a>, for which they provide the <a href="Schematic">schematics</a> and <a href="https://learn.sparkfun.com/tutorials/ina169-breakout-board-hookup-guide">further documentation</a>. By the way, Sparkfun, Adafruit et al. are good resources for finding example applications of some common ICs and other components…</p>
+
+<h4 id="shunt-resistor">Shunt Resistor</h4>
+
+<p>What’s gonna be the value of the shunt? According to its datasheet, the INA169 operates best if the upper input voltage is between 50 and 100mV. Let’s choose the lower bound in order to minimize voltage drop and because surely yields a nice <math><msup><mn>10</mn><mi>x</mi></msup></math> resistor value with our 5A spec:</p>
+
+<math>
+	<mi>R</mi>
+	<mo>=</mo>
+	<mfrac>
+		<mrow><mn>50</mn><mi>mV</mi></mrow>
+		<mrow><mn>5</mn><mi>A</mi></mrow>
+	</mfrac>
+
+	<mo>=</mo>
+	<mn>10</mn><mi>mΩ</mi>
+</math>
+
+<p>Perfect, nice value. And just what we guessed earlier. But what power is it gonna turn into heat?</p>
+
+<math>
+<mi>P</mi> <mo>=</mo> <msup><mi>I</mi><mn>2</mn></msup> <mo>×</mo> <mi>R</mi>
+<mo>=</mo> <mn>25</mn><msup><mi>A</mi><mn>2</mn></msup> <mo>×</mo> <mn>0.010</mn><mo>Ω</mo>
+<mo>=</mo> <mfrac><mn>1</mn><mn>4</mn></mfrac><mi>W</mi>
+</math>
+
+<p>So for some safety margin we should probably go with a <math><mo>≥</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>W</mi></math> resistor for the job…</p>
+
+<h4 id="load-resistor">Load Resistor</h4>
+
+<p>Sparkfun also tells us in their “hookup guide” how to calculate the values of the additional resistor. We need a seconday resistor at the output of the opamp, that converts the “known current” output into a “known voltage”. The formula goes as follows:</p>
+
+<math>
+	<msub><mi>I</mi><mi>s</mi></msub>
+	<mo>=</mo>
+	<mfrac>
+		<mrow><msub><mi>V</mi><mi>out</mi></msub> <mo>×</mo> <mn>1</mn><mi>kΩ</mi></mrow>
+		<mrow><msub><mi>R</mi><mi>s</mi></msub> <mo>×</mo> <msub><mi>R</mi><mi>l</mi></msub></mrow>
+	</mfrac>
+</math>
+
+<p>The value we’re looking for is <math><msub><mi>R</mi><mi>l</mi></msub></math>. The value of the <strong>s</strong>hunt resistor is <math><msub><mi>R</mi><mi>s</mi></msub></math>. Tweaking the equation a bit, we get:</p>
+
+<math>
+	<msub><mi>R</mi><mi>l</mi></msub>
+	<mo>=</mo>
+	<mfrac>
+		<mrow><msub><mi>V</mi><mi>out</mi></msub> <mo>×</mo> <mn>1</mn><mi>kΩ</mi></mrow>
+		<mrow><msub><mi>R</mi><mi>s</mi></msub> <mo>×</mo> <msub><mi>I</mi><mi>s</mi></msub></mrow>
+	</mfrac>
+</math>
+
+<p>Plugging in the value of the shunt and our values for the maximum current of 5A ≘ 5V:</p>
+
+<math>
+	<msub><mi>R</mi><mi>l</mi></msub>
+	<mo>=</mo>
+	<mfrac>
+		<mrow><mn>5</mn><mi>V</mi> <mo>×</mo> <mn>1</mn><mi>kΩ</mi></mrow>
+		<mrow><mn>10</mn><mi>mΩ</mi> <mo>×</mo> <mn>5</mn><mi>A</mi></mrow>
+	</mfrac>
+
+	<mo>=</mo>
+	<mfrac>
+		<mrow><mn>1</mn><mi>kV</mi></mrow>
+		<mrow><mn>10</mn><mi>mA</mi></mrow>
+	</mfrac>
+
+	<mo>=</mo>
+	<mfrac>
+		<mrow><mn>1</mn></mrow>
+		<mrow><mn>0.010</mn></mrow>
+	</mfrac>
+	<mi>kΩ</mi>
+
+	<mo>=</mo>
+	<mn>100</mn>
+	<mi>kΩ</mi>
+</math>
+
+<h4 id="final-parts-choice">Final Parts Choice</h4>
+
+<p>As always, I use the digikey search for its excellent filter options to find appropriate parts.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Purpose</th>
+      <th>Part Number</th>
+      <th>Specs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Op-Amp</td>
+      <td>INA169</td>
+      <td>2.7 - 60V; 0.5%; SOT23-5</td>
+    </tr>
+    <tr>
+      <td>Shunt (<math><msub><mi>R</mi><mi>s</mi></msub></math>)</td>
+      <td><a href="http://www.ohmite.com/cat/res_lvk.pdf">LVK12R010DER</a></td>
+      <td>SMD 0.01 OHM 0.5% 1/2W 1206</td>
+    </tr>
+    <tr>
+      <td>Load Resistor (<math><msub><mi>R</mi><mi>l</mi></msub></math>)</td>
+      <td><a href="http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_7.pdf">RC1206FR-07100KL</a></td>
+      <td>(Fab Inventory)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Pushing 5A through a 1206 component sound unreasonable to me, but well – seems like this is physics. Otherwise i did not yet understand it properly, but hopefully will do so after producing some smoke. But hey, that’s also just a way of learning…</p>
+
+<h4 id="alternative-method">Alternative method</h4>
+
+<p>An alternative method would be to use a premade hall-effect based IC, like the <a href="http://datasheet.octopart.com/ACS712ELCTR-05B-T-Allegro-datasheet-13439546.pdf">Allegro ACS712</a>, but that somehow feels like cheating, though it’s a perfectly valid and accurate solution.</p>
+
+<p>Also, a standard opamp from the fab inventory could be used. But as we don’t have them in stock at the Lab, and i have to order from Digikey anyway, i’ll choose the application-specific solution. Of course, i’ll order some of the standard <a href="https://www.digikey.com/product-detail/en/analog-devices-inc/AD8615AUJZ-REEL7/AD8615AUJZ-REEL7CT-ND/951443">AD8615AUJZ</a>’s as well – who knows what comes next ;)</p>
+
+<h3 id="voltage-sensing">Voltage Sensing</h3>
+
+<p>For the voltage sensing, we just need to divide down 36V (max output voltage) to 5V (Aref of the attiny), which is a ratio of 0.13889. Using an <a href="http://jansson.us/resistors.html">online calculator</a>, we can easiy find the appropriate values. It suggests 10k and 62k as a perfect match from the E24 series. I don’t know which series that is we have in the lab, but there is a 61.9kΩ, which should be just fine. We can still account for that in the calculation taking place on the attiny later on.</p>
+
+<h3 id="ic-interface">I²C Interface</h3>
+
+<p>We need a pull-up on the SDA line. According to what i’ve read elsewhere, a 4.7k should be used. I see Neil use 10k ones in his examples, guessing that’s because they’re in the standard inventory. So anything in between 4.7k and 10k should be fine, assuming short wire lengths and low device count per bus.</p>
+
+<p>http://academy.cba.mit.edu/classes/networking_communications/index.html
+http://academy.cba.mit.edu/classes/networking_communications/I2C/hello.I2C.45.node.png</p>
+
+<h3 id="voltage-regulator">Voltage Regulator</h3>
+
+<p>Besides all that, we need a small voltage regulator in order to power our microcontroller and opamp. This way we can use the board as a “programmable” step-down converter, where we set the parameters once (it should store them in EEPROM), and then operate it without any external control input.</p>
+
+<h4 id="but-which-one">But which one?</h4>
+
+<ul>
+  <li>The attiny itself takes less than <em>10mA</em> when operating at 5V (8MHz).</li>
+  <li>The INA169 says “Input current into any pin <em>10mA</em> MAX”. Let’s take it for that!</li>
+  <li>Our swiching pin will be connected to ground via the 1k gate pull-down. That’s another <em>5mA</em> at 5V.</li>
+  <li>More current will be drawn when the I²C bus is active</li>
+</ul>
+
+<p>Those should be about the main consumers. So if we choose a <em>100-150mA</em> linear regulator, we should be quite on the safe side. Our max Vin is 36V. Burning 100mA at 31V causes 3.1W of global warming. Out min Vin is 6V so the maximum allowed dropout is 1V. That’s the specs. Yeah, and don’t forget to add some capacitance.</p>
+
+<p>And the winner is: <a href="http://datasheet.octopart.com/MIC5233-5.0YM5-TR-Microchip-datasheet-8332515.pdf">MIC5233-5.0YM5-TR</a> – I chose by package size because it’ll run on the lower end of its specs and therefore we can trade off worse cooling for smaller footprint. Unfortunately, it’s got an “enable” pin and the datasheed doesn’t mention an internal pull-up, so we’ll have to add an external one to be sure it’s on by default.</p>
+
+<h3 id="further-lecture">Further Lecture</h3>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Buck_converter">https://en.wikipedia.org/wiki/Buck_converter</a></li>
+  <li><a href="https://www.allaboutcircuits.com/textbook/alternating-current/chpt-8/low-pass-filters/">https://www.allaboutcircuits.com/textbook/alternating-current/chpt-8/low-pass-filters/</a></li>
+  <li><a href="https://www.allaboutcircuits.com/technical-articles/low-pass-filter-a-pwm-signal-into-an-analog-voltage/">https://www.allaboutcircuits.com/technical-articles/low-pass-filter-a-pwm-signal-into-an-analog-voltage/</a></li>
+  <li><a href="http://sim.okawa-denshi.jp/en/RLCtool.php">http://sim.okawa-denshi.jp/en/RLCtool.php</a></li>
+  <li><a href="http://www.electronics-tutorials.ws/filter/filter_2.html">http://www.electronics-tutorials.ws/filter/filter_2.html</a></li>
+  <li><a href="https://electronics.stackexchange.com/questions/165444/problem-with-simulating-lc-filter-with-n-channel-mosfet-used-for-pwm">https://electronics.stackexchange.com/questions/165444/problem-with-simulating-lc-filter-with-n-channel-mosfet-used-for-pwm</a></li>
+  <li><a href="http://www.learningaboutelectronics.com/Articles/Low-pass-filter.php">http://www.learningaboutelectronics.com/Articles/Low-pass-filter.php</a></li>
+  <li><a href="https://www.youtube.com/watch?v=6Otr1I0OR18#t=402.923392">https://www.youtube.com/watch?v=6Otr1I0OR18#t=402.923392</a></li>
+  <li><a href="https://www.seeedstudio.com/Adjustable-Step-Down-DC%26amp%3BDC-Converter-%280.8V-18V%26amp%3B3A%29-p-1716.html">https://www.seeedstudio.com/Adjustable-Step-Down-DC%26amp%3BDC-Converter-%280.8V-18V%26amp%3B3A%29-p-1716.html</a></li>
+  <li><a href="http://www.eetimes.com/document.asp?doc_id=1272335">Choosing the optimum switching frequency of your DC/DC converter</a></li>
+  <li><a href="https://www.onsemi.com/pub/Collateral/TND388-D.PDF">Effects of High Switching Frequency on Buck Regulators</a></li>
+  <li><a href="https://www.maximintegrated.com/en/app-notes/index.mvp/id/746">High-Side Current-Sense Measurement: Circuits and Principles</a></li>
+</ul>
+
+
+
+	</article>
+
+	
+
+	<footer>
+		
+
+	</footer>
+</main>
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

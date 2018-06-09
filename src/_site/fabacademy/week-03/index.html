@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W03: Computer Aided Design – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W03: Computer Aided Design</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					Model (draw, render, animate, simulate, …) a possible final project, and post it on your class page with original 2D and 3D files. Don’t rely on a printed document. Check the information for each assignment in this living document each week.
+				</p>
+			</div>
+		</div>
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Personal Goal</h5>
+				<p class="card-text">
+					Prepare wall mount design for next week's cutting excercise. Draw a plan of the installation in the shop.
+				</p>
+			</div>
+		</div>
+		
+
+		
+		
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Further Resources</h5>
+			</div>
+			<ul class="links list-group list-group-flush">
+				
+					
+					<li class="list-group-item">
+						
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+				
+				<a href="/fabacademy/week-03/lecture-notes.html"><i class="fa fa-btn fa-sticky-note-o"></i> Lecture Notes</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+		
+				<a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual">OpenSCAD User Manual</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="https://github.com/fabgrid/design">Design Files</a>
+					</li>
+				
+					
+			</ul>
+		</div>
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#2d-overview" id="markdown-toc-2d-overview">2D Overview</a>    <ul>
+      <li><a href="#1-vectorize-a-ground-plan-of-the-shop" id="markdown-toc-1-vectorize-a-ground-plan-of-the-shop">1. Vectorize a ground plan of the shop</a></li>
+      <li><a href="#2-place-outlets" id="markdown-toc-2-place-outlets">2. Place outlets</a></li>
+      <li><a href="#3-place-cpu-and-routes" id="markdown-toc-3-place-cpu-and-routes">3. Place CPU and routes</a></li>
+      <li><a href="#4-perform-some-calculations" id="markdown-toc-4-perform-some-calculations">4. Perform some calculations</a></li>
+    </ul>
+  </li>
+  <li><a href="#3d-components" id="markdown-toc-3d-components">3D Components</a>    <ul>
+      <li><a href="#1-acces-grid-conductors" id="markdown-toc-1-acces-grid-conductors">1. Acces Grid: Conductors</a>        <ul>
+          <li><a href="#conductor-api" id="markdown-toc-conductor-api">“Conductor” API:</a></li>
+          <li><a href="#implementation-l-conductor" id="markdown-toc-implementation-l-conductor">Implementation: L-Conductor</a></li>
+        </ul>
+      </li>
+      <li><a href="#2-acces-grid-wall-mounts" id="markdown-toc-2-acces-grid-wall-mounts">2. Acces Grid: Wall Mounts</a>        <ul>
+          <li><a href="#wall-mount-api" id="markdown-toc-wall-mount-api">“Wall-Mount” API</a></li>
+          <li><a href="#optimizations" id="markdown-toc-optimizations">Optimizations</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="2d-overview">2D Overview</h2>
+
+<p><strong>Goal: Know where to place everything in the room. Know how much wire is reqired in total.</strong></p>
+
+<ol>
+  <li>Vectorize a ground plan of the shop</li>
+  <li>Place outlets</li>
+  <li>Place CPU and routes</li>
+  <li>Perform some calculations</li>
+</ol>
+
+<h3 id="1-vectorize-a-ground-plan-of-the-shop">1. Vectorize a ground plan of the shop</h3>
+
+<p>The scan is a bit skewed so our first task is to transform it in GIMP. We want to have its edges paralell to the image borders and its angles square. First, i put four guide lines (blue dashed lines) onto my original scan, to indicate where the strokes of the drawing <strong>should</strong> be. Next, i use the <em>perspective</em> transform tool <img src="01-gimp-transform-tool.png" class="icon" /> to align all four corners in the drawing with the intersection points of the guides (red arrows). After adjusting one corner, i check if the other three corners still line up and adjust them in turn, until i’m statisfied with the result. It doesn’t need to be too perfect…</p>
+
+<div class="row">
+	<div class="col-sm-6">
+		<zoom src="02-gimp-screenshot-1.png" shadow="true"></zoom>
+	</div>
+	<div class="col-sm-6">
+		<zoom src="03-gimp-screenshot-2.png" shadow="true"></zoom>
+	</div>
+</div>
+
+<p>Now, export that file as <code class="highlighter-rouge">png</code>. The <code class="highlighter-rouge">jpeg</code> format is not recommended here, as the drawing might loose sharpness and edges could get fuzzy.</p>
+
+<p>I prefer to vectorize this file manually for the cleaner svg output and as a further “filter” to smoothen out the imprecision of the scan. We could use Inkscape here, but for this simple task, <a href="https://www.sketchapp.com/">Sketch</a> is totally fine and a bit easier to operate. So i start by adding my aligned png drawing as a layer in a blank Sketch file. Again, i add some guides to help me with the manual tracing.</p>
+
+<zoom src="04-sketch-guides.png"></zoom>
+
+<p>After that, i start drawing the outer shape of the relevant area in my plan as a <img alt="Vector" src="05-sketch-vector-tool.png" class="icon" /> . Then i subtract the interior walls from that. Pretty simple if everything is straight.</p>
+
+<zoom src="06-sketch-interior.png"></zoom>
+
+<p>Finally, i need to take note of the scale. To achieve this, i draw a vector that has a known length in my plan, for example the <code class="highlighter-rouge">3.02m</code> at the bottom of the drawing. Then, i divide the length of that vector by our known 3.02, which gives me a line that represents exactly one meter in our original plan. Label</p>
+
+<zoom src="07-sketch-scale.png"></zoom>
+
+<p>Last thing i do is hide the background layer, resize the artboard and add a description. Done with the plan so far, now let’s add our components to it!</p>
+
+<zoom src="08-sketch-ground-plan.png"></zoom>
+
+<div class="alert alert-warning">
+	<strong>What i could have done better:</strong> Measure the scale first and resize the drawing before vectorization so that for example <code>1px = 1cm</code>. This way, i could have used all measures stated on the scan to create an exact plan in easy-to-convert units. Realized too late, not necessary for now, lesson for next time…
+</div>
+
+<h3 id="2-place-outlets">2. Place outlets</h3>
+
+<p>I will set the locations of the outlets first, as they depend on our practical needs. The CPU location and wire routes have to be adapted to that.</p>
+
+<p>The red triangle <img alt="triangle" src="09-outlet-symbol.png" class="icon" /> indicates an outlet, but i made it a <a href="https://www.sketchapp.com/learn/documentation/symbols/">Symbol</a> so i can change it any time. This way i also keep information about the orientation in the document. <code class="highlighter-rouge">0°</code> is the upwards pointing arrow. <code class="highlighter-rouge">-90°</code> points to the left. It is preserved in the svg as an attribute (<code class="highlighter-rouge">transform="rotate(-90.000000)"</code>) and might be useful in further, possibly automated steps.</p>
+
+<p>The outlets are all placed in a common group called <code class="highlighter-rouge">Outlets</code>, which should also facilitate automated processing or evaluation.</p>
+
+<zoom src="10-sketch-outlets.png"></zoom>
+
+<h3 id="3-place-cpu-and-routes">3. Place CPU and routes</h3>
+
+<blockquote>
+  <p>“CPU” is a stupid acronym for the random term “Central Power Unit”, which basically just means a power supply plus some analog electronics.</p>
+</blockquote>
+
+<p><em>Distribution grid</em> means wires at the ceiling, whose task is to distribute the power across the room to where it’s needed – in contrast to the <em>Access grid</em>, which is a set of blank, vertically wall-mount copper strips where our DC can be tapped anywhere over the entire length.</p>
+
+<p><img src="00-installation.svg" class="constrain shadow" /></p>
+
+<p>What’s missing now are the routes for the access grid. They go vertically upwards from each outlet to the respective end of the distribution grid - so they’re pretty difficult to depict in our 2D top view. Let’s go 3D!</p>
+
+<h3 id="4-perform-some-calculations">4. Perform some calculations</h3>
+
+<div class="alert alert-warning">Initially, the plan was to build a tool that could calculate some useful statistics, such as the total length of wire required, based on an svg plan and some more parameters using the <code>SVGGeometryElement.getTotalLength()</code> method. As i will build a small prototype section before installing the entire grid, such a tool is of less importance right now, given my limited time. But i still like the idea and will hopefully come back to it later.</div>
+
+<hr />
+
+<h2 id="3d-components">3D Components</h2>
+
+<p>I want to start with the design of the wall mounts for the access grid with its blank conductors. Everything should be nicely parametrized, so other people can easily adapt the system to their needs. For this reason, and because i know how to work with it already, <a href="http://www.openscad.org/">OpenSCAD</a> will be the tool of my choice in the following steps.</p>
+
+<p>The corresponding code to this section can be found at <a href="https://github.com/fabgrid/design">https://github.com/fabgrid/design</a></p>
+
+<h3 id="1-acces-grid-conductors">1. Acces Grid: Conductors</h3>
+
+<p>First, i will design the conductors as a module that provides the profile of the cross section over a standardized interface. This way, it can easily be swapped out later. This profile will then be used in the next step to determine the shape of the cutouts in the relevant parts of the wall-mount.</p>
+
+<h4 id="conductor-api">“Conductor” API:</h4>
+
+<p>A swappable software component needs a standardized interface. A “Conductor”, as we use the term, must be a self-contained, “<code class="highlighter-rouge">use</code>-able” openSCAD file with the following module and functions:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ConductorProfile(current): [Module] Draws the profile of a single conductor on the XY-space
+conductor_width(): [Function] Returns the X-spread of a single conductor
+conductor_height(): [Function] Returns the Y-spread of a single conductor
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">current</code> argument to the <code class="highlighter-rouge">ConductorProfile</code> module is there to allow the conductor implementation to adjust its profile based on the electrical current that it’s going to be loaded with.</p>
+
+<h4 id="implementation-l-conductor">Implementation: L-Conductor</h4>
+
+<p>As i currently imagine it, the first version will be made out of copper sheet metal, bent into an L-shape. Here’s what the cross section looks like in openSCAD:</p>
+
+<zoom src="11-scad-l-profile.png"></zoom>
+
+<p>In a different file, i defined a helper module, to extrude any conductor profile into a 3D-shape, and another module that renders a series of them next to each other:</p>
+
+<zoom src="12-scad-conductor-3d.png"></zoom>
+
+<h3 id="2-acces-grid-wall-mounts">2. Acces Grid: Wall Mounts</h3>
+
+<p>Now that i have the shape of my conductors defined in a reusable way, i can now design suitable wall mounts based on that information. I will use the same schema, making the wall-mount a swappable component.</p>
+
+<h4 id="wall-mount-api">“Wall-Mount” API</h4>
+
+<p>The API for that is quite simple: Again, we need an openSCAD file providing a single module <code class="highlighter-rouge">WallMount</code> which draws an example of its type. It gets a single <code class="highlighter-rouge">$child</code> which is the full profile of the conductors.</p>
+
+<p>And here’s a first design draft:</p>
+
+<zoom src="13-scad-laser-wallmount.png"></zoom>
+
+<p>This model is just a draft, lacking the fitted joints. But it’s already fully parametric and adapts to my conductors config. Shound i decide to use now 6 round wires, instead of 4 L-shaped ones, it automatically adapts:</p>
+
+<zoom src="14-scad-laser-wallmount-variant.png"></zoom>
+
+<h4 id="optimizations">Optimizations</h4>
+
+<p>One thing i need to find a solution for: I want to be able to separately open and render the files containing individual components (eg. <code class="highlighter-rouge">LaserWallMount</code>). Currently, they depend on <code class="highlighter-rouge">Main.scad</code> passing them the correct options. It would be nice to have everything stored in some kind of global config with known a interface (eg. variable names). This global config could then be used by all components to render with the correct options.</p>
+
+<p>The code would be cleaner if we passed only the <code class="highlighter-rouge">ConductorsProfile</code> as child to the <code class="highlighter-rouge">WallMount</code> (<a href="https://github.com/fabgrid/design/blob/master/Main.scad#L50">Main.scad:50</a>), instead of passing both the child <em>and</em> two arguments, <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code>. Unfortunately, there is currently no way in openSCAD (without compiling a fork) to programatically retrieve the dimensions of a shape. Therefore, we have to rely on passing hard-coded or calculated values.</p>
+
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-04/">W04: Computer-Controlled Cutting</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-02/">W02: Project Management</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

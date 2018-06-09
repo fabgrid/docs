@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>FabAcademy 2017 – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="page">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a class="active" href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>FabAcademy 2017</h1>
+	</header>
+
+	<article>
+		<p>The fabgrid is my final project for the FabAcademy ‘17. <a href="http://fabacademy.org/">FabAcademy</a> is a course on “How to make anything” - focussing on digital fabrication. It is held every year by <a href="http://ng.cba.mit.edu/">Neil Gershenfeld at the MIT</a> with the support of local instructors in <a href="https://fablabs.io">FabLabs around the world</a>.</p>
+
+<p>Within a couple of weeks we’re going to acquire all kinds of digital fabrictation skills, including cnc cutting and milling, 3D printing, electronics design, programming and more. For a full list of all lessons, check the <em>FabAcademy Schedule</em> link below.</p>
+
+<p>I will try to use each lesson to create a necessary part to my final project, the fabgrid. One of the most interesting parts will be <em>Molding and Casting</em>, as i’ve never done it before.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>We are encouraged to carefully document each step in order to ensure full reproducibility of our work. Here is the documentation segmented by week/topic:</p>
+
+<ul>
+  <li><a href="/fabacademy/week-01/">Week 01: Principles and Practices</a></li>
+  <li><a href="/fabacademy/week-02/">Week 02: Project Management</a></li>
+  <li><a href="/fabacademy/week-03/">Week 03: Computer Aided Design</a></li>
+  <li><a href="/fabacademy/week-04/">Week 04: Computer-Controlled Cutting</a></li>
+  <li><a href="/fabacademy/week-05/">Week 05: Electronics Production</a></li>
+  <li><a href="/fabacademy/week-06/">Week 06: 3D Printing and Scanning</a></li>
+  <li><a href="/fabacademy/week-07/">Week 07: Electronics Design</a></li>
+  <li><a href="/fabacademy/week-08/">Week 08: Computer Machining</a></li>
+  <li><a href="/fabacademy/week-09/">Week 09: Embedded Programming</a></li>
+  <li><a href="/fabacademy/week-10/">Week 10: Mechanical Design</a></li>
+  <li><a href="/fabacademy/week-11/">Week 11: Machine Design</a></li>
+  <li><a href="/fabacademy/week-12/">Week 12: Output Devices</a></li>
+  <li><a href="/fabacademy/week-13/">Week 13: Molding &amp; Casting</a></li>
+  <li><a href="/fabacademy/week-14/">Week 14: Input Devices</a></li>
+  <li><a href="/fabacademy/week-15/">Week 15: Wildcard Week: Composites</a></li>
+  <li><a href="/fabacademy/week-16/">Week 16: Networking &amp; Communications</a></li>
+  <li><a href="/fabacademy/week-17/">Week 17: Interface &amp; Application Programming</a></li>
+  <li><a href="/fabacademy/week-18/">Week 18: Applications &amp; Implications</a></li>
+  <li><a href="/fabacademy/week-19/">Week 19: Invention, Intellectual Property</a></li>
+</ul>
+
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href=""></a>
+		
+		
+	</div>
+
+
+	</footer>
+</main>
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

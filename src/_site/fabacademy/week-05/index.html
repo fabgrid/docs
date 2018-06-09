@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W05: Electronics Production – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W05: Electronics Production</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					Make an in-circuit programmer by milling the PCB (program it, so that you can use it to program your board in Electronics Design week, and in other weeks). Optionally, trying other processes.
+				</p>
+			</div>
+		</div>
+		
+
+		
+
+		
+		
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Further Resources</h5>
+			</div>
+			<ul class="links list-group list-group-flush">
+				
+					
+					<li class="list-group-item">
+						
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+				
+				<a href="/fabacademy/week-05/lecture-notes.html"><i class="fa fa-btn fa-sticky-note-o"></i> Lecture Notes</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+		
+				<a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Official FabTinyISP Instructions</a>
+					</li>
+				
+					
+			</ul>
+		</div>
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#milling-the-board" id="markdown-toc-milling-the-board">Milling the Board</a>    <ul>
+      <li><a href="#generating-the-toolpaths" id="markdown-toc-generating-the-toolpaths">Generating the toolpaths</a>        <ul>
+          <li><a href="#parameters-changed-in-mod" id="markdown-toc-parameters-changed-in-mod">Parameters changed in Mod:</a></li>
+          <li><a href="#things-to-check-in-otherplan" id="markdown-toc-things-to-check-in-otherplan">Things to check in Otherplan</a></li>
+          <li><a href="#outline" id="markdown-toc-outline">Outline</a></li>
+          <li><a href="#final-steps" id="markdown-toc-final-steps">Final steps</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#collecting-the-components" id="markdown-toc-collecting-the-components">Collecting the components</a></li>
+  <li><a href="#solder" id="markdown-toc-solder">Solder</a></li>
+  <li><a href="#check-board" id="markdown-toc-check-board">Check Board</a></li>
+  <li><a href="#flash" id="markdown-toc-flash">Flash</a>    <ul>
+      <li><a href="#prepare-environment-macos" id="markdown-toc-prepare-environment-macos">Prepare environment (macOS)</a></li>
+      <li><a href="#flash-in-stages" id="markdown-toc-flash-in-stages">Flash in stages</a></li>
+    </ul>
+  </li>
+  <li><a href="#tune-thickness" id="markdown-toc-tune-thickness">Tune thickness</a></li>
+  <li><a href="#program-something" id="markdown-toc-program-something">Program something!</a></li>
+</ul>
+
+<hr />
+
+<h2 id="milling-the-board">Milling the Board</h2>
+
+<p>Here at the erfindergarden, we have that nice little <a href="https://othermachine.co">Othermill</a>, which works perfectly for PCB milling. <a href="https://othermachine.co/otherplan/">Otherplan</a>, the software it comes with, is also optimized for pcb fabrication. First thing is to head to that link and upgrade the software.</p>
+
+<p><img src="01-othermill-otherplan.jpg" class="img-fluid" />
+<span class="img-caption">Photo from the othermachine.co website, showing the “Othermill” and corresponding software “Otherplan”</span></p>
+
+<h3 id="generating-the-toolpaths">Generating the toolpaths</h3>
+
+<p>I decided to build the <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">FabTinyISP</a> for its small footprint and low parts count. The board outline and traces are available on the linked website as 1000dpi PNGs. When browsing through <a href="http://mod.cba.mit.edu">mod</a>, i noticed that it can output Othermill-specific gcode, so let’s check that feature out.</p>
+
+<p>First, the traces need to be milled. Mod provides a preset for PCB traces with a 1/64” flat endmill. I use that and only change the number of offsets to <code class="highlighter-rouge">-1</code> in order to remove all copper that’s not a trace or pad, then export as <code class="highlighter-rouge">Othermill (.nc)</code>. The resulting file can be directly read by Otherplan.</p>
+
+<div class="alert alert-warning">
+	After breaking an end mill, i reduced the cut speed to 4.45mm/s. The actual reason was most likely my double-sided tape being too thick, so that the mill plunged too deeply into the material. This put too much stress on the tool, as it had to remove not only the copper plating, but also some of the FR-1 base material.
+</div>
+
+<div class="row">
+	<div class="col-sm">
+		<zoom src="02-mod-traces.png" caption="Processing the traces using fabmodules"></zoom>
+	</div>
+	<div class="col-sm">
+		<zoom src="03-otherplan-traces.png" caption="GCode opened in Otherplan, ready to mill…"></zoom>
+	</div>
+</div>
+
+<h4 id="parameters-changed-in-mod">Parameters changed in Mod:</h4>
+
+<ul>
+  <li>Offsets: -1</li>
+  <li>Cut Speed: 4.45</li>
+</ul>
+
+<h4 id="things-to-check-in-otherplan">Things to check in Otherplan</h4>
+
+<ul>
+  <li>Check Material, Size and Thickness</li>
+  <li>Select proper tool (same as used in mod, 1/64”)</li>
+  <li>Physical position of the board inside the mill and position of the toolpaths inside Otherplan</li>
+  <li>The tool can be inserted after starting the job. Otherplan will prompt you to insert the needed tool at the right time.</li>
+  <li>When not using super-thin tape, add its thickness to the stock thickness parameter</li>
+</ul>
+
+<p>After all settings in Otherplan are ensured to be correct, we stick the raw PCB onto the buildplate using double-sided tape. Make sure the surface is even and clean. Also make sure the PCB is flat. <strong>Use the thinnest tape you can find!</strong></p>
+
+<div class="row">
+	<div class="col-sm">
+		<zoom src="04-pcb-tape.jpg" shadow="true"></zoom>
+	</div>
+	<div class="col-sm">
+		<zoom src="05-pcb-inserted.jpg" shadow="true"></zoom>
+	</div>
+</div>
+
+<p>I didn’t have any of the super-thin tape so i used a thicker one, causing the tool to break. So on the second attempt, i reduced cut speed in mod, and added the approximate tape thickness to the material thickness (z = 1.60mm) in Otherplan.</p>
+
+<p>This time the traces come out nicely:</p>
+
+<div class="row">
+	<div class="col-sm">
+		<zoom src="06-traces-done.jpg" shadow="true"></zoom>
+	</div>
+	<div class="col-sm">
+		<iframe class="constrain" width="560" height="315" src="https://www.youtube-nocookie.com/embed/kywhPTGDRKE" frameborder="0" allowfullscreen=""></iframe>
+	</div>
+</div>
+
+<h4 id="outline">Outline</h4>
+
+<p>The process for the outline is quite similar, with just a few differences:</p>
+
+<ul>
+  <li>In mod, use the “PCB outline (1/32)” profile and keep all suggested parameters</li>
+  <li>Use a 1/32” bit</li>
+</ul>
+
+<p>An here’s how it looks:</p>
+
+<iframe class="constrain" width="560" height="315" src="https://www.youtube-nocookie.com/embed/vbv0GNLJU2Q" frameborder="0" allowfullscreen=""></iframe>
+
+<div class="alert alert-info">
+	Towards the end of the cutting process, one can see a white blob building up around the mill. It's the sticky tape wrapping around. The toolpaths could be adjusted to not cut all the way down and avoid this, as it might influence the performace/lifetime of the bit.
+</div>
+
+<h4 id="final-steps">Final steps</h4>
+
+<ul>
+  <li>Clean the PCB and mill with a vacuum cleaner</li>
+  <li>Carefully remove the board with a knife or sharp screwdriver</li>
+  <li>Clean board with water and soap or alcohol</li>
+</ul>
+
+<zoom src="07-finished-pcb.jpg" shadow="true"></zoom>
+
+<h2 id="collecting-the-components">Collecting the components</h2>
+
+<ul>
+  <li>Collect parts on tape</li>
+  <li>Have no 49Ω, use 100Ω</li>
+  <li>Have no 100nF, use a 1uF</li>
+  <li>Have only one 3v3 zener, salvage another board…</li>
+  <li>LEDs: yellow and blue instead of green and red - resistors should still match approximately</li>
+</ul>
+
+<zoom src="08-components-sheet.jpg" shadow="true"></zoom>
+
+<h2 id="solder">Solder</h2>
+
+<ul>
+  <li>Have the layout and schematic open on a screen or printed out for quick lookup</li>
+  <li>Small components first for easy access to all solder pads</li>
+  <li>ISP header before ATTiny because of heat</li>
+</ul>
+
+<p>Then, for each component:</p>
+<ul>
+  <li>Always have a clean tip with a little solder on it</li>
+  <li>Put some solder on the pad</li>
+  <li>Place part, ensure orientation, fix it at one pin</li>
+  <li>Solder other pin(s)</li>
+  <li>Re-solder “fixture pin”</li>
+</ul>
+
+<p>I first did the resistors, z-diodes and the capacitor next to the USB plug, then the LEDs and their series resistors, then the ATTiny and finally the ISP header. Everything was easily accessible to solder.</p>
+
+<zoom src="09-soldered-pcb.jpg" shadow="true"></zoom>
+
+<h2 id="check-board">Check Board</h2>
+
+<p>Now we do a few checks before we power up the board for the first time.</p>
+
+<ol>
+  <li>Visually check each part against the schematic (position, orientation)</li>
+  <li>Visually check for unwanted solder bridges</li>
+  <li>Ensure there’s no short between VCC and GND using a multimeter</li>
+  <li>Close solder jumper</li>
+  <li>Plug into usb and see if red LED lights up</li>
+</ol>
+
+<h2 id="flash">Flash</h2>
+
+<h3 id="prepare-environment-macos">Prepare environment (macOS)</h3>
+
+<ul>
+  <li>Install <a href="https://www.obdev.at/products/crosspack/download.html">Crosspack</a></li>
+  <li>Crosspack didn’t put a <code class="highlighter-rouge">gcc-avr</code> binary into my $PATH, so i installed it manually using <code class="highlighter-rouge">brew tap osx-cross/avr; brew install avr-libc</code></li>
+  <li>avrdude is also missing so i’ll install that as well: <code class="highlighter-rouge">brew install avrdude</code></li>
+  <li>I think we could have left crosspack out as its only purpose was to install those two binaries and their dependencies, which homebrew did easily. Crosspack hasn’t been updated in a couple of years, maybe it’s not even necessary anymore…</li>
+</ul>
+
+<h3 id="flash-in-stages">Flash in stages</h3>
+
+<ul>
+  <li>Download and <code class="highlighter-rouge">make</code> the <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_firmware_bdm_v1.zip">firmware</a></li>
+  <li>Connect the board to an ISP programmer</li>
+  <li><code class="highlighter-rouge">make flash</code> the firmware to the board</li>
+  <li><code class="highlighter-rouge">make fuses</code> to set the fuses except the one disabling the reset pin</li>
+  <li>Plug into usb and check if the device gets recognized (on macOS use “System Information” app if there’s no <code class="highlighter-rouge">lsusb</code>)</li>
+  <li><strong>Only after ensuring the device gets recognized:</strong> <a href="https://www.youtube.com/watch?v=8v_Hv-lN1yE">Blow the reset fuse ;)</a> – <code class="highlighter-rouge">make rstdisbl</code>, enabling the board to act as a programmer itself</li>
+  <li>Open the solder jumper again. Use solder wick to remove the excess solder.</li>
+</ul>
+
+<div class="row">
+	<div class="col-sm">
+		<zoom src="10-isp-cable.jpg" shadow="true" caption="Pin 1 is top left"></zoom>
+	</div>
+	<div class="col-sm">
+		<zoom src="11-sysinfo.png" caption="Make sure USBtinySPI is there!"></zoom>
+	</div>
+</div>
+
+<h2 id="tune-thickness">Tune thickness</h2>
+
+<ul>
+  <li>We need to ensure proper contact of the USB plug – the PCB itself is too thin</li>
+  <li>Cut out the shape from an old credit card or something and glue it to the bottom of the board</li>
+</ul>
+
+<zoom src="12-extra-thickness.jpg" shadow="true"></zoom>
+
+<h2 id="program-something">Program something!</h2>
+
+<blockquote>
+  <p>Or rather: Try to program something; Fail; Debug; Look at and understand the circuit you just built; And then, program something!</p>
+</blockquote>
+
+<ul>
+  <li>Now i want to test my programmer, so i’ll breadboard a simple test circuit with another ATTiny and an LED to flash the “Blink LED” sketch onto it using the Arduino IDE. (Photo breadboard)</li>
+  <li>Check the pinout in the <a href="http://www.atmel.com/images/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf">Datasheet</a> and connect accordingly (i used another breadboard for this purpose): (screenshot) (photo)</li>
+  <li>Conncet in through a USB-2.0 hub, as USBv3 might cause trouble</li>
+  <li>Check connection using <code class="highlighter-rouge">avrdude -p attiny45 -c usbtiny -v</code></li>
+  <li>Gives error</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>initialization failed, rc=-1
+         Double check connections and try again, or use -F to override
+         this check.
+</code></pre></div></div>
+
+<ul>
+  <li>Online research indicates this error is due to a hardware issue</li>
+  <li>Connecting the breadboard to my known-to-work programmer lets me program the ATTiny, proving that the chip and wiring are okay. Must be a physical issue with my board…</li>
+  <li>One last check could be to try to use it from a linux machine with native USB 2.0</li>
+  <li>Unfortunately i have no suitable computer at hand right now. And also my multimeter ran out of power with no 9V block at hand so i’ll have to debug the issue later in the lab…</li>
+</ul>
+
+<p>The solution:</p>
+
+<ul>
+  <li>When i got the multimeter going, first thing i checked was whether GND and VCC on the ICSP header were connected to the USB plug. GND was, VCC was not. So i looked at the traces again and realized: The solder jumper was open in order to program devices that have their own power supply. I was assuming that the programmer would power my chip, but it’s configured to <em>do not</em>.</li>
+  <li>So i decided to give the ATTiny its own power supply by switching back to the original test breadboard with the led, using the Adafruit PowerBoost with a small LiPo battery mounted there – Tada! It worked!</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ avrdude -p attiny45 -c usbtiny
+
+avrdude: AVR device initialized and ready to accept instructions
+Reading | ################################################## | 100% 0.00s
+avrdude: Device signature = 0x1e9206 (probably t45)
+avrdude: safemode: Fuses OK (E:FF, H:DF, L:E2)
+avrdude done.  Thank you.
+</code></pre></div></div>
+
+<p>Note: Now i also understood what the green LED is for: It lights up when the powered ATTiny is connected, indicating that we’re ready to flash.</p>
+
+<p>Time to flash the “hello world” <em>Blink Sketch</em>. Inside the Arduino IDE (with the ATTiny toolchain installed), i open up the “Example &gt; Basics &gt; Blink” sketch and replace all three occurences of the <code class="highlighter-rouge">LED_BUILTIN</code> constant with the value <code class="highlighter-rouge">0</code>. This refers to PB0 on the ATTiny, where the LED is connected.</p>
+
+<p>(screenshot)</p>
+
+<p>Note: Had i asked myself what the purpose of the <em>VCC jumper</em> on my working programmer is, i could have realized the issue earlier…</p>
+
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-06/">W06: 3D Scanning & Printing</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-04/">W04: Computer-Controlled Cutting</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

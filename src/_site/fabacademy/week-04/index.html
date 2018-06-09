@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W04: Computer-Controlled Cutting – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W04: Computer-Controlled Cutting</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					Make lasercutter test part(s), varying slot dimensions using parametric functions, testing your laser kerf & cutting settings (group project). Cut something on the vinylcutter. Design, make, and document a parametric press-fit construction kit, accounting for the lasercutter kerf, which can be assembled in multiple ways.
+				</p>
+			</div>
+		</div>
+		
+
+		
+
+		
+		
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Further Resources</h5>
+			</div>
+			<ul class="links list-group list-group-flush">
+				
+					
+					<li class="list-group-item">
+						
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+				
+				<a href="/fabacademy/week-04/lecture-notes.html"><i class="fa fa-btn fa-sticky-note-o"></i> Lecture Notes</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+			
+		
+			
+			
+		
+			
+			
+		
+		
+				<a href="https://github.com/jsphpl/press-fit-kit">Press-fit kit source code</a>
+					</li>
+				
+					
+			</ul>
+		</div>
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#1-vinyl-cutting" id="markdown-toc-1-vinyl-cutting">1. Vinyl cutting</a></li>
+  <li><a href="#2-press-fit-construction-kit" id="markdown-toc-2-press-fit-construction-kit">2. Press-fit construction kit</a>    <ul>
+      <li><a href="#the-model" id="markdown-toc-the-model">The Model</a></li>
+      <li><a href="#measuring-the-kerf" id="markdown-toc-measuring-the-kerf">Measuring the kerf</a></li>
+      <li><a href="#cutting-the-parts" id="markdown-toc-cutting-the-parts">Cutting the parts</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="1-vinyl-cutting">1. Vinyl cutting</h2>
+
+<p>Before i can use the Vinyl cutter (a <em>Silhouette Cameo</em> in our lab), i need to download and install the control software called <a href="https://www.silhouetteamerica.com/software#update">Silhouette Studio</a>.</p>
+
+<p>The design is simply gonna be the fabgrid logo as a vinyl sticker. I’ll do it in Sketch, based on the already exising logo. A rectangular border is added so the sticker can later be easily removed from the rest of the vinyl.</p>
+
+<zoom src="09-vinyl-design.png"></zoom>
+
+<p>I was told that the free version of Silhouette Studio couldn’t open svg files. But it can open dxf, so i’m gonna save it as dxf using an Inkscape, tracing the outlines of all paths in the process.</p>
+
+<hr />
+
+<h2 id="2-press-fit-construction-kit">2. Press-fit construction kit</h2>
+
+<p>First part will be to design a parametric press-fit construction kit for laser cutting, adjusting for the kerf.</p>
+
+<h3 id="the-model">The Model</h3>
+
+<p>Again, i use openSCAD to design a fully parametric press-fit kit. The part itself is really simple: It’s just a circular disk with a parametrized number of slots evenly distributed over its 360°. The type of slot used should be easily swappable. Separate values for clearance and lasercutter kerf let us fine-tune how tight the joints fit.</p>
+
+<p>I end up with the following parameters:</p>
+
+<pre><code class="language-openscad">/**
+ * Diameter of the disk.
+ *
+ * @type {Number} Float (mm)
+ */
+DIAMETER = 30;
+
+/**
+ * Thickness of the material used.
+ *
+ * @type {Number} Float (mm)
+ */
+MATERIAL = 3;
+
+/**
+ * Width of a cut produced by the lasercutter. This value shoud be
+ * determined precisely for each machine/material combination!
+ *
+ * @type {Number} Float (mm)
+ */
+KERF = .05;
+
+/**
+ * Tolerance for joints. Should be a small value close to 0.
+ * Very soft materials might require negative values.
+
+ * @type {Number} Float (mm)
+ */
+CLEARANCE = .01;
+
+/**
+ * The number of slots in one disk.
+ *
+ * @type {Number} Integer
+ */
+N_SLOTS = 3;
+
+/**
+ * Depth of each slot. Mind that the total
+ * overlap of two parts is twice as much.
+ *
+ * @type {Number} Float (mm)
+ */
+SLOT_DEPTH = 6;
+
+/**
+ * The type of slot to use.
+ *
+ * Options currently available:
+ * 	- basic
+ *
+ * @type {String}
+ */
+SLOT_TYPE = "basic";
+
+/**
+ * The depth of the chamfer as fraction of `SLOT_DEPTH`.
+ *
+ * @type {Number} Float
+ */
+CHAMFER = .1;
+
+/**
+ * Diameter of the center hole. Set to 0 to disable.
+ *
+ * @type {Number} Float (mm)
+ */
+CENTER_HOLE = 4;
+
+/**
+ * Number of circle fragments per 360. Higher numbers
+ * mean smoother circles. Can be set to `N_SLOTS`
+ * or a multiple of it for fun effects.
+ *
+ * @type {Number} Integer
+ */
+FN = 100; //N_SLOTS*2;
+</code></pre>
+
+<p>The full source code can be found under the link at the top of this page (#Further Resources
+). Above settings yield a part that looks like so:</p>
+
+<zoom src="01-openscad-kit.png"></zoom>
+
+<h3 id="measuring-the-kerf">Measuring the kerf</h3>
+
+<p>Before we can cut the first sample of our model, we need to measure the kerf of the laser cutter/material combination using the following process:</p>
+
+<ol>
+  <li>Insert target material into the laser cutter</li>
+  <li>Adjust focus</li>
+  <li>Make a rectangular cut. Subdivide it into <code class="highlighter-rouge">n (n &gt; 5)</code> segments</li>
+  <li>Compress the segments so all cutting edges touch, measure the total gap <code class="highlighter-rouge">g</code></li>
+  <li>Our kerf can be calculated as <code class="highlighter-rouge">kerf = g/(n+1)</code></li>
+  <li>The greater <code class="highlighter-rouge">n</code>, the more precise our measurement</li>
+</ol>
+
+<p>This is the template:</p>
+
+<p><img src="kerf-probe.svg" class="constrain shadow" /></p>
+
+<p>I cut it on 2.9mm plywood, then use tape to hold everything together while taking it out of the cutter.</p>
+
+<zoom src="03-cutter-tape.jpg" shadow="true"></zoom>
+
+<p>Three measurements are taken and averaged:</p>
+
+<zoom src="04-measuring.jpg" shadow="true"></zoom>
+
+<math display="block">
+	<mrow>
+		<msub><mi>gap</mi><mi>total</mi></msub> <mo>=</mo> <mfrac><mrow><mn>0.82</mn> <mo>+</mo> <mn>0.88</mn> <mo>+</mo> <mn>0.72</mn></mrow><mrow><mn>3</mn></mrow></mfrac> <mo>≈</mo> <mn>0.8067</mn>
+	</mrow>
+</math>
+
+<p>The kerf is calculated as the above <math><msub><mi>gap</mi><mi>total</mi></msub></math> devided by the number of cuts. We can use that value as input parameter for our press-fit model:</p>
+
+<math display="block">
+	<mrow>
+		<mi>kerf</mi> <mo>=</mo> <mfrac><mrow><mn>0.82</mn> <mo>+</mo> <mn>0.88</mn> <mo>+</mo> <mn>0.72</mn></mrow><mrow><mn>3</mn> <mo>×</mo> <mn>14</mn></mrow></mfrac> <mo>≈</mo> <mn>0.0576</mn>
+	</mrow>
+</math>
+
+<h3 id="cutting-the-parts">Cutting the parts</h3>
+
+<p>On the first attempt on cutting the parts, i had the settings in visicut to weak/fast (<code class="highlighter-rouge">power 100, speed 100</code>), so i had to cut another pass until the parts got loose. This distorts the kerf initially measured and results in the joint becoming too loose.</p>
+
+<p>I made another attempt (<code class="highlighter-rouge">power 100, speed 75</code>), which was <em>almost good</em>, but the part still stuck a little bit. Thus the lower edges are not smooth. I’ll give it another try at <code class="highlighter-rouge">power 100, speed 65</code> before i go into fine-tuning the clearance.</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hcEFxzhH-BA" frameborder="0" allowfullscreen="" class="constrain"></iframe>
+
+<p>This time i find the parts popping out well, so we can now start looking at and fine-tuning the fit of our joints. Looks like it’a bit too wide - the parts slip off each other easily. I add a clearance of <math><mrow><mo>-</mo></mrow><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>20</mn></mrow></mfrac></mrow><mrow><mi>mm</mi></mrow></math>. The resulting parts fit just right. Nice level of friction. I’ll cut a couple of them with the same settings and see what i can build…</p>
+
+<div class="row">
+	<div class="col-sm"><zoom src="05-visicut.png"></zoom></div>
+	<div class="col-sm"><zoom src="06-more-parts.jpg" shadow="true"></zoom></div>
+</div>
+<div class="row">
+	<div class="col-sm"><zoom src="07-triangles.jpg" shadow="true"></zoom></div>
+	<div class="col-sm"><zoom src="08-hexagon.jpg" shadow="true"></zoom></div>
+</div>
+
+<p>Pretty basic stuff so far and it takes lots of parts to build bigger structures. Should add bigger disks or elongated parts. Also, playing with the angle/number of slots would be interesting. Multiples of 4 as slots count would make it easy to create rectangular structures. Currently, with 6 slots, we’re bound to 60° steps…</p>
+
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-05/">W05: Electronics Production</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-03/">W03: Computer Aided Design</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

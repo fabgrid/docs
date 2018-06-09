@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W11: Machine Design – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W11: Machine Design</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+
+		
+
+		
+		
+		
+
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#firmware" id="markdown-toc-firmware">Firmware</a>    <ul>
+      <li><a href="#configuration" id="markdown-toc-configuration">Configuration</a></li>
+      <li><a href="#compile--flash" id="markdown-toc-compile--flash">Compile &amp; Flash</a></li>
+      <li><a href="#how-to-connect-the-servo-to-the-grbl-board" id="markdown-toc-how-to-connect-the-servo-to-the-grbl-board">How to connect the servo to the GRBL board?</a></li>
+    </ul>
+  </li>
+  <li><a href="#control-software" id="markdown-toc-control-software">Control Software</a>    <ul>
+      <li><a href="#gcode-generation" id="markdown-toc-gcode-generation">GCode generation</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="firmware">Firmware</h2>
+
+<p>There is a nice fork of the original <a href="https://github.com/gnea/grbl">GRBL</a> that works with a servo instead of a spindle:
+<a href="https://github.com/cprezzi/grbl-servo">https://github.com/cprezzi/grbl-servo</a></p>
+
+<h3 id="configuration">Configuration</h3>
+
+<p>I had to make just a few adjustments to <code class="highlighter-rouge">defaults.h</code> in order to set the machine properties, such as axis lengths, accelerations and steps per unit.</p>
+
+<p><strong>defaults.h</strong></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">// […]</span>
+  <span class="cp">#define DEFAULT_X_STEPS_PER_MM 53.555
+</span>  <span class="cp">#define DEFAULT_Y_STEPS_PER_MM 53.555
+</span>  <span class="c1">// […]</span>
+  <span class="cp">#define DEFAULT_X_MAX_RATE 6400.0 // mm/min
+</span>  <span class="cp">#define DEFAULT_Y_MAX_RATE 6400.0 // mm/min
+</span>  <span class="c1">// […]</span>
+  <span class="cp">#define DEFAULT_X_ACCELERATION (80.0*60*60) // 80*60*60 mm/min^2 = 80 mm/sec^2
+</span>  <span class="cp">#define DEFAULT_Y_ACCELERATION (80.0*60*60) // 80*60*60 mm/min^2 = 80 mm/sec^2
+</span>  <span class="c1">// […]</span>
+  <span class="cp">#define DEFAULT_X_MAX_TRAVEL 300.0 // mm NOTE: Must be a positive value.
+</span>  <span class="cp">#define DEFAULT_Y_MAX_TRAVEL 300.0 // mm NOTE: Must be a positive value.
+</span>  <span class="c1">// […]</span>
+  <span class="cp">#define DEFAULT_DIRECTION_INVERT_MASK 1 // invert X axis
+</span>  <span class="c1">// […]</span>
+</code></pre></div></div>
+
+<h3 id="compile--flash">Compile &amp; Flash</h3>
+
+<p>After changing values in the code, it needs to be recompiled and flashed (requires <code class="highlighter-rouge">avr-gcc</code> and <code class="highlighter-rouge">avrdude</code>):</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
+make flash
+</code></pre></div></div>
+
+<p>In order to restore settings in the EEPROM to their firmware defaults, one can issue the following command via serial terminal:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$RST=*
+</code></pre></div></div>
+
+<h3 id="how-to-connect-the-servo-to-the-grbl-board">How to connect the servo to the GRBL board?</h3>
+
+<p>Everything worked fine except for the servo control. According to the <a href="https://github.com/cprezzi/grbl-servo">readme</a>, one should be able to control the servo using <code class="highlighter-rouge">M3 S0</code> … <code class="highlighter-rouge">M3 S255</code> commands. I assumed that the servo had to be connected to the <em>“Spindle Enable” (D12)</em> pin, which vanilla GRBL can natively drive using PWM. Took me a while before i found the following in grbl’s <code class="highlighter-rouge">config.h</code>:</p>
+
+<blockquote>
+  <p>When enabled, the Z-limit pin D11 and spindle enable pin D12 switch! The hardware PWM output on pin D11 is required for variable spindle output voltages.</p>
+</blockquote>
+
+<p>Hooked the servo up to <code class="highlighter-rouge">D11</code> instead, and suddely it worked! Magic! Only thing left to do was to adjust minimum and maximum pulse values in order to restrict servo movement to the absolutely necessary:</p>
+
+<p><strong>cpu_map.h:127-132</strong></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cp">#ifdef SPINDLE_IS_SERVO
+</span>    <span class="cp">#define SPINDLE_PWM_MAX_VALUE     60
+</span>    <span class="cp">#ifndef SPINDLE_PWM_MIN_VALUE
+</span>      <span class="cp">#define SPINDLE_PWM_MIN_VALUE   20
+</span>    <span class="cp">#endif
+</span>  <span class="cp">#else
+</span></code></pre></div></div>
+
+<h2 id="control-software">Control Software</h2>
+
+<h3 id="gcode-generation">GCode generation</h3>
+
+<p>For
+https://github.com/arpruss/gcodeplot</p>
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-12/">W12: Output Devices</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-10/">W10: Mechanical Design</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

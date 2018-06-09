@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Installation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Installation">
+            <g id="Ground-Plan" transform="translate(44.000000, 34.000000)">
+                <g>
+                    <path d="M0,28.9219158 L39.1596262,28.9219158 L39.1596262,0 L103.986256,0 L103.986256,28.9219158 L148.994281,28.9219158 L148.994281,122.485454 L158.817634,122.485454 L158.817634,106.851075 L165.993989,106.107233 L165.993989,99.9579033 L158.817634,99.9579033 L158.817634,0 L189.743936,0 L189.743936,13.931944 L193.144851,28.9219158 L205.627173,28.9219158 L205.627173,100.769163 L199.392138,100.769163 L199.392138,106.851075 L205.627173,106.851075 L205.627173,143.061331 L332.71984,143.061331 L332.71984,204.921916 L302.481351,204.921916 L302.481351,222.921916 L330.334057,222.890486 L330.334057,235.905475 L341.037082,235.905475 L341.037082,222.921916 L491.342644,223.263865 L491.342644,231.892485 L512,231.892485 L512,498.921916 L480.196308,498.921916 L480.196308,531.984991 L381.847375,531.984991 L381.847375,498.921916 L291.341683,498.921916 L291.341683,531.984991 L192.365124,531.984991 L192.365124,498.921916 L101.048234,498.921916 L101.048234,531.984991 L48.4521467,531.984991 L48.4521467,498.921916 L0,498.921916 L0,222.921916 L50.5373981,222.921916 L50.5373981,204.921916 L0,204.921916 L0,28.9219158 Z M93.423214,204.921916 L93.423214,222.921916 L112.80002,222.921916 L112.80002,231.4682 L142.621507,231.4682 L142.621507,253.781883 L157.918583,253.781883 L157.918583,231.4682 L194.12229,231.4682 L194.12229,222.921916 L255.314286,222.921916 L255.314286,204.921916 L158.369089,204.921916 L158.369089,162.125271 L149.11232,162.125271 L149.11232,204.921916 L93.423214,204.921916 Z M137,403.921916 L137,425.921916 L159,425.921916 L159,403.921916 L137,403.921916 Z M331,268.921916 L331,344.921916 L341,344.921916 L341,268.921916 L331,268.921916 Z" stroke="#4990E2" stroke-width="2" fill-opacity="0.180734828" fill="#4990E2"></path>
+                    <g id="Scale" transform="translate(462.000000, 176.000000)">
+                        <path d="M-7.10542736e-15,1 L49.7,1" id="Path-2" stroke="#000000"></path>
+                        <path id="Path-2-decoration-1" d="M-7.10542736e-15,-2 L-7.10542736e-15,4" stroke="#000000"></path>
+                        <path id="Path-2-decoration-2" d="M49.7,-2 L49.7,4" stroke="#000000"></path>
+                        <text id="1.0m" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" fill="#4A4A4A">
+                            <tspan x="13" y="18">1.0m</tspan>
+                        </text>
+                    </g>
+                    <text id="Description" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" fill="#4A4A4A">
+                        <tspan x="446.668945" y="13">ground plan</tspan>
+                        <tspan x="433.188477" y="29" font-family="RobotoCondensed-Light, Roboto Condensed" font-weight="300">erfindergarden</tspan>
+                        <tspan x="461.824219" y="45" font-family="RobotoCondensed-Light, Roboto Condensed" font-weight="300">München</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Key" transform="translate(288.000000, 34.000000)">
+                <g id="CPU" transform="translate(0.000000, 72.000000)">
+                    <text id="Label" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" fill="#4A4A4A">
+                        <tspan x="40" y="16">Central Power Unit</tspan>
+                    </text>
+                    <g>
+                        <g>
+                            <rect fill="#4A4A4A" x="0" y="0" width="36" height="24"></rect>
+                            <text font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="6" y="17">CPU</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+                <g id="Grid-(ceiling)" transform="translate(5.000000, 28.000000)">
+                    <text id="Label" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" fill="#4A4A4A">
+                        <tspan x="35" y="13">Distribution</tspan>
+                        <tspan x="35" y="29">grid (ceiling)</tspan>
+                    </text>
+                    <path d="M0,16.5 L25.6311162,16.5" id="Symbol" stroke="#BD0FE1" stroke-width="3" stroke-dasharray="5"></path>
+                </g>
+                <g id="Outlet" transform="translate(12.000000, 0.000000)">
+                    <text id="Label" font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" fill="#4A4A4A">
+                        <tspan x="28" y="13">Outlet</tspan>
+                    </text>
+                    <g fill="#D0011B">
+                        <polygon points="6 0 12 16 0 16"></polygon>
+                    </g>
+                </g>
+            </g>
+            <g id="Grid-(ceiling)" transform="translate(45.000000, 268.000000)" stroke-width="3" stroke="#BD0FE1" stroke-dasharray="5">
+                <polyline id="Grid-1" points="1.01423834 154.966808 509.225138 154.966808 509.225138 75.4144965"></polyline>
+                <path d="M496.056953,264.804061 L496.056953,155.026969" id="Grid-2"></path>
+                <path d="M341.937191,156.166291 L341.937191,76.7886958" id="Grid-3"></path>
+                <path d="M328.948155,74.8630562 L328.948155,153.347498" id="Grid-4"></path>
+                <path d="M126.078971,0.0603767719 L126.078971,155.003988" id="Grid-5"></path>
+                <path d="M193.706648,282.868764 L193.706648,154.515473" id="Grid-6"></path>
+                <path d="M1.42705262,154.781653 L1.42705262,182.724003" id="Grid-7"></path>
+                <path d="M147.521804,169.032433 L147.521804,154.992145" id="Grid-8"></path>
+            </g>
+            <g id="Outlets" transform="translate(45.000000, 266.000000)" fill="#D0011B">
+                <g id="Outlet" transform="translate(490.000000, 250.000000)">
+                    <polygon points="6 0 12 16 0 16"></polygon>
+                </g>
+                <g id="Outlet" transform="translate(502.000000, 77.000000) rotate(-90.000000) translate(-502.000000, -77.000000) translate(496.000000, 69.000000)">
+                    <polygon points="6 0 12 16 0 16"></polygon>
+                </g>
+                <g id="Outlet" transform="translate(349.000000, 77.000000) rotate(90.000000) translate(-349.000000, -77.000000) translate(343.000000, 69.000000)">
+                    <polygon points="6 0 12 16 0 16"></polygon>
+                </g>
+                <g id="Outlet" transform="translate(321.000000, 77.000000) rotate(-90.000000) translate(-321.000000, -77.000000) translate(315.000000, 69.000000)">
+                    <polygon points="6 0 12 16 0 16"></polygon>
+                </g>
+                <g id="Outlet" transform="translate(200.000000, 284.000000) rotate(90.000000) translate(-200.000000, -284.000000) translate(194.000000, 276.000000)">
+                    <polygon points="6 0 12 16 0 16"></polygon>
+                </g>
+                <g id="Outlet" transform="translate(8.000000, 185.000000) rotate(90.000000) translate(-8.000000, -185.000000) translate(2.000000, 177.000000)">
+                    <polygon points="6 0 12 16 0 16"></polygon>
+                </g>
+                <g id="Outlet" transform="translate(126.000000, 8.000000) rotate(180.000000) translate(-126.000000, -8.000000) translate(120.000000, 0.000000)">
+                    <polygon points="6 0 12 16 0 16"></polygon>
+                </g>
+                <g id="Outlet" transform="translate(141.000000, 155.000000)">
+                    <polygon points="6 0 12 16 0 16"></polygon>
+                </g>
+            </g>
+            <g id="CPU" transform="translate(326.000000, 411.000000)">
+                <g>
+                    <rect fill="#4A4A4A" x="0" y="0" width="36" height="24"></rect>
+                    <text font-family="RobotoCondensed-Regular, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="6" y="17">CPU</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

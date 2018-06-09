@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>Last Todos: FabAcademy 2017 – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="page">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>Last Todos: FabAcademy 2017</h1>
+	</header>
+
+	<article>
+		<p>what’s still missing from my weekly assignments…</p>
+
+<h1 id="w1-project-mgmt">W1 Project Mgmt</h1>
+<ul>
+  <li>[_] mention git</li>
+</ul>
+
+<h1 id="w2-cad">W2 CAD</h1>
+<ul>
+  <li>[_] Add files to gitlab</li>
+</ul>
+
+<h1 id="w3-cuttin">W3 Cuttin</h1>
+<ul>
+  <li>[_] Add files to gitlab</li>
+  <li>[_] Vinyl cutting: Add result</li>
+</ul>
+
+<h1 id="w4-complete">W4 Complete</h1>
+
+<h1 id="w5---3d-scanning--printing">W5 - 3D Scanning &amp; Printing</h1>
+<ul>
+  <li>[_] Print something that can’t be made subtractively</li>
+  <li>[_] Scan something</li>
+  <li>[_] Include files</li>
+</ul>
+
+<h1 id="w6">W6</h1>
+<ul>
+  <li>[✓] Document Design Process</li>
+</ul>
+
+<h1 id="w7">W7</h1>
+<ul>
+  <li>[✓] Include Downloads</li>
+</ul>
+
+<h1 id="w8">W8</h1>
+<ul>
+  <li>[_] Use final project code</li>
+</ul>
+
+<h1 id="w9">W9</h1>
+<ul>
+  <li>[_] Document Design</li>
+  <li>[_] Show Video of machine moving</li>
+</ul>
+
+<h1 id="w10">W10</h1>
+<ul>
+  <li>[_] Use final project</li>
+  <li>[_] Use own board</li>
+</ul>
+
+<h1 id="w11">W11</h1>
+<ul>
+  <li>[_] See W9</li>
+</ul>
+
+<h1 id="w12">W12</h1>
+<ul>
+  <li>[_] Mill a mold, cast resin inside</li>
+</ul>
+
+<h1 id="w13">W13</h1>
+<ul>
+  <li>[✓] Add files</li>
+</ul>
+
+<h1 id="w14">W14</h1>
+<ul>
+  <li>[_] Final Project, mill the mold</li>
+</ul>
+
+<h1 id="w15">W15</h1>
+<ul>
+  <li>[_] Two boards made by myself
+    <ul>
+      <li>Question to Daniele: Isn’t the bluetooth/serial communication between my custom-made board and the android app (phone obviously bought) sufficient? The assignment says “design and build a wired &amp;/or wireless network connecting at least two processors” - strictly this means i have to design and build the network, not necessarily each node’s hardware…</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="w16">W16</h1>
+<ul>
+  <li>[_] Final Project</li>
+</ul>
+
+<h1 id="w17">W17</h1>
+<ul>
+  <li>[_] Add missing points</li>
+</ul>
+
+<h1 id="w18">W18</h1>
+<ul>
+  <li>[_] How to comercialize?</li>
+</ul>
+
+
+	</article>
+
+	
+
+	<footer>
+		
+
+	</footer>
+</main>
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

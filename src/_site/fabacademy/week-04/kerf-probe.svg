@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="585px" height="177px" viewBox="0 0 585 177" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="520" height="133"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="520" height="133" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="0" y="0" width="585" height="177"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="585" height="177" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" stroke="#979797">
+            <g id="Group" transform="translate(33.000000, 22.000000)">
+                <use id="Rectangle" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                <path d="M37.7539062,0.25390625 L37.7539063,133.193588" id="Path-2"></path>
+                <path d="M77.7539062,0.25390625 L77.7539063,133.193588" id="Path-2-Copy"></path>
+                <path d="M117.753906,0.25390625 L117.753906,133.193588" id="Path-2-Copy-2"></path>
+                <path d="M157.753906,0.25390625 L157.753906,133.193588" id="Path-2-Copy-3"></path>
+                <path d="M197.753906,0.25390625 L197.753906,133.193588" id="Path-2-Copy-4"></path>
+                <path d="M237.753906,0.25390625 L237.753906,133.193588" id="Path-2-Copy-5"></path>
+                <path d="M277.753906,0.25390625 L277.753906,133.193588" id="Path-2-Copy-6"></path>
+                <path d="M317.753906,0.25390625 L317.753906,133.193588" id="Path-2-Copy-7"></path>
+                <path d="M357.753906,0.25390625 L357.753906,133.193588" id="Path-2-Copy-8"></path>
+                <path d="M397.753906,0.25390625 L397.753906,133.193588" id="Path-2-Copy-9"></path>
+                <path d="M437.753906,0.25390625 L437.753906,133.193588" id="Path-2-Copy-10"></path>
+                <path d="M477.753906,0.25390625 L477.753906,133.193588" id="Path-2-Copy-11"></path>
+            </g>
+            <use id="Rectangle-2" mask="url(#mask-4)" stroke-width="2" xlink:href="#path-3"></use>
+        </g>
+    </g>
+</svg>

@@ -77,7 +77,7 @@ This time the traces come out nicely:
 		<zoom src="06-traces-done.jpg" shadow="true"></zoom>
 	</div>
 	<div class="col-sm">
-		<iframe class="constrain" width="560" height="315" src="https://www.youtube.com/embed/kywhPTGDRKE" frameborder="0" allowfullscreen></iframe>
+		<iframe class="constrain" width="560" height="315" src="https://www.youtube-nocookie.com/embed/kywhPTGDRKE" frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>
 
@@ -90,7 +90,7 @@ The process for the outline is quite similar, with just a few differences:
 
 An here's how it looks:
 
-<iframe class="constrain" width="560" height="315" src="https://www.youtube.com/embed/vbv0GNLJU2Q" frameborder="0" allowfullscreen></iframe>
+<iframe class="constrain" width="560" height="315" src="https://www.youtube-nocookie.com/embed/vbv0GNLJU2Q" frameborder="0" allowfullscreen></iframe>
 
 <div class="alert alert-info">
 	Towards the end of the cutting process, one can see a white blob building up around the mill. It's the sticky tape wrapping around. The toolpaths could be adjusted to not cut all the way down and avoid this, as it might influence the performace/lifetime of the bit.

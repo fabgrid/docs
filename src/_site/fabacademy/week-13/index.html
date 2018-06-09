@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W13: Molding & Casting – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W13: Molding & Casting</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					Design a 3D mould, machine it, and cast parts from it.
+				</p>
+			</div>
+		</div>
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Personal Goal</h5>
+				<p class="card-text">
+					Create a knurled knob for adjusting color and brightness on the lamp.
+				</p>
+			</div>
+		</div>
+		
+
+		
+		
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Further Resources</h5>
+			</div>
+			<ul class="links list-group list-group-flush">
+				
+					
+					<li class="list-group-item">
+						
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+				
+				<a href="/fabacademy/week-13/lecture-notes.html"><i class="fa fa-btn fa-sticky-note-o"></i> Lecture Notes</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+		
+				<a href="candles/">Casting candles</a>
+					</li>
+				
+					
+					<li class="list-group-item">
+						
+		
+				<a href="dial-mold.scad">dial-mold.scad (OpenSCAD Source)</a>
+					</li>
+				
+					
+			</ul>
+		</div>
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#cad" id="markdown-toc-cad">CAD</a>    <ul>
+      <li><a href="#steps" id="markdown-toc-steps">Steps</a></li>
+      <li><a href="#execution" id="markdown-toc-execution">Execution</a></li>
+    </ul>
+  </li>
+  <li><a href="#cam" id="markdown-toc-cam">CAM</a>    <ul>
+      <li><a href="#model-import" id="markdown-toc-model-import">Model Import</a></li>
+      <li><a href="#tools-setup" id="markdown-toc-tools-setup">Tools Setup</a>        <ul>
+          <li><a href="#fusion-360-tool-library" id="markdown-toc-fusion-360-tool-library">Fusion 360 Tool Library</a></li>
+        </ul>
+      </li>
+      <li><a href="#milling-passes" id="markdown-toc-milling-passes">Milling passes</a>        <ul>
+          <li><a href="#1-roughing-pass" id="markdown-toc-1-roughing-pass">1. Roughing pass</a></li>
+          <li><a href="#2-z-facing-pass" id="markdown-toc-2-z-facing-pass">2. Z-Facing pass</a></li>
+          <li><a href="#3-vertical-finishing" id="markdown-toc-3-vertical-finishing">3. Vertical finishing</a></li>
+          <li><a href="#4-teeth-finishing-pass" id="markdown-toc-4-teeth-finishing-pass">4. Teeth Finishing pass</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#milling-the-mold" id="markdown-toc-milling-the-mold">Milling the Mold</a>    <ul>
+      <li><a href="#setup" id="markdown-toc-setup">Setup</a></li>
+      <li><a href="#milling" id="markdown-toc-milling">Milling</a></li>
+    </ul>
+  </li>
+  <li><a href="#casting" id="markdown-toc-casting">Casting</a>    <ul>
+      <li><a href="#unmolding" id="markdown-toc-unmolding">Unmolding</a></li>
+    </ul>
+  </li>
+  <li><a href="#questions--notes" id="markdown-toc-questions--notes">Questions &amp; Notes</a></li>
+</ul>
+
+<hr />
+
+<h2 id="cad">CAD</h2>
+
+<p>First, i need to create a digital design of the dial wheel with the following specs:</p>
+
+<ul>
+  <li>50mm outer diameter</li>
+  <li>8mm thickness</li>
+  <li>knurled rim</li>
+  <li>center hole to mount it on the shaft of the rotary encoder</li>
+</ul>
+
+<h3 id="steps">Steps</h3>
+
+<ol>
+  <li>Design “positive” model of the dial wheel</li>
+  <li>Add cast-on sections</li>
+  <li>Subtract from a solid to get the negative model</li>
+  <li>Split result into two halves</li>
+  <li>Add notches/holes for proper alignment of the two halves</li>
+</ol>
+
+<blockquote>
+  <p>This process is actually cheating – typically you mill a positive from which you can cast a “negative” mold. That mold in turn is used to cast the actual positive. The mold is typically made from a flexible material, like silicone. In my case, i hope i can directly cast my final part in the milled wax mold – let’s see if it works…</p>
+</blockquote>
+
+<h3 id="execution">Execution</h3>
+
+<div class="row">
+    <div class="col-md-4"><zoom src="01-target-positive.png" caption="The target 'positive'"></zoom></div>
+    <div class="col-md-4"><zoom src="02-cast-ons.png" caption="… with 'cast-ons'"></zoom></div>
+    <div class="col-md-4"><zoom src="03-mold-halves.png" caption="The two halves of the mold"></zoom></div>
+</div>
+
+<p>I open the model in FreeCAD, so i can export it as a <code class="highlighter-rouge">STEP</code> file from there. OpenSCAD can only export to mesh formats, which, when imported to Fusion 360 will be more difficult to handle. FreeCAD can parse scad models into its internal geometry model and export step files, which are more easily handled by Fusion than meshes.</p>
+
+<zoom src="06-import-result.png" caption="The bottom half opened in FreeCAD"></zoom>
+
+<h2 id="cam">CAM</h2>
+
+<h3 id="model-import">Model Import</h3>
+
+<p>The <code class="highlighter-rouge">STEP</code> model can be easily imported into Fusion 360</p>
+
+<h3 id="tools-setup">Tools Setup</h3>
+
+<p>I will use <code class="highlighter-rouge">2mm</code> and <code class="highlighter-rouge">.6mm</code> flat end mills. The parameters for 1/8” and 1/32” tools from <a href="https://support.bantamtools.com/hc/en-us/articles/115001668653-Machining-Wax">Bantam Tools’ site on machinable wax</a> roughly apply:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4>1/8” flat end mill:</h4>
+        <table>
+            <tr><th>Parameter</th><th>Value</th></tr>
+            <tr><td>Feed rate</td><td>1500 mm/min</td></tr>
+            <tr><td>Plunge rate</td><td>500 mm/min</td></tr>
+            <tr><td>Spindle speed</td><td>16,400 RPM</td></tr>
+            <tr><td>Max pass depth</td><td>3 mm</td></tr>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <h4>1/32” flat end mill:</h4>
+        <table>
+            <tr><th>Parameter</th><th>Value</th></tr>
+            <tr><td>Feed rate</td><td>1500 mm/min</td></tr>
+            <tr><td>Plunge rate</td><td>500 mm/min</td></tr>
+            <tr><td>Spindle speed</td><td>16,400 RPM</td></tr>
+            <tr><td>Max pass depth</td><td>1.5 mm</td></tr>
+        </table>
+    </div>
+</div>
+
+<p><br /></p>
+
+<h4 id="fusion-360-tool-library">Fusion 360 Tool Library</h4>
+
+<div class="row">
+    <div class="col-md-6"><zoom src="07-tool-setup.png" caption="Creating a new tool in the library"></zoom></div>
+    <div class="col-md-6"><zoom src="08-tool-library.png" caption="Both tools in the library"></zoom></div>
+</div>
+
+<div class="alert alert-warning">Make sure to create your tools in the "local" library. When you create them inside the "document" library, they will not be available for use in other projects.</div>
+
+<h3 id="milling-passes">Milling passes</h3>
+
+<ol>
+  <li>Roughing pass (2mm end mill)</li>
+  <li>Facing pass for surfaces in Z-plane (2mm end mill)</li>
+  <li>Finishing pass for “low detail” vertical faces (2mm end mill)</li>
+  <li>Finishing pass for the tiny vertical surfaces of the teeth (.6mm end mill)</li>
+</ol>
+
+<h4 id="1-roughing-pass">1. Roughing pass</h4>
+
+<p>First, we use a <em>adaptive clearing</em> strategy to efficiently clear most of the material, but leave some stock for the detail passes.</p>
+
+<div class="row">
+    <div class="col-md-8"><zoom src="09-roughing-pass-paths.png" caption="'Adaptive clearing' calculated machine paths"></zoom></div>
+    <div class="col-md-4"><zoom src="10-roughing-pass-params.png" caption="'Adaptive clearing' strategy parameters"></zoom></div>
+</div>
+
+<h4 id="2-z-facing-pass">2. Z-Facing pass</h4>
+
+<p>Using a <em>facing</em> strategy, we finish all surfaces in the XY-plane.</p>
+
+<div class="row">
+    <div class="col-md-8"><zoom src="11-facing-pass-paths.png" caption="'Facing' calculated machine paths"></zoom></div>
+    <div class="col-md-4"><zoom src="12-facing-pass-params.png" caption="'Facing' strategy parameters"></zoom></div>
+</div>
+
+<h4 id="3-vertical-finishing">3. Vertical finishing</h4>
+
+<p>Still using the 2mm tool, we finish the “low detail” vertical surfaces, namely the round poles. I choose a <em>contour</em> strategy for that job.</p>
+
+<div class="row">
+    <div class="col-md-8"><zoom src="13-vertical-finishing-pass-paths.png" caption="'Contour' calculated machine paths"></zoom></div>
+    <div class="col-md-4"><zoom src="14-vertical-finishing-pass-params.png" caption="'Contour' strategy parameters"></zoom></div>
+</div>
+
+<h4 id="4-teeth-finishing-pass">4. Teeth Finishing pass</h4>
+
+<p>In the final pass, we use a .6mm mill to finish the fine details of the knurled perimeter, also with a <em>contour</em> strategy.</p>
+
+<div class="row">
+    <div class="col-md-8"><zoom src="15-detail-pass-paths.png" caption="'Contour' calculated machine paths"></zoom></div>
+    <div class="col-md-4"><zoom src="16-detail-pass-params.png" caption="'Contour' strategy parameters"></zoom></div>
+</div>
+
+<h2 id="milling-the-mold">Milling the Mold</h2>
+
+<h3 id="setup">Setup</h3>
+
+<p>Using the “measure” tool in Fusion, i determine the total dimensions of the model (58x58mm). I then cut some milling wax to that size, roughly 60x60mm. Finally, i adjust the stock in Fusion to be slighly larger than that (62x62mm) in order to compensate for any inaccuracies.</p>
+
+<div class="row">
+    <div class="col-md-5"><zoom src="19-stock-measuring.jpg" caption="Measuring the stock material"></zoom></div>
+    <div class="col-md-6"><zoom src="20-stock-setup.png" caption="Enter stock dimensions plus tolerance"></zoom></div>
+</div>
+
+<p>So we’re ready to regenerate all toolpaths and run the post-processor to generate g-code for the Othermill. Before i send the code to the machine, it is very important to <strong>run a simulation</strong> in order to detect any possible collisions upfront.</p>
+
+<div class="alert alert-warning">Initially, the postprocessor failed with an "!Error: Failed to post data. See log for details." warning. I had to select the operations manually and export them as separate gcode files per tool. Might be something with the tool changing procedure and g-codes of the Othermill…</div>
+
+<div class="row">
+    <div class="col-md-6"><zoom src="17-bantam-tools.png" caption="The gcode file opened in BantamTools"></zoom></div>
+    <div class="col-md-6"><zoom src="18-bantam-tools-tool-library.png" caption="Tool library in BantamTools"></zoom></div>
+</div>
+
+<h3 id="milling">Milling</h3>
+
+<p>Having fixed the wax block onto the sacrificial plate (using double-sided tape 🤭), we can start milling:<br /></p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/u29A-RUgrFg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h2 id="casting">Casting</h2>
+
+<p>The resin we have fortunately declares itself as <em>weakly exothermic</em> – good for my wax mold. It already has lots of chunks in it, but it had that already when i used it last time and it worked when carefully pouring only the liquid parts.</p>
+
+<div class="row">
+    <div class="col-md-4"><zoom src="21-resin.jpg" caption="Old but should still work"></zoom></div>
+    <div class="col-md-7"><zoom src="22-mold-and-funnel.jpg" caption="The bandaged mold with its tailor-made funnel"></zoom></div>
+</div>
+
+<h3 id="unmolding">Unmolding</h3>
+<p><strong>Two weeks later:</strong><br />
+(one or two days would have been enough)<br /></p>
+
+<div class="row">
+    <div class="col-md-6"><iframe width="480" height="270" src="https://www.youtube-nocookie.com/embed/zt8nTHznxkw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
+    <div class="col-md-6"><zoom src="23-finished-cast.JPG" caption="The finished cast"></zoom></div>
+</div>
+
+<h2 id="questions--notes">Questions &amp; Notes</h2>
+
+<ul>
+  <li>Would the machining marks not have impressed onto the final piece, if i had used the typical “two-step” molding process?</li>
+  <li>I apparently left too little extra resin in the funnel, so it sucked in air and created that dent. Might have been neccessary to attach another funnel to the “outlet hole” to establish equal pressure at both ends. I’m also wondering why it didn’t suck in air from the “outlet”.</li>
+</ul>
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-14/">W14: Input Devices</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-12/">W12: Output Devices</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

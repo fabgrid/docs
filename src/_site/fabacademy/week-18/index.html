@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<title>W18: Applications & Implications – </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/assets/css/main.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="lesson">
+		<div class="container" id="app">
+
+			<sidebar inline-template>
+	<aside :class="{ open: menuOpen }" id="sidebar">
+		<button :class="{ open: menuOpen }" @click.prevent="toggleMenu" id="sidebar-toggle"><i class="fa fa-btn fa-bars"></i></button>
+		<div :class="{ open: menuOpen }" @click="toggleMenu" id="sidebar-close"></div>
+		<header>
+			<img class="logo" src="/assets/img/fabgrid-logo-white.svg" />
+			<h1>
+				
+				<small></small>
+			</h1>
+			<p></p>
+		</header>
+
+		<nav class="main-nav">
+	<ul class="nav level-1">
+	
+		
+		<li>
+			<a  href="/">
+				About
+			</a>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/illuminative/">
+				Final Project: IllumiNative
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/illuminative/hardware.html">
+								Hardware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/electronics.html">
+								Electronics
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/firmware.html">
+								Firmware
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/illuminative/android-app.html">
+								Android App
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/fabacademy/">
+				Weekly Assignments
+			</a>
+			
+				<ul class="nav level-2">
+					
+						
+						<li>
+							<a  href="/fabacademy/week-01/">
+								W01: Principles and Practices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-02/">
+								W02: Project Management
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-03/">
+								W03: Computer Aided Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-04/">
+								W04: Computer-Controlled Cutting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-05/">
+								W05: Electronics Production
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-06/">
+								W06: 3D Scanning & Printing
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-07/">
+								W07: Electronics Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-08/">
+								W08: Computer Machining
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-09/">
+								W09: Embedded Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-10/">
+								W10: Mechanical Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-11/">
+								W11: Machine Design
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-12/">
+								W12: Output Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-13/">
+								W13: Molding & Casting
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-14/">
+								W14: Input Devices
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-15/">
+								W15: * Week: Composites
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-16/">
+								W16: Networking & Communications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-17/">
+								W17: Interface & Application Programming
+							</a>
+						</li>
+					
+						
+						<li>
+							<a class="active" href="/fabacademy/week-18/">
+								W18: Applications & Implications
+							</a>
+						</li>
+					
+						
+						<li>
+							<a  href="/fabacademy/week-19/">
+								W19: Invention, Intellectual Property
+							</a>
+						</li>
+					
+				</ul>
+			
+		</li>
+	
+		
+		<li>
+			<a  href="/resources/">
+				Resources
+			</a>
+			
+		</li>
+	
+	</ul>
+</nav>
+
+
+		<footer>
+			<ul class="external-links">
+			
+				<li><a href="https://github.com/fabgrid" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+			
+				<li><a href="https://youtube.com/" target="_blank"><i class="fa fa-fw fa-youtube"></i></a></li>
+			
+			</ul>
+			<p>Project Status: <span class="project-status"></span></p>
+		</footer>
+	</aside>
+</sidebar>
+
+			<main>
+	<header>
+		<h1>W18: Applications & Implications</h1>
+
+		<section class="lesson-meta">
+	<div class="card-deck">
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Assignment</h5>
+				<p class="card-text">
+					Propose a final project that integrates the range of units covered
+				</p>
+			</div>
+		</div>
+		
+
+		
+		<div class="card">
+			<div class="card-block">
+				<h5 class="card-title">Personal Goal</h5>
+				<p class="card-text">
+					
+				</p>
+			</div>
+		</div>
+		
+
+		
+		
+		
+
+		
+	</div>
+</section>
+
+	</header>
+
+	<article>
+		<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#applications--implications" id="markdown-toc-applications--implications">Applications &amp; Implications</a>    <ul>
+      <li><a href="#what-will-it-do" id="markdown-toc-what-will-it-do">What will it do?</a></li>
+      <li><a href="#whos-done-what-beforehand" id="markdown-toc-whos-done-what-beforehand">Who’s done what beforehand?</a></li>
+      <li><a href="#what-materials-and-components-will-be-required--where-will-they-come-from" id="markdown-toc-what-materials-and-components-will-be-required--where-will-they-come-from">What materials and components will be required? / Where will they come from?</a></li>
+      <li><a href="#how-much-will-it-cost" id="markdown-toc-how-much-will-it-cost">How much will it cost?</a></li>
+      <li><a href="#what-parts-and-systems-will-be-made" id="markdown-toc-what-parts-and-systems-will-be-made">What parts and systems will be made?</a></li>
+      <li><a href="#what-processes-will-be-used" id="markdown-toc-what-processes-will-be-used">What processes will be used?</a></li>
+      <li><a href="#what-tasks-need-to-be-completed" id="markdown-toc-what-tasks-need-to-be-completed">What tasks need to be completed?</a></li>
+      <li><a href="#what-questions-need-to-be-answered" id="markdown-toc-what-questions-need-to-be-answered">What questions need to be answered?</a></li>
+      <li><a href="#what-is-the-schedule" id="markdown-toc-what-is-the-schedule">What is the schedule?</a></li>
+      <li><a href="#how-will-it-be-evaluated" id="markdown-toc-how-will-it-be-evaluated">How will it be evaluated?</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="applications--implications">Applications &amp; Implications</h2>
+
+<h3 id="what-will-it-do">What will it do?</h3>
+
+<p>A color- and brightness-adjustable LED-lamp that imitates sunlight during the course of the day. It oscillates between warm (~2500K) and cold (~5000K) white, synced with the sun, based on its location. Features a smartphone app.</p>
+
+<h3 id="whos-done-what-beforehand">Who’s done what beforehand?</h3>
+
+<p>I’ve done a small experiment in that direction about two years ago, using a pre-made Arduino, pre-made LED modules  and PT4115E driver boards.</p>
+
+<h3 id="what-materials-and-components-will-be-required--where-will-they-come-from">What materials and components will be required? / Where will they come from?</h3>
+
+<ul>
+  <li><a href="/illuminative/electronics.html">Electronics</a> (lab stock / farnell)
+    <ul>
+      <li>
+        <ul>
+          <li>external wall adapter (24V 2A) (lab stock)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Copper sheet for the heat sink (lab stock)</li>
+  <li>Housing
+    <ul>
+      <li>Glass pipe (local glass blower)</li>
+      <li>Composite (raw materials from lab stock)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-much-will-it-cost">How much will it cost?</h3>
+
+<h3 id="what-parts-and-systems-will-be-made">What parts and systems will be made?</h3>
+
+<ul>
+  <li><strong>LED modules</strong> – arrays of two different types of LEDs, separately controllable</li>
+  <li><strong>Controller Board</strong> - based on ATMega328 / <a href="/i2dc/index.html">I²DC</a> two filtered PWM channels, serial bluetooth interface</li>
+  <li><strong>Housing</strong> – Glass pipe + end caps</li>
+  <li><strong>Physical UI</strong></li>
+  <li><strong>Android App</strong></li>
+</ul>
+
+<h3 id="what-processes-will-be-used">What processes will be used?</h3>
+
+<ul>
+  <li>PCB Milling</li>
+  <li>Reflow Soldering</li>
+  <li>CNC Milling</li>
+  <li>Composites</li>
+  <li>3D Printing</li>
+</ul>
+
+<h3 id="what-tasks-need-to-be-completed">What tasks need to be completed?</h3>
+
+<h3 id="what-questions-need-to-be-answered">What questions need to be answered?</h3>
+
+<h3 id="what-is-the-schedule">What is the schedule?</h3>
+
+<h3 id="how-will-it-be-evaluated">How will it be evaluated?</h3>
+
+<ul>
+  <li>Successful production of the hardware is necessary. This includes:
+    <ul>
+      <li>Molding the shade</li>
+      <li>Casting the end caps</li>
+    </ul>
+  </li>
+  <li>A working 2-channel PWM driver is required</li>
+  <li>Smartphone control is mandatory (color &amp; brightness)</li>
+  <li>Sun tracking is optional</li>
+</ul>
+
+	</article>
+
+	
+
+	<footer>
+		
+	<div class="pagination">
+		
+			
+			<a class="next" href="/fabacademy/week-19/">W19: Invention, Intellectual Property</a>
+		
+		
+			
+			<a class="previous" href="/fabacademy/week-17/">W17: Interface & Application Programming</a>
+		
+	</div>
+
+
+	</footer>
+</main>
+
+
+		</div>
+	</body>
+
+
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" async></script>
+	<script type="text/javascript" src="https://fabgrid.disqus.com/count.js" id="dsq-count-scr" async></script>
+	<script>
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://fabgrid.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+
+	<script type="text/javascript" src="/assets/js/bundle.js" async></script>
+	<noscript>Please enable JavaScript to view the comments.</noscript>
+</html>

@@ -214,7 +214,7 @@ Alright, now here's the procedure:
 - Pour everything slowly into the bottle, onto the same spot the whole time.
 
 <div class="row">
-	<div class="col-md-6"><iframe width="100%" height="360px" src="https://www.youtube.com/embed/tB-aodcKt4k" frameborder="0" allowfullscreen></iframe></div>
+	<div class="col-md-6"><iframe width="100%" height="360px" src="https://www.youtube-nocookie.com/embed/tB-aodcKt4k" frameborder="0" allowfullscreen></iframe></div>
 	<div class="col-md-6"><zoom src="20-done-with-the-mess.jpg" caption="Done with the mess"></zoom></div>
 </div>
 
