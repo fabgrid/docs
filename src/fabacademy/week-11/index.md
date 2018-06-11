@@ -80,6 +80,11 @@ Hooked the servo up to `D11` instead, and suddely it worked! Magic! Only thing l
 ## Control Software
 
 ### GCode generation
+Inkscape Plugin: https://github.com/arpruss/gcodeplot (there you can set the gcode to lift and lower the pen using the servo as "before path" and "after path" actions)
 
-For
-https://github.com/arpruss/gcodeplot
+### Machine control & GCODE sender
+[http://chilipeppr.com/jpadie](http://chilipeppr.com/jpadie) (the jpadie workspace is compatible with latest GRBL)
+
+## Computer-controlled Operation:
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/or-OBGDfo-E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+

@@ -20,6 +20,8 @@ next: fabacademy/week-04/index.md
 
 ---
 
+> Note: This design is for an old idea for a final project, where i wanted to create a low-voltage DC power grid in our lab.
+
 ## 2D Overview
 
 **Goal: Know where to place everything in the room. Know how much wire is reqired in total.**
@@ -28,6 +30,18 @@ next: fabacademy/week-04/index.md
 2. Place outlets
 3. Place CPU and routes
 4. Perform some calculations
+
+### Software choice
+I have been using different programs for 2D drawing in the past. GIMP is open source software for creating and editig raster graphics. It has support for paths, too, but for my purpose i need a vector grahipcs or dedicated CAD program for accurate distances and in order to be easily able to change everything later. Apart from artistic (including photograpy) or scientific purposes, use of raster graphics programs is limited. You almost always want to choose a vector graphics program for any design or technical drawing purposes.
+
+So what are our options for vector graphics programs?
+
+- Inkscape – most fully featured open source program with lots of features and extensions
+- Adobe Illustrator – most popular commercial software among professional designers
+- Sketch – Very popular among web/app designers (commercial)
+- Many more for sure…
+
+Building web apps for a living, i happen to have a license for Sketch already. Generally i would always prefer to use open source software, but Inkscape's user experience is just so much worse on a Mac than Sketch's. Thus, it's not a real option, unless i require any of its special features for a specific task. Main annoyance is scrolling and zooming, which i constantly need when drawing. And it's really really bad, compared to other "Mac native" drawing apps. Apart from that, there are no prepackaged binaries of the latest build of Inkscape for Mac, so i have to go with an older version. I have it installed, because sometimes there are not much alternatives to using it. But as long as i can, i stay away from it.
 
 ### 1. Vectorize a ground plan of the shop
 

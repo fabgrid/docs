@@ -35,7 +35,7 @@ First, i need to create a digital design of the dial wheel with the following sp
 2. Add cast-on sections
 3. Subtract from a solid to get the negative model
 4. Split result into two halves
-5. Add notches/holes for proper alignment of the two halves
+5. Add registration marks for proper alignment of the two halves
 
 > This process is actually cheating – typically you mill a positive from which you can cast a "negative" mold. That mold in turn is used to cast the actual positive. The mold is typically made from a flexible material, like silicone. In my case, i hope i can directly cast my final part in the milled wax mold – let's see if it works…
 
@@ -122,7 +122,7 @@ Using a *facing* strategy, we finish all surfaces in the XY-plane.
 
 #### 3. Vertical finishing
 
-Still using the 2mm tool, we finish the "low detail" vertical surfaces, namely the round poles. I choose a *contour* strategy for that job.
+Still using the 2mm tool, we finish the "low detail" vertical surfaces, namely the registration marks. I choose a *contour* strategy for that job.
 
 <div class="row">
     <div class="col-md-8"><zoom src="13-vertical-finishing-pass-paths.png" caption="'Contour' calculated machine paths"></zoom></div>

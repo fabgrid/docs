@@ -465,6 +465,7 @@
 <ul id="markdown-toc">
   <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
   <li><a href="#2d-overview" id="markdown-toc-2d-overview">2D Overview</a>    <ul>
+      <li><a href="#software-choice" id="markdown-toc-software-choice">Software choice</a></li>
       <li><a href="#1-vectorize-a-ground-plan-of-the-shop" id="markdown-toc-1-vectorize-a-ground-plan-of-the-shop">1. Vectorize a ground plan of the shop</a></li>
       <li><a href="#2-place-outlets" id="markdown-toc-2-place-outlets">2. Place outlets</a></li>
       <li><a href="#3-place-cpu-and-routes" id="markdown-toc-3-place-cpu-and-routes">3. Place CPU and routes</a></li>
@@ -488,6 +489,10 @@
 
 <hr />
 
+<blockquote>
+  <p>Note: This design is for an old idea for a final project, where i wanted to create a low-voltage DC power grid in our lab.</p>
+</blockquote>
+
 <h2 id="2d-overview">2D Overview</h2>
 
 <p><strong>Goal: Know where to place everything in the room. Know how much wire is reqired in total.</strong></p>
@@ -498,6 +503,20 @@
   <li>Place CPU and routes</li>
   <li>Perform some calculations</li>
 </ol>
+
+<h3 id="software-choice">Software choice</h3>
+<p>I have been using different programs for 2D drawing in the past. GIMP is open source software for creating and editig raster graphics. It has support for paths, too, but for my purpose i need a vector grahipcs or dedicated CAD program for accurate distances and in order to be easily able to change everything later. Apart from artistic (including photograpy) or scientific purposes, use of raster graphics programs is limited. You almost always want to choose a vector graphics program for any design or technical drawing purposes.</p>
+
+<p>So what are our options for vector graphics programs?</p>
+
+<ul>
+  <li>Inkscape – most fully featured open source program with lots of features and extensions</li>
+  <li>Adobe Illustrator – most popular commercial software among professional designers</li>
+  <li>Sketch – Very popular among web/app designers (commercial)</li>
+  <li>Many more for sure…</li>
+</ul>
+
+<p>Building web apps for a living, i happen to have a license for Sketch already. Generally i would always prefer to use open source software, but Inkscape’s user experience is just so much worse on a Mac than Sketch’s. Thus, it’s not a real option, unless i require any of its special features for a specific task. Main annoyance is scrolling and zooming, which i constantly need when drawing. And it’s really really bad, compared to other “Mac native” drawing apps. Apart from that, there are no prepackaged binaries of the latest build of Inkscape for Mac, so i have to go with an older version. I have it installed, because sometimes there are not much alternatives to using it. But as long as i can, i stay away from it.</p>
 
 <h3 id="1-vectorize-a-ground-plan-of-the-shop">1. Vectorize a ground plan of the shop</h3>
 

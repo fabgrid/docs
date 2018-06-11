@@ -424,7 +424,6 @@
 
 	<article>
 		<h2 id="table-of-contents">Table of Contents</h2>
-
 <ul id="markdown-toc">
   <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
   <li><a href="#design" id="markdown-toc-design">Design</a>    <ul>
@@ -437,6 +436,13 @@
       </li>
     </ul>
   </li>
+  <li><a href="#build-steps" id="markdown-toc-build-steps">Build Steps</a>    <ul>
+      <li><a href="#linear-actuator-build" id="markdown-toc-linear-actuator-build">Linear Actuator Build</a></li>
+      <li><a href="#end-effector-build" id="markdown-toc-end-effector-build">End Effector Build</a></li>
+    </ul>
+  </li>
+  <li><a href="#manual-operation" id="markdown-toc-manual-operation">Manual Operation</a></li>
+  <li><a href="#individual-contribution" id="markdown-toc-individual-contribution">Individual Contribution</a></li>
   <li><a href="#improvements" id="markdown-toc-improvements">Improvements</a></li>
 </ul>
 
@@ -447,11 +453,9 @@
 <zoom src="http://cdn8.bigcommerce.com/s-itwgldve/images/stencil/608x608/products/312/2498/V-Slot_20x40_clear_s_w_2__95354.1510262987.png"></zoom>
 
 <h2 id="design">Design</h2>
-
 <p>Currently, i’m thinking of a simple “T” style design with only one linear actuator per axis. As we’re not building a heavy-duty CNC machine, but rather just a plotter, forces should be small enough to allow for that kind of setup.</p>
 
 <h3 id="parts-library">Parts Library</h3>
-
 <p>The design is developed around the V-Slot extrusions, so using the <a href="https://github.com/mazerte/openscad-openbuilds">Openbuilds OpenSCAD library</a> can save us some time.</p>
 
 <p>A quick test to see if it’s working:</p>
@@ -462,7 +466,6 @@
 </div>
 
 <h3 id="process">Process</h3>
-
 <ol>
   <li>Design a common linear actuator</li>
   <li>Design the Y-axis</li>
@@ -473,7 +476,6 @@
 </ol>
 
 <h4 id="linear-actuator">Linear actuator</h4>
-
 <p>A linear actuator consists of:</p>
 
 <ul>
@@ -487,7 +489,6 @@
 <p>The motor stems from the <code class="highlighter-rouge">MCAD</code> library, which is bundeled with OpenSCAD. The pulleys are included in <code class="highlighter-rouge">openscad-openbuilds</code>. I couldn’t find a model of the <em>end mount</em> for the motor and idler pulley, so i designed it myself. I likely would have needed that custom model anyway, because i want to print them, instead of buying them for 10€ each.</p>
 
 <h4 id="x-and-y-axis">X and Y axis</h4>
-
 <p>After modelling the linear actuator, “assembling the axes” is quite simple: Just put two of them on top of each other:</p>
 
 <zoom src="03-axes.png" caption="X- and Y-axes"></zoom>
@@ -495,13 +496,41 @@
 <p>The X motor kind of acts as a counterweight</p>
 
 <h4 id="end-effector">End effector</h4>
-
 <p>The end effector (Z axis) will slide on cheap 8mm smooth rod with LM8UU linear bearings. It will push the pen downwards using a spring and be able to lift it with a servo. The assembly could be mounted upside down to inverse this logic so that the pen would be pushed <strong>up</strong> by the spring and <strong>down</strong> by the servo. I prefer the former approach because this way the spring acts as a suspension while drawing, smoothing out any irregularities in the drawing surface and reducing forces at the pen tip.</p>
 
 <zoom src="04-end-effector.png" caption="The end effector (bearings and servo lever missing)"></zoom>
 
-<h2 id="improvements">Improvements</h2>
+<h2 id="build-steps">Build Steps</h2>
+<p>Building with Openbuilds parts is quite straight forward and requires not much explanation:</p>
 
+<h3 id="linear-actuator-build">Linear Actuator Build</h3>
+<div class="row">
+    <div class="col-md-3"><zoom src="05-actuator.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="06-actuator.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="07-actuator.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="08-actuator.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="09-actuator.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="10-actuator.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="11-actuator.JPG"></zoom></div>
+</div>
+
+<h3 id="end-effector-build">End Effector Build</h3>
+<div class="row">
+    <div class="col-md-3"><zoom src="12-end-effector.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="13-end-effector.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="14-end-effector.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="15-end-effector.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="16-end-effector.JPG"></zoom></div>
+    <div class="col-md-3"><zoom src="17-end-effector.JPG"></zoom></div>
+</div>
+
+<h2 id="manual-operation">Manual Operation</h2>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/w75ygAgBhCk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h2 id="individual-contribution">Individual Contribution</h2>
+<p>Though this assignment is a group assignment (and requires to describe the individual’s contribution), i did the design and build by myself, as i didn’t find the time to visit to the lab and coordinate with the other student.</p>
+
+<h2 id="improvements">Improvements</h2>
 <ul>
   <li>Add end stops</li>
   <li>Smarter pen holder</li>
